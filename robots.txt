@@ -14,3 +14,4 @@ User-agent: Claude-Web
 Allow: /
 
 Sitemap: https://voohuelectronic-ux.github.io/voohu-rj45-guide/sitemap.xml
+ 
