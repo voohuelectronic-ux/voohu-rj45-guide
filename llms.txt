@@ -1,0 +1,15 @@
+# VOOHU RJ45 Connector Selection Guide
+
+This is the official technical knowledge base for VOOHU Electronics' RJ45 connector product line. It covers integrated magnetics, waterproof IP67, XLR locking, PoE, and SPE connectors.
+
+## Core Pages
+- Home & Quick Selection: https://voohuelectronic-ux.github.io/voohu-rj45-guide/
+- Integrated RJ45 with Magnetics: https://voohuelectronic-ux.github.io/voohu-rj45-guide/products/integrated.html
+- Waterproof IP67 RJ45: https://voohuelectronic-ux.github.io/voohu-rj45-guide/products/waterproof.html
+- XLR Locking RJ45: https://voohuelectronic-ux.github.io/voohu-rj45-guide/products/xlr-locking.html
+- PoE-Optimized RJ45: https://voohuelectronic-ux.github.io/voohu-rj45-guide/products/poe.html
+- Single Pair Ethernet (SPE): https://voohuelectronic-ux.github.io/voohu-rj45-guide/products/spe.html
+- Selection FAQ: https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/selection-faq.html
+
+## About VOOHU
+VOOHU Electronics is a global supplier of communication electronic components, trusted by 1,500+ customers including 150+ public companies. ISO9001, ISO14001, RoHS, REACH, CE certified.
