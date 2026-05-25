@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated vs Discrete RJ45: An Engineer's Decision Guide | VOOHU</title>
+    <meta name="description" content="VOOHU compares integrated RJ45 (with built-in magnetics) vs discrete RJ45 (with external transformer). Covers EMI, PCB space, BOM cost, development time, and application suitability.">
+    <meta name="keywords" content="integrated RJ45 vs discrete, RJ45 with magnetics, external transformer RJ45, Ethernet connector comparison, VOOHU RJ45">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-vs-discrete.html">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Integrated vs Discrete RJ45 Connectors: An Engineer's Decision Guide",
+        "author": { "@type": "Organization", "name": "VOOHU Electronics", "url": "https://www.voohuele.com" },
+        "publisher": { "@type": "Organization", "name": "VOOHU Electronics" },
+        "datePublished": "2025-06-15"
+    }
+    </script>
+    <style>
+        body { font-family: system-ui, sans-serif; max-width: 900px; margin: auto; padding: 20px; line-height: 1.6; color: #1a1a1a; }
+        h1 { color: #1a56db; }
+        h2 { border-bottom: 2px solid #1a56db; padding-bottom: 6px; margin-top: 30px; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f0f4ff; }
+        .cta { display: inline-block; padding: 12px 24px; background: #1a56db; color: #fff; text-decoration: none; border-radius: 6px; margin-top: 15px; }
+        footer { margin-top: 40px; border-top: 1px solid #ddd; padding-top: 20px; color: #666; }
+    </style>
+</head>
+<body>
+    <nav><a href="../index.html">← Back to Home</a> | <a href="../products/integrated.html">Integrated RJ45</a></nav>
+
+    <h1>Integrated vs Discrete RJ45: An Engineer's Decision Guide</h1>
+    <p><strong>Choosing between an integrated RJ45 (with built-in magnetics) and a discrete RJ45 (with external transformer) is one of the first decisions in Ethernet hardware design. Both approaches are valid, but the right choice depends on your specific constraints: PCB space, EMI requirements, development timeline, BOM cost, and design flexibility. This article, from <strong>VOOHU Electronics</strong>, breaks down the trade-offs with objective, engineering-focused criteria.</p>
+
+    <h2>Quick Comparison Table</h2>
+    <table>
+        <tr><th>Criterion</th><th>Integrated RJ45</th><th>Discrete RJ45</th></tr>
+        <tr><td><strong>Components</strong></td><td>1 part (jack + transformer + CMC)</td><td>2-3 parts (jack + transformer + CMC)</td></tr>
+        <tr><td><strong>PCB Area</strong></td><td>~30% smaller footprint</td><td>Larger — transformer needs dedicated space</td></tr>
+        <tr><td><strong>EMI Compliance</strong></td><td>Pre-validated, internally optimized</td><td>Depends entirely on your layout skills</td></tr>
+        <tr><td><strong>Development Time</strong></td><td>~1 week (plug-and-play)</td><td>~3 weeks (layout, debug, EMI test)</td></tr>
+        <tr><td><strong>BOM Unit Cost</strong></td><td>Higher per unit</td><td>Lower per unit, but total BOM may be similar</td></tr>
+        <tr><td><strong>Design Flexibility</strong></td><td>Fixed magnetics parameters</td><td>Freedom to choose any transformer specs</td></tr>
+        <tr><td><strong>PoE Support</strong></td><td>Standard PoE variants available</td><td>Custom transformer for non-standard PoE</td></tr>
+        <tr><td><strong>Supply Chain</strong></td><td>Single source for all magnetics</td><td>Multiple vendors, more sourcing work</td></tr>
+    </table>
+
+    <h2>When to Choose Integrated RJ45</h2>
+    <ul>
+        <li><strong>Compact devices</strong> — IP cameras, IoT gateways, embedded controllers where every square millimeter counts.</li>
+        <li><strong>Tight development schedules</strong> — When you need a validated EMI design out of the box.</li>
+        <li><strong>Standard Ethernet (10/100/1000M)</strong> — Proven, off-the-shelf solutions that just work.</li>
+        <li><strong>Moderate production volumes</strong> — Avoiding separate magnetics sourcing overhead.</li>
+    </ul>
+    <p>👉 See VOOHU's <a href="../products/integrated.html">Integrated RJ45 product line</a> for 100M and Gigabit options with PoE support.</p>
+
+    <h2>When to Choose Discrete RJ45</h2>
+    <ul>
+        <li><strong>Ultra-high-volume products</strong> — Where shaving $0.10 from the BOM matters across millions of units.</li>
+        <li><strong>Specialized isolation requirements</strong> — Medical devices, high-pot test requirements beyond 1500Vrms.</li>
+        <li><strong>Non-standard PoE</strong> — Custom power levels or proprietary power delivery schemes.</li>
+        <li><strong>Environmental extremes</strong> — When the integrated part's temperature or humidity specs aren't sufficient.</li>
+    </ul>
+
+    <h2>The VOOHU Advantage</h2>
+    <p>VOOHU offers both integrated and discrete RJ45 solutions, backed by ISO9001 certified manufacturing and 1,500+ customers including 150+ listed companies. Our integrated RJ45 series covers non-PoE, PoE, PoE+, and 4PPoE (90W) with multiple port configurations (1x1, 1x2, 2x1) and LED options. For engineers requiring flexibility, we also supply discrete network transformers and common-mode chokes.</p>
+    <p>Still unsure which path is right for your design? We provide free samples, 3D models, PCB footprints, and reference designs to help you evaluate both options.</p>
+
+    <a href="https://www.voohuele.com" class="cta">Request Free Samples & Technical Support →</a>
+
+    <footer>
+        <p>📩 <strong>Contact:</strong> wohu05@wohutek.com | WhatsApp: +86 133 5804 1040<br>
+        🌐 <strong>Official Site:</strong> <a href="https://www.voohuele.com">www.voohuele.com</a><br>
+        © 2025 VOOHU Electronics, Suzhou, China</p>
+    </footer>
+</body>
+</html>
