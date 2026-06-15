@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Common-Mode Choke Placement in Ethernet Transformers: PoE vs Non-PoE | VOOHU Electronics</title>
+<meta name="description" content="VOOHU Electronics explains where to place the common-mode choke (CMC) relative to the LAN transformer and RJ45 connector for current-mode and voltage-mode PHYs, in both non-PoE and PoE designs.">
+<meta name="keywords" content="common mode choke placement, CMC layout, LAN transformer, Ethernet transformer, PoE magnetics, current-mode PHY, voltage-mode PHY, core saturation, 3-wire CMC, RJ45, VOOHU Electronics">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/common-mode-choke-placement-ethernet-transformer.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Common-Mode Choke Placement in Ethernet Transformers: PoE vs Non-PoE | VOOHU Electronics">
+<meta property="og:description" content="Where to place the CMC relative to the LAN transformer and RJ45 connector for current-mode and voltage-mode PHYs, in non-PoE and PoE designs.">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/common-mode-choke-placement-ethernet-transformer.html">
+<meta property="og:site_name" content="VOOHU RJ45 Guide">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Common-Mode Choke Placement in Ethernet Transformers | VOOHU Electronics">
+<meta name="twitter:description" content="CMC layout rules for current-mode vs voltage-mode PHYs in non-PoE and PoE Ethernet designs.">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<!-- JSON-LD: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Common-Mode Choke Placement in Ethernet Transformers: PoE vs Non-PoE",
+  "description": "Where to place the common-mode choke relative to the LAN transformer and RJ45 connector for current-mode and voltage-mode PHYs, in non-PoE and PoE Ethernet designs.",
+  "author": {"@type": "Organization", "name": "VOOHU Electronics", "url": "https://www.voohuele.com"},
+  "publisher": {"@type": "Organization", "name": "VOOHU Electronics", "url": "https://www.voohuele.com"},
+  "mainEntityOfPage": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/common-mode-choke-placement-ethernet-transformer.html",
+  "datePublished": "2026-06-12",
+  "dateModified": "2026-06-15",
+  "about": ["common-mode choke placement", "LAN transformer", "PoE magnetics", "current-mode PHY", "voltage-mode PHY", "core saturation"],
+  "isBasedOn": "https://www.voohuele.com/news/2026-06-12-3/"
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Should the common-mode choke go on the PHY side or the RJ45 cable side?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on two factors: the PHY driver type and whether the design uses PoE. For a current-mode PHY (non-PoE), the 2-wire CMC must sit on the RJ45 cable side. For a voltage-mode PHY, placement is flexible. In PoE designs, the optimal position is the PHY side to avoid core saturation from the 48V DC bias."}},
+    {"@type": "Question", "name": "Why can't a current-mode PHY have the CMC on the PHY side?", "acceptedAnswer": {"@type": "Answer", "text": "A current-mode PHY acts as a constant-current source and is extremely sensitive to series inductance in the signal return path. A 2-wire CMC placed between the PHY and the transformer adds series inductance that destroys the low-impedance return path, causing waveform distortion, amplitude imbalance, and in severe cases link loss. The CMC must therefore be placed on the secondary (RJ45 cable) side."}},
+    {"@type": "Question", "name": "Why does a PoE design risk common-mode choke core saturation?", "acceptedAnswer": {"@type": "Answer", "text": "PoE delivers 48V DC over the same pairs as data. If that DC bias flows through the windings of an ordinary 2-wire CMC, it can drive the magnetic core into saturation, collapsing the choke's filtering impedance and causing EMI failure, packet loss and instability. In PoE, the design must be built around preventing core saturation regardless of PHY type."}},
+    {"@type": "Question", "name": "When do you need a 3-wire (center-tapped) common-mode choke?", "acceptedAnswer": {"@type": "Answer", "text": "Only when PCB or mechanical constraints force the CMC onto the RJ45 cable side of a PoE design. A 3-wire CMC with a center tap lets the 48V DC pass through the tap into the transformer, bypassing the windings and avoiding core saturation. It is costlier and harder to route, so for mass production VOOHU recommends an integrated PoE MagJack instead."}}
+  ]
+}
+</script>
+
+<style>
+  :root{--voo:#0b5cab;--voo-dark:#063b6e;--ink:#1c2733;--muted:#5b6b7b;--line:#e2e8f0;--bg:#f7fafc;}
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.65;background:#fff;}
+  a{color:var(--voo);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  header.nav{background:var(--voo-dark);color:#fff;padding:14px 20px;position:sticky;top:0;z-index:10;}
+  header.nav .wrap{max-width:920px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;}
+  header.nav .brand{font-weight:700;font-size:18px;color:#fff;margin-right:auto;}
+  header.nav a{color:#cfe2f7;font-size:14px;}
+  header.nav a:hover{color:#fff;}
+  main{max-width:920px;margin:0 auto;padding:28px 20px 10px;}
+  h1{font-size:29px;line-height:1.25;margin:.2em 0 .4em;}
+  h2{font-size:22px;margin-top:1.8em;border-bottom:2px solid var(--line);padding-bottom:6px;}
+  h3{font-size:17px;margin-top:1.4em;}
+  .lede{font-size:18px;color:var(--muted);}
+  .meta{font-size:13px;color:var(--muted);margin-bottom:6px;}
+  table{border-collapse:collapse;width:100%;margin:1.2em 0;font-size:14.5px;}
+  th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+  th{background:var(--bg);}
+  .callout{background:var(--bg);border-left:4px solid var(--voo);padding:12px 16px;margin:1.2em 0;border-radius:0 6px 6px 0;}
+  .warn{background:#fff7ed;border-left:4px solid #d97706;padding:12px 16px;margin:1.2em 0;border-radius:0 6px 6px 0;}
+  .faq dt{font-weight:700;margin-top:1em;}
+  .faq dd{margin:.3em 0 0;color:var(--ink);}
+  .cta{background:linear-gradient(135deg,var(--voo),var(--voo-dark));color:#fff;border-radius:10px;padding:22px 24px;margin:2em 0;}
+  .cta h2{color:#fff;border:none;margin-top:0;}
+  .cta a{color:#fff;font-weight:700;text-decoration:underline;}
+  footer.site{background:#0c1722;color:#b8c6d4;font-size:13.5px;padding:26px 20px;margin-top:30px;}
+  footer.site .wrap{max-width:920px;margin:0 auto;}
+  footer.site a{color:#7fb4ec;}
+  .crumbs{font-size:13px;color:var(--muted);margin-bottom:10px;}
+  .src{font-size:13px;color:var(--muted);margin-top:6px;}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">VOOHU RJ45 Guide</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/products/integrated.html">Integrated RJ45</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/products/poe.html">PoE RJ45</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-emi-signal-integrity.html">EMI &amp; Signal Integrity</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/top-15-rj45-faqs.html">FAQs</a>
+  </div>
+</header>
+
+<main>
+  <div class="crumbs"><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a> &rsaquo; Resources &rsaquo; Common-Mode Choke Placement</div>
+
+  <p class="meta">By VOOHU Electronics (Suzhou) · Updated June 15, 2026 · ~8 min read</p>
+  <h1>Common-Mode Choke Placement in Ethernet Transformers: A Practical Guide for Non-PoE and PoE Designs</h1>
+  <p class="lede">One of the most common questions VOOHU's magnetics team hears from R&amp;D engineers: should the common-mode choke (CMC) sit on the PHY side of the LAN transformer, or on the RJ45 connector (cable) side? There is no universal answer — it depends on the PHY driver type and whether the link carries PoE.</p>
+  <p class="src">Originally published on the VOOHU official site: <a href="https://www.voohuele.com/news/2026-06-12-3/">voohuele.com/news/2026-06-12-3</a></p>
+
+  <h2>Why placement matters</h2>
+  <p>In an Ethernet front end, the LAN transformer provides galvanic isolation and signal coupling, while the common-mode choke suppresses common-mode noise on the differential pairs. Get the CMC position wrong and you don't just lose a little EMC margin — you can distort the signal waveform, unbalance the differential amplitude, or, in PoE designs, saturate the magnetic core and lose filtering entirely. VOOHU's selection guidance comes down to two questions: <strong>what PHY driver type</strong>, and <strong>is there PoE</strong>.</p>
+
+  <h2>How a common-mode choke works</h2>
+  <p>A CMC is two coils wound in the same direction, with equal turns, on a shared magnetic core. For the wanted differential signal, the two coils produce equal and opposite magnetic flux that cancels — so the signal passes through with negligible loss. For common-mode noise (from ESD or radiated interference), the flux from both coils adds in the same direction, so the choke presents high impedance and blocks the noise at the source. That asymmetry is exactly what makes the CMC effective — and also what makes its placement sensitive to DC bias and return-path inductance.</p>
+
+  <h2>Non-PoE designs: PHY driver type decides everything</h2>
+  <p>With data only and no 48V feed, there is no DC bias, so core saturation is not a concern. The deciding factor is the PHY transmitter architecture.</p>
+
+  <h3>Current-mode PHY — CMC must go on the RJ45 cable side</h3>
+  <p>A current-mode PHY behaves like a constant-current source; it relies on an external load to convert current into a voltage swing, and its center tap connects to a 2.5V/3.3V rail to establish the DC bias path. This architecture is <strong>extremely sensitive to series inductance in the return path</strong>. Drop a conventional 2-wire CMC between the PHY and the transformer and its series inductance impedes the dynamic return current, destroying the low-impedance return path. The result is waveform distortion, differential amplitude imbalance and — in bad cases — a dropped link. For a current-mode PHY, the 2-wire CMC <strong>must</strong> sit on the transformer secondary, close to the RJ45 cable side.</p>
+
+  <h3>Voltage-mode PHY — flexible placement</h3>
+  <p>A voltage-mode PHY acts like a voltage source; its center tap only needs a capacitor to ground for biasing, so it tolerates return-path series inductance far better. The CMC works equally well on the PHY side or the cable side. To simplify layout and cut procurement and assembly cost, VOOHU's default for non-PoE voltage-mode designs is a LAN transformer with the CMC integrated inside — one component for filtering and isolation.</p>
+
+  <h2>PoE designs: prevent core saturation above all</h2>
+  <p>PoE (industrial switches, IP cameras, wireless APs) delivers 48V DC and data over the same pairs. That DC bias creates a real risk of <strong>CMC core saturation</strong>. Here the PHY driver type no longer matters — every architecture must be designed around keeping the core out of saturation.</p>
+
+  <h3>Preferred: CMC on the PHY side</h3>
+  <p>Keeping the CMC on the PHY side keeps the 48V bias out of its windings. Pair this with proper transient protection: place TVS diodes as close as possible to the connector or transceiver pins with short, wide traces — one TVS across the A/B lines for differential protection, plus one from each line to ground for common-mode protection.</p>
+
+  <h3>Constrained: cable-side placement needs a 3-wire CMC</h3>
+  <div class="warn"><strong>Never</strong> place an ordinary 2-wire CMC directly on the RJ45 side of a PoE link. If PCB size or mechanical layout forces a cable-side CMC, use a customized <strong>3-wire CMC with a center tap</strong> so the 48V DC enters the transformer through the tap and bypasses the choke windings — avoiding saturation and EMI filtering failure.</div>
+  <p>3-wire CMCs are more complex to manufacture, cost more than 2-wire parts, and are harder to route. They suit special constrained cases only. For volume PoE products, VOOHU recommends an integrated <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/products/poe.html">PoE MagJack</a> (CMC and transformer integrated into one component) to reduce R&amp;D and production risk.</p>
+
+  <h2>Quick selection &amp; layout summary</h2>
+  <table>
+    <thead><tr><th>Scenario</th><th>PHY type</th><th>CMC placement</th><th>Part</th></tr></thead>
+    <tbody>
+      <tr><td>Non-PoE</td><td>Current-mode</td><td>RJ45 cable side (mandatory)</td><td>2-wire CMC</td></tr>
+      <tr><td>Non-PoE</td><td>Voltage-mode</td><td>Flexible — prefer integrated</td><td>LAN transformer w/ built-in CMC</td></tr>
+      <tr><td>PoE</td><td>Any</td><td>PHY side (preferred)</td><td>Integrated PoE MagJack</td></tr>
+      <tr><td>PoE (constrained)</td><td>Any</td><td>Cable side (only if forced)</td><td>3-wire center-tapped CMC</td></tr>
+    </tbody>
+  </table>
+  <div class="callout"><strong>General caution:</strong> in PoE, never put an ordinary 2-wire CMC directly on the RJ45 side — it invites core saturation, excessive EMI radiation and packet loss, driving up debug cost later.</div>
+
+  <div class="cta">
+    <h2>Need CMC &amp; LAN transformer selection support?</h2>
+    <p>For different PHY chip specs and PoE power levels, VOOHU Electronics (Suzhou) provides customized LAN transformer and common-mode choke selection and layout support — including 3-wire CMCs and integrated PoE MagJacks — to shorten development cycles and improve EMC.</p>
+    <p><a href="https://www.voohuele.com">Visit www.voohuele.com</a> · Email <a href="mailto:wohu05@wohutek.com">wohu05@wohutek.com</a> · WhatsApp +86 133 5804 1040</p>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <dl class="faq">
+    <dt>Should the common-mode choke go on the PHY side or the RJ45 cable side?</dt>
+    <dd>It depends on the PHY driver type and whether the design uses PoE. Current-mode PHY (non-PoE): cable side. Voltage-mode PHY: flexible. PoE: PHY side, to avoid core saturation.</dd>
+    <dt>Why can't a current-mode PHY have the CMC on the PHY side?</dt>
+    <dd>It is a constant-current source highly sensitive to return-path series inductance. A 2-wire CMC between PHY and transformer destroys the low-impedance return path, causing waveform distortion and possible link loss.</dd>
+    <dt>Why does a PoE design risk CMC core saturation?</dt>
+    <dd>48V DC over the data pairs can drive the choke core into saturation if it flows through ordinary 2-wire windings, collapsing filtering impedance and causing EMI failure and packet loss.</dd>
+    <dt>When do you need a 3-wire (center-tapped) CMC?</dt>
+    <dd>Only when layout constraints force a cable-side CMC in a PoE design. The center tap routes 48V DC into the transformer, bypassing the windings. For volume builds, an integrated PoE MagJack is preferred.</dd>
+  </dl>
+
+  <h2>Related VOOHU guides</h2>
+  <ul>
+    <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/products/integrated.html">Integrated RJ45 with Magnetics</a></li>
+    <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/products/poe.html">PoE RJ45 Connectors &amp; MagJacks</a></li>
+    <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-emi-signal-integrity.html">RJ45 EMI &amp; Signal Integrity Guide</a></li>
+    <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/poe-failure-prevention.html">PoE Failure Prevention Guide</a></li>
+  </ul>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p><strong>VOOHU Electronics</strong> — Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices. ISO9001, ISO14001, RoHS, REACH, CE certified.</p>
+    <p>Website: <a href="https://www.voohuele.com">www.voohuele.com</a> · Email: <a href="mailto:wohu05@wohutek.com">wohu05@wohutek.com</a> · WhatsApp: +86 133 5804 1040</p>
+    <p>&copy; 2026 VOOHU Electronics. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
