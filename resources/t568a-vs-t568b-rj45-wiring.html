@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T568A vs T568B: RJ45 Wiring Standards Explained (Pinout &amp; When to Use) | VOOHU Electronics</title>
+<meta name="description" content="VOOHU Electronics explains T568A vs T568B RJ45 wiring: full pin-by-pin pinout, the one difference between them, straight-through vs crossover cables, and which standard to use.">
+<meta name="keywords" content="T568A vs T568B, T568A, T568B, RJ45 wiring, RJ45 pinout, 8P8C pinout, straight-through vs crossover, Ethernet wiring standard, TIA-568, VOOHU Electronics">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/t568a-vs-t568b-rj45-wiring.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="T568A vs T568B: RJ45 Wiring Standards Explained | VOOHU Electronics">
+<meta property="og:description" content="Full pinout for T568A and T568B, the one difference between them, straight-through vs crossover, and which to use.">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/t568a-vs-t568b-rj45-wiring.html">
+<meta property="og:site_name" content="VOOHU RJ45 Guide">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="T568A vs T568B: RJ45 Wiring Explained | VOOHU Electronics">
+<meta name="twitter:description" content="Pinout, the one difference, straight-through vs crossover, and which standard to use.">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<!-- JSON-LD: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "T568A vs T568B: RJ45 Wiring Standards Explained",
+  "description": "Full pin-by-pin pinout for T568A and T568B RJ45 wiring, the single difference between them, straight-through vs crossover cabling, and which standard to use.",
+  "author": {"@type": "Organization", "name": "VOOHU Electronics", "url": "https://www.voohuele.com"},
+  "publisher": {"@type": "Organization", "name": "VOOHU Electronics", "url": "https://www.voohuele.com"},
+  "mainEntityOfPage": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/t568a-vs-t568b-rj45-wiring.html",
+  "datePublished": "2026-06-19",
+  "dateModified": "2026-06-19",
+  "about": ["T568A vs T568B", "RJ45 pinout", "Ethernet wiring standard", "straight-through vs crossover"]
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What is the difference between T568A and T568B?", "acceptedAnswer": {"@type": "Answer", "text": "T568A and T568B are two pin/pair assignment schemes under the TIA-568 standard for 8P8C RJ45 connectors. The only difference is that the orange and green pairs are swapped: pins 1, 2, 3 and 6 differ, while pins 4, 5, 7 and 8 are identical in both. Electrically they perform the same; the key rule is to use one standard consistently at both ends of a cable."}},
+    {"@type": "Question", "name": "Is T568A or T568B better?", "acceptedAnswer": {"@type": "Answer", "text": "Neither is electrically better; both support up to Cat6A and Cat8 and Gigabit/PoE. T568B is the most common choice in US commercial installations, while T568A is common in US residential and is specified by some government and federal projects. Pick the one your project or local standard requires and apply it consistently."}},
+    {"@type": "Question", "name": "What happens if I use T568A on one end and T568B on the other?", "acceptedAnswer": {"@type": "Answer", "text": "Wiring T568A on one end and T568B on the other produces a crossover cable, which swaps transmit and receive pairs. Modern equipment with Auto-MDI-X detects and corrects this automatically, so the link usually still works, but for structured cabling you should keep both ends the same standard to avoid confusion and documentation errors."}},
+    {"@type": "Question", "name": "Does the wiring standard affect Gigabit or PoE?", "acceptedAnswer": {"@type": "Answer", "text": "No. Both T568A and T568B use the same four pairs on the same pin positions, so 1000BASE-T (which uses all four pairs) and Power over Ethernet work identically with either scheme, as long as the cable is wired consistently end to end."}}
+  ]
+}
+</script>
+
+<style>
+  :root{--voo:#0b5cab;--voo-dark:#063b6e;--ink:#1c2733;--muted:#5b6b7b;--line:#e2e8f0;--bg:#f7fafc;}
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.65;background:#fff;}
+  a{color:var(--voo);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  header.nav{background:var(--voo-dark);color:#fff;padding:14px 20px;position:sticky;top:0;z-index:10;}
+  header.nav .wrap{max-width:920px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;}
+  header.nav .brand{font-weight:700;font-size:18px;color:#fff;margin-right:auto;}
+  header.nav a{color:#cfe2f7;font-size:14px;}
+  header.nav a:hover{color:#fff;}
+  main{max-width:920px;margin:0 auto;padding:28px 20px 10px;}
+  h1{font-size:28px;line-height:1.25;margin:.2em 0 .4em;}
+  h2{font-size:22px;margin-top:1.8em;border-bottom:2px solid var(--line);padding-bottom:6px;}
+  h3{font-size:17px;margin-top:1.4em;}
+  .lede{font-size:18px;color:var(--muted);}
+  .meta{font-size:13px;color:var(--muted);margin-bottom:6px;}
+  table{border-collapse:collapse;width:100%;margin:1.2em 0;font-size:14px;}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;}
+  th{background:var(--bg);}
+  .swap{background:#fff7ed;}
+  .callout{background:var(--bg);border-left:4px solid var(--voo);padding:12px 16px;margin:1.2em 0;border-radius:0 6px 6px 0;}
+  .faq dt{font-weight:700;margin-top:1em;}
+  .faq dd{margin:.3em 0 0;color:var(--ink);}
+  .cta{background:linear-gradient(135deg,var(--voo),var(--voo-dark));color:#fff;border-radius:10px;padding:22px 24px;margin:2em 0;}
+  .cta h2{color:#fff;border:none;margin-top:0;}
+  .cta a{color:#fff;font-weight:700;text-decoration:underline;}
+  ul li{margin:.35em 0;}
+  footer.site{background:#0c1722;color:#b8c6d4;font-size:13.5px;padding:26px 20px;margin-top:30px;}
+  footer.site .wrap{max-width:920px;margin:0 auto;}
+  footer.site a{color:#7fb4ec;}
+  .crumbs{font-size:13px;color:var(--muted);margin-bottom:10px;}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">VOOHU RJ45 Guide</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/cat6a-cat8-rj45-selection.html">Cat6A vs Cat8</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/shielded-vs-unshielded-rj45.html">Shielded vs Unshielded</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-installation-maintenance.html">Installation</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/top-15-rj45-faqs.html">FAQs</a>
+  </div>
+</header>
+
+<main>
+  <div class="crumbs"><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a> &rsaquo; Resources &rsaquo; T568A vs T568B</div>
+
+  <p class="meta">By VOOHU Electronics · Updated June 19, 2026 · ~7 min read</p>
+  <h1>T568A vs T568B: RJ45 Wiring Standards Explained</h1>
+  <p class="lede">T568A and T568B are the two standard ways to arrange the eight wires inside an RJ45 (8P8C) connector. They cause endless confusion, but the practical truth is simple: there's only one difference between them, and the golden rule is to stay consistent. This VOOHU Electronics guide gives the full pinout and tells you which to use.</p>
+
+  <h2>The short answer</h2>
+  <p>T568A and T568B are pin/pair assignment schemes defined under the ANSI/TIA-568 cabling standard. <strong>The only difference is that the orange and green pairs are swapped.</strong> Both perform identically and both support Gigabit, 10G and PoE. Use <strong>one</strong> standard at <strong>both</strong> ends of every cable — that consistency matters far more than which one you pick.</p>
+
+  <h2>T568A and T568B pinout</h2>
+  <p>Both schemes use the same four twisted pairs on the same pin groups (pair 1 on pins 4&ndash;5, pair 2 on 1&ndash;2, pair 3 on 3&ndash;6, pair 4 on 7&ndash;8). Only the wire colors on pins 1, 2, 3 and 6 change:</p>
+  <table>
+    <thead><tr><th>Pin</th><th>T568A wire</th><th>T568B wire</th><th>Signal (10/100)</th></tr></thead>
+    <tbody>
+      <tr class="swap"><td>1</td><td>White/Green</td><td>White/Orange</td><td>TX+</td></tr>
+      <tr class="swap"><td>2</td><td>Green</td><td>Orange</td><td>TX-</td></tr>
+      <tr class="swap"><td>3</td><td>White/Orange</td><td>White/Green</td><td>RX+</td></tr>
+      <tr><td>4</td><td>Blue</td><td>Blue</td><td>(unused on 10/100)</td></tr>
+      <tr><td>5</td><td>White/Blue</td><td>White/Blue</td><td>(unused on 10/100)</td></tr>
+      <tr class="swap"><td>6</td><td>Orange</td><td>Green</td><td>RX-</td></tr>
+      <tr><td>7</td><td>White/Brown</td><td>White/Brown</td><td>(unused on 10/100)</td></tr>
+      <tr><td>8</td><td>Brown</td><td>Brown</td><td>(unused on 10/100)</td></tr>
+    </tbody>
+  </table>
+  <p class="meta">Highlighted rows (pins 1, 2, 3, 6) are the only positions that differ. Pins 4, 5, 7, 8 are identical in both standards. On 1000BASE-T (Gigabit) all four pairs carry data bidirectionally.</p>
+
+  <h2>Straight-through vs crossover cables</h2>
+  <p>The two standards are how you make the two common cable types:</p>
+  <ul>
+    <li><strong>Straight-through cable:</strong> the same standard (A&ndash;A or B&ndash;B) on both ends. This is the normal patch cable connecting a PC, phone or device to a switch or wall jack.</li>
+    <li><strong>Crossover cable:</strong> T568A on one end and T568B on the other. This swaps the transmit and receive pairs and was historically used to connect two like devices directly (PC-to-PC, switch-to-switch).</li>
+  </ul>
+  <div class="callout"><strong>Crossover cables are largely obsolete.</strong> Virtually all modern Ethernet ports support Auto-MDI-X, which detects and corrects the TX/RX orientation automatically — so a straight-through cable works even between two switches. Build straight-through (B&ndash;B is most common) unless a specific legacy device requires a crossover.</div>
+
+  <h2>Which standard should you use?</h2>
+  <p>Neither is electrically superior, so the choice is about convention and consistency:</p>
+  <ul>
+    <li><strong>T568B</strong> is the most widely used scheme in US commercial installations and is what most pre-made patch cords follow.</li>
+    <li><strong>T568A</strong> is common in US residential work and is specified by some US government and federal projects, and is more common in certain other regions.</li>
+    <li><strong>Pick one and standardize.</strong> Choose the standard your customer spec, local code, or existing plant uses, document it, and wire every jack and cord the same way. Mixing schemes within a site is the real source of faults and troubleshooting headaches.</li>
+  </ul>
+  <p>Quality RJ45 jacks and keystone modules are printed with <em>both</em> A and B color codes on the housing, so the same connector supports either scheme — you simply punch down to the row you've standardized on.</p>
+
+  <h2>Common mistakes</h2>
+  <ul>
+    <li>Accidentally wiring one end A and the other B and creating an unintended crossover.</li>
+    <li>Splitting pairs (not following the pair groupings), which destroys twist and ruins high-speed performance &mdash; see our <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-emi-signal-integrity.html">signal-integrity guide</a>.</li>
+    <li>Mixing A and B across a building with no documentation.</li>
+    <li>Untwisting too much wire at the connector, hurting Cat6A/Cat8 margin &mdash; see <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/cat6a-cat8-rj45-selection.html">Cat6A vs Cat8 selection</a>.</li>
+  </ul>
+
+  <div class="cta">
+    <h2>Need RJ45 jacks, plugs or keystones?</h2>
+    <p>VOOHU Electronics manufactures standard, shielded, integrated-magnetics, PoE and waterproof RJ45 connectors and keystones marked for both T568A and T568B wiring. Request datasheets or samples for your build.</p>
+    <p><a href="https://www.voohuele.com">Visit www.voohuele.com</a> · Email <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> · WhatsApp +86 133 5804 1040</p>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <dl class="faq">
+    <dt>What is the difference between T568A and T568B?</dt>
+    <dd>Only the orange and green pairs are swapped — pins 1, 2, 3 and 6 differ; pins 4, 5, 7 and 8 are identical. Electrically they perform the same; use one standard consistently at both ends.</dd>
+    <dt>Is T568A or T568B better?</dt>
+    <dd>Neither is electrically better; both support Cat6A/Cat8, Gigabit and PoE. T568B dominates US commercial work; T568A is common in US residential and some government specs. Pick one and standardize.</dd>
+    <dt>What happens if I use T568A on one end and T568B on the other?</dt>
+    <dd>You create a crossover cable. Modern Auto-MDI-X ports correct it automatically so it usually still works, but for structured cabling keep both ends the same standard.</dd>
+    <dt>Does the wiring standard affect Gigabit or PoE?</dt>
+    <dd>No. Both use the same four pairs on the same pins, so 1000BASE-T and PoE work identically with either, as long as the cable is wired consistently end to end.</dd>
+  </dl>
+
+  <h2>Related VOOHU guides</h2>
+  <ul>
+    <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/cat6a-cat8-rj45-selection.html">Cat6A vs Cat8 RJ45 Selection</a></li>
+    <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/shielded-vs-unshielded-rj45.html">Shielded vs Unshielded RJ45</a></li>
+    <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-installation-maintenance.html">RJ45 Installation &amp; Maintenance</a></li>
+    <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-emi-signal-integrity.html">RJ45 EMI &amp; Signal Integrity</a></li>
+  </ul>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p><strong>VOOHU Electronics</strong> — Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices. ISO9001, ISO14001, RoHS, REACH, CE certified.</p>
+    <p>Website: <a href="https://www.voohuele.com">www.voohuele.com</a> · Email: <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> · WhatsApp: +86 133 5804 1040</p>
+    <p>&copy; 2026 VOOHU Electronics. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
