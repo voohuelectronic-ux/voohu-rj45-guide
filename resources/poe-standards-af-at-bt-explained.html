@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PoE, PoE+, PoE++ Explained: 802.3af vs at vs bt (Power &amp; Types) | VOOHU Electronics</title>
+<meta name="description" content="VOOHU Electronics explains PoE standards: 802.3af (PoE), 802.3at (PoE+) and 802.3bt (PoE++ / Type 3 &amp; 4) — power levels, 2-pair vs 4-pair delivery, cabling and connector requirements.">
+<meta name="keywords" content="PoE PoE+ PoE++, 802.3af, 802.3at, 802.3bt, PoE types, PoE power levels, 4PPoE, PoE standards, PoE connector, PoE RJ45, VOOHU Electronics">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/poe-standards-af-at-bt-explained.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="PoE, PoE+, PoE++ Explained: 802.3af vs at vs bt | VOOHU Electronics">
+<meta property="og:description" content="Power levels, 2-pair vs 4-pair delivery, cabling and connector requirements across PoE, PoE+ and PoE++ (802.3af/at/bt).">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/poe-standards-af-at-bt-explained.html">
+<meta property="og:site_name" content="VOOHU RJ45 Guide">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PoE vs PoE+ vs PoE++ Explained | VOOHU Electronics">
+<meta name="twitter:description" content="802.3af/at/bt power tiers, 2-pair vs 4-pair, and connector requirements.">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<!-- JSON-LD: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "PoE, PoE+, PoE++ Explained: 802.3af vs at vs bt",
+  "description": "An explanation of PoE standards 802.3af, 802.3at and 802.3bt: power levels, 2-pair vs 4-pair delivery, cabling and connector requirements.",
+  "author": {"@type": "Organization", "name": "VOOHU Electronics", "url": "https://www.voohuele.com"},
+  "publisher": {"@type": "Organization", "name": "VOOHU Electronics", "url": "https://www.voohuele.com"},
+  "mainEntityOfPage": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/poe-standards-af-at-bt-explained.html",
+  "datePublished": "2026-06-20",
+  "dateModified": "2026-06-20",
+  "about": ["PoE standards", "802.3af", "802.3at", "802.3bt", "PoE connector"]
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What is the difference between PoE, PoE+ and PoE++?", "acceptedAnswer": {"@type": "Answer", "text": "PoE (IEEE 802.3af, Type 1) delivers up to 15.4 W from the switch and about 12.95 W at the device over 2 pairs. PoE+ (802.3at, Type 2) delivers 30 W from the switch and about 25.5 W at the device over 2 pairs. PoE++ (802.3bt) covers Type 3 (60 W source, ~51 W at the device) and Type 4 (up to ~90-100 W source, ~71.3 W at the device), both using all 4 pairs."}},
+    {"@type": "Question", "name": "Does PoE++ (802.3bt) need special cabling?", "acceptedAnswer": {"@type": "Answer", "text": "PoE++ uses all four pairs and higher current, so heat rises in the bundle. Cat5e can carry it electrically, but Cat6 or Cat6A is recommended for Type 3/4 to manage temperature rise, especially in large bundles, and connectors must be rated for the per-contact current. Follow cable bundle derating guidance for high-power PoE."}},
+    {"@type": "Question", "name": "How many pairs does each PoE type use?", "acceptedAnswer": {"@type": "Answer", "text": "802.3af and 802.3at deliver power over 2 of the 4 pairs (Mode A or Mode B). 802.3bt Type 3 and Type 4 deliver power over all 4 pairs (4-pair PoE, also called 4PPoE), which lowers per-pair current and enables higher total power."}},
+    {"@type": "Question", "name": "What voltage does PoE use?", "acceptedAnswer": {"@type": "Answer", "text": "PoE operates at a nominal 48 V DC. The power-sourcing equipment typically outputs in the range of about 44 to 57 V, and the powered device sees roughly 37 to 57 V depending on the type, with the standard handling negotiation and classification automatically."}}
+  ]
+}
+</script>
+
+<style>
+  :root{--voo:#0b5cab;--voo-dark:#063b6e;--ink:#1c2733;--muted:#5b6b7b;--line:#e2e8f0;--bg:#f7fafc;}
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.65;background:#fff;}
+  a{color:var(--voo);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  header.nav{background:var(--voo-dark);color:#fff;padding:14px 20px;position:sticky;top:0;z-index:10;}
+  header.nav .wrap{max-width:920px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;}
+  header.nav .brand{font-weight:700;font-size:18px;color:#fff;margin-right:auto;}
+  header.nav a{color:#cfe2f7;font-size:14px;}
+  header.nav a:hover{color:#fff;}
+  main{max-width:920px;margin:0 auto;padding:28px 20px 10px;}
+  h1{font-size:27px;line-height:1.25;margin:.2em 0 .4em;}
+  h2{font-size:22px;margin-top:1.8em;border-bottom:2px solid var(--line);padding-bottom:6px;}
+  h3{font-size:17px;margin-top:1.4em;}
+  .lede{font-size:18px;color:var(--muted);}
+  .meta{font-size:13px;color:var(--muted);margin-bottom:6px;}
+  table{border-collapse:collapse;width:100%;margin:1.2em 0;font-size:14px;}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;}
+  th{background:var(--bg);}
+  .callout{background:var(--bg);border-left:4px solid var(--voo);padding:12px 16px;margin:1.2em 0;border-radius:0 6px 6px 0;}
+  .warn{background:#fff7ed;border-left:4px solid #d97706;padding:12px 16px;margin:1.2em 0;border-radius:0 6px 6px 0;}
+  .faq dt{font-weight:700;margin-top:1em;}
+  .faq dd{margin:.3em 0 0;color:var(--ink);}
+  .cta{background:linear-gradient(135deg,var(--voo),var(--voo-dark));color:#fff;border-radius:10px;padding:22px 24px;margin:2em 0;}
+  .cta h2{color:#fff;border:none;margin-top:0;}
+  .cta a{color:#fff;font-weight:700;text-decoration:underline;}
+  ul li{margin:.35em 0;}
+  footer.site{background:#0c1722;color:#b8c6d4;font-size:13.5px;padding:26px 20px;margin-top:30px;}
+  footer.site .wrap{max-width:920px;margin:0 auto;}
+  footer.site a{color:#7fb4ec;}
+  .crumbs{font-size:13px;color:var(--muted);margin-bottom:10px;}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">VOOHU RJ45 Guide</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/products/poe.html">PoE RJ45</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/poe-failure-prevention.html">PoE Failure Prevention</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-materials-plating.html">Materials &amp; Plating</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/top-15-rj45-faqs.html">FAQs</a>
+  </div>
+</header>
+
+<main>
+  <div class="crumbs"><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a> &rsaquo; Resources &rsaquo; PoE Standards Explained</div>
+
+  <p class="meta">By VOOHU Electronics · Updated June 20, 2026 · ~8 min read</p>
+  <h1>PoE, PoE+, PoE++ Explained: 802.3af vs 802.3at vs 802.3bt</h1>
+  <p class="lede">Power over Ethernet sends DC power and data down the same RJ45 cable, but "PoE", "PoE+" and "PoE++" hide four different IEEE power tiers. This VOOHU Electronics guide lays out the standards, the power each delivers, 2-pair vs 4-pair delivery, and what they demand from the cable and connector.</p>
+
+  <h2>The PoE standards at a glance</h2>
+  <table>
+    <thead><tr><th>Name</th><th>IEEE standard</th><th>Type</th><th>Power at switch (PSE)</th><th>Power at device (PD)</th><th>Pairs used</th></tr></thead>
+    <tbody>
+      <tr><td>PoE</td><td>802.3af (2003)</td><td>Type 1</td><td>15.4 W</td><td>~12.95 W</td><td>2 pairs</td></tr>
+      <tr><td>PoE+</td><td>802.3at (2009)</td><td>Type 2</td><td>30 W</td><td>~25.5 W</td><td>2 pairs</td></tr>
+      <tr><td>PoE++ (4PPoE)</td><td>802.3bt (2018)</td><td>Type 3</td><td>60 W</td><td>~51 W</td><td>4 pairs</td></tr>
+      <tr><td>PoE++ (4PPoE)</td><td>802.3bt (2018)</td><td>Type 4</td><td>~90&ndash;100 W</td><td>~71.3 W</td><td>4 pairs</td></tr>
+    </tbody>
+  </table>
+  <p class="meta">PSE = power sourcing equipment (the switch/injector). PD = powered device. The gap between PSE and PD power is loss in the cable. Nominal voltage is 48 V DC (PSE typically ~44&ndash;57 V).</p>
+
+  <h2>What the differences actually mean</h2>
+  <h3>PoE (802.3af, Type 1)</h3>
+  <p>The original standard: up to 15.4 W from the switch, about 12.95 W usable at the device over two pairs. Enough for VoIP phones, basic Wi-Fi access points and simple IP cameras.</p>
+  <h3>PoE+ (802.3at, Type 2)</h3>
+  <p>Doubles source power to 30 W (~25.5 W at the device), still over two pairs. Powers PTZ cameras, dual-radio access points and thin clients.</p>
+  <h3>PoE++ (802.3bt, Type 3 &amp; 4)</h3>
+  <p>802.3bt introduced 4-pair power delivery (4PPoE). Type 3 supplies 60 W (~51 W at the device); Type 4 supplies up to ~90&ndash;100 W (~71.3 W at the device). This runs Wi-Fi 6/7 APs, video conferencing units, LED lighting, building access systems and even some laptops and displays.</p>
+
+  <h2>2-pair vs 4-pair delivery</h2>
+  <p>802.3af/at deliver power on two of the four pairs (Mode A puts power on the data pairs; Mode B on the spare pairs). 802.3bt uses <strong>all four pairs</strong>, which halves the current per pair for a given power and is what enables the higher Type 3/4 wattage. Spreading current across four pairs also reduces heating and voltage drop.</p>
+  <div class="callout">Power classes 0&ndash;8 let the PSE and PD negotiate exactly how much power is needed, so a device only draws what it requires and the switch can budget its total PoE power across ports.</div>
+
+  <h2>Cabling and connector requirements</h2>
+  <p>Higher PoE power means higher current, and current means heat and contact stress:</p>
+  <ul>
+    <li><strong>Cable grade:</strong> Cat5e carries PoE electrically, but Cat6/Cat6A is recommended for 802.3bt Type 3/4 to manage temperature rise — particularly in large, tightly packed bundles where derating applies.</li>
+    <li><strong>Connector current rating:</strong> the RJ45 contacts must handle the per-pin current without overheating. For 4PPoE this is a real selection criterion, not a formality.</li>
+    <li><strong>Plating and arc resistance:</strong> disconnecting a connector under load can arc and erode the contact. Quality gold plating over proper nickel resists fretting and arcing — see our <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-materials-plating.html">materials &amp; plating guide</a>.</li>
+    <li><strong>Integrated magnetics:</strong> PoE designs often use integrated-magnetics jacks (PoE MagJacks) rated for the bias current; see our <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/common-mode-choke-placement-ethernet-transformer.html">CMC placement guide</a> for the magnetics side.</li>
+  </ul>
+  <div class="warn">Under-rated connectors are a leading cause of PoE field failures. For high-power PoE, choose RJ45 connectors explicitly rated for 802.3bt current and verify thermal performance — see our <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/poe-failure-prevention.html">PoE failure-prevention guide</a>.</div>
+
+  <h2>How to choose</h2>
+  <ul>
+    <li><strong>Match the type to the load:</strong> phone/basic AP &rarr; PoE (af); PTZ camera/dual-radio AP &rarr; PoE+ (at); Wi-Fi 6/7 AP, lighting, displays &rarr; PoE++ (bt Type 3/4).</li>
+    <li><strong>Budget at the switch:</strong> confirm the PSE's total PoE power budget covers all ports at their class, not just one port's maximum.</li>
+    <li><strong>Specify cable and connector for the power tier,</strong> including bundle derating for 4PPoE.</li>
+  </ul>
+
+  <div class="cta">
+    <h2>Need PoE-rated RJ45 connectors?</h2>
+    <p>VOOHU Electronics manufactures PoE and PoE++ (802.3bt) rated RJ45 connectors and integrated-magnetics MagJacks, with plating and contacts engineered for high-current delivery. Request datasheets or samples to validate your PoE design.</p>
+    <p><a href="https://www.voohuele.com">Visit www.voohuele.com</a> · Email <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> · WhatsApp +86 133 5804 1040</p>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <dl class="faq">
+    <dt>What is the difference between PoE, PoE+ and PoE++?</dt>
+    <dd>PoE (802.3af, Type 1): 15.4 W source / ~12.95 W device, 2 pairs. PoE+ (802.3at, Type 2): 30 W / ~25.5 W, 2 pairs. PoE++ (802.3bt): Type 3 = 60 W / ~51 W and Type 4 = ~90&ndash;100 W / ~71.3 W, both 4 pairs.</dd>
+    <dt>Does PoE++ (802.3bt) need special cabling?</dt>
+    <dd>It uses all four pairs and higher current, so heat rises. Cat5e works electrically, but Cat6/Cat6A is recommended for Type 3/4, and connectors must be rated for the per-contact current. Apply bundle derating.</dd>
+    <dt>How many pairs does each PoE type use?</dt>
+    <dd>802.3af/at use 2 pairs (Mode A or B). 802.3bt Type 3/4 use all 4 pairs (4PPoE), lowering per-pair current and enabling higher power.</dd>
+    <dt>What voltage does PoE use?</dt>
+    <dd>Nominal 48 V DC; the PSE typically outputs about 44&ndash;57 V, with negotiation and classification handled automatically by the standard.</dd>
+  </dl>
+
+  <h2>Related VOOHU guides</h2>
+  <ul>
+    <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/poe-failure-prevention.html">PoE Failure Prevention Guide</a></li>
+    <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/products/poe.html">PoE RJ45 Connectors &amp; MagJacks</a></li>
+    <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-materials-plating.html">RJ45 Materials &amp; Plating Reliability</a></li>
+    <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/cat6a-cat8-rj45-selection.html">Cat6A vs Cat8 RJ45 Selection</a></li>
+  </ul>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p><strong>VOOHU Electronics</strong> — Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices. ISO9001, ISO14001, RoHS, REACH, CE certified.</p>
+    <p>Website: <a href="https://www.voohuele.com">www.voohuele.com</a> · Email: <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> · WhatsApp: +86 133 5804 1040</p>
+    <p>&copy; 2026 VOOHU Electronics. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
