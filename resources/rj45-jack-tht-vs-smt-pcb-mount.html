@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Through-Hole vs Surface-Mount RJ45 Jacks: PCB-Mount Selection Guide — VOOHU Electronics</title>
+<meta name="description" content="THT vs SMT RJ45 jacks compared: solder process, mechanical strength, board locks, density and rework. VOOHU explains how to choose the right PCB-mount RJ45 socket (母座) with real IEC 60603-7, TIA-568, IEEE 802.3 and J-STD-020 parameters.">
+<meta name="keywords" content="RJ45 jack THT vs SMT, through-hole RJ45 socket, surface-mount RJ45 jack, PCB-mount RJ45 connector, RJ45 母座, integrated magnetics RJ45, sink-type RJ45, VOOHU RJ45 jack, IEC 60603-7, J-STD-020 reflow">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-tht-vs-smt-pcb-mount.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VOOHU RJ45 Connector Guide">
+<meta property="og:title" content="Through-Hole vs Surface-Mount RJ45 Jacks: PCB-Mount Selection Guide — VOOHU Electronics">
+<meta property="og:description" content="THT vs SMT RJ45 jacks compared — solder process, mechanical strength, board locks, density and rework — with real IEC 60603-7, TIA-568, IEEE 802.3 and J-STD-020 parameters from VOOHU.">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-tht-vs-smt-pcb-mount.html">
+<meta property="og:image" content="https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Through-Hole vs Surface-Mount RJ45 Jacks: PCB-Mount Selection Guide — VOOHU">
+<meta name="twitter:description" content="How to choose between THT and SMT RJ45 jacks (母座): mechanical strength, board locks, reflow vs wave solder, density and rework — with sourced specs.">
+<meta name="twitter:image" content="https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<!-- JSON-LD: TechArticle -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Through-Hole vs Surface-Mount RJ45 Jacks: PCB-Mount Selection Guide — VOOHU Electronics",
+  "description": "A practical engineering comparison of through-hole (THT) and surface-mount (SMT) RJ45 jacks / female modular sockets, including solder process, mechanical strength, board-lock retention, PCB density and rework, with sourced IEC 60603-7, ANSI/TIA-568, IEEE 802.3 and IPC J-STD-020 parameters.",
+  "author": {"@type": "Organization", "name": "VOOHU Electronics", "url": "https://www.voohuele.com"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "logo": {"@type": "ImageObject", "url": "https://www.voohuele.com/upload/image/20241210/c0db5d4f8ac1de5520bf94745ed32180.svg"}
+  },
+  "datePublished": "2026-06-29",
+  "dateModified": "2026-06-29",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-tht-vs-smt-pcb-mount.html"},
+  "image": "https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp",
+  "about": ["RJ45 jack", "Through-hole technology", "Surface-mount technology", "PCB-mount modular socket", "Integrated magnetics RJ45"],
+  "keywords": "RJ45 jack THT vs SMT, through-hole RJ45 socket, surface-mount RJ45 jack, PCB-mount RJ45, integrated magnetics RJ45, IEC 60603-7, J-STD-020"
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are most RJ45 jacks through-hole or surface-mount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The majority of panel-facing RJ45 jacks — including integrated-magnetics (magjack) sink-type modules such as VOOHU's 1x1, 1xN and 2xN parts — are through-hole (THT). The leads anchor through the PCB, which best resists the repeated plug-in force a connector sees. Surface-mount (SMT) RJ45 jacks exist for low-profile, space-constrained and high-volume automated designs, and almost always add metal board locks for mechanical strength."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is through-hole stronger for an RJ45 jack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A through-hole jack's solder tails pass through plated holes and are soldered on the far side, so mating and cable loads are carried in shear by the barrel of the hole rather than only by a surface pad. SMT joints rely on pad adhesion and added board locks. Because an RJ45 connector is rated for at least 750 mating cycles per IEC 60603-7, the mechanical anchoring of THT is valued in front-panel, industrial and PoE designs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a surface-mount RJ45 jack survive reflow soldering?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, provided the part is specified for the reflow profile. SMT RJ45 jacks are built with high-temperature thermoplastic bodies that withstand a J-STD-020 reflow peak of up to about 260 C. Always confirm the moisture-sensitivity level (MSL) and reflow rating on the datasheet, and never reflow a part qualified only for wave or selective soldering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does THT or SMT affect the electrical performance of the RJ45 jack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The mounting method is mechanical; the contact system sets the electrical class. A Cat5e, Cat6 or Cat6A jack must still meet ANSI/TIA-568 NEXT and return-loss limits whether it is THT or SMT. What the mount does influence is launch geometry and ground return, so for 2.5G/5G and 10GBASE-T designs keep tails short and provide a clean shield path regardless of mount style."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root { --brand:#0b5cab; --brand-dark:#08407a; --ink:#1c2733; --muted:#5b6b7a; --line:#e2e8f0; --bg:#f6f9fc; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:#fff; line-height:1.65; }
+  a { color:var(--brand); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .nav { position:sticky; top:0; z-index:50; background:var(--brand); color:#fff; }
+  .nav .wrap { max-width:920px; margin:0 auto; padding:11px 18px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center; }
+  .nav .brand { font-weight:700; letter-spacing:.3px; margin-right:6px; }
+  .nav a { color:#eaf2fb; font-size:14px; }
+  .nav a:hover { color:#fff; }
+  .container { max-width:920px; margin:0 auto; padding:0 18px 60px; }
+  .crumb { font-size:13px; color:var(--muted); margin:18px 0 6px; }
+  .crumb a { color:var(--muted); }
+  h1 { font-size:30px; line-height:1.25; margin:10px 0 8px; }
+  h2 { font-size:22px; margin:34px 0 10px; color:var(--brand-dark); border-bottom:2px solid var(--bg); padding-bottom:6px; }
+  h3 { font-size:18px; margin:22px 0 6px; }
+  .updated { color:var(--muted); font-size:14px; margin-bottom:6px; }
+  .lede { font-size:18px; color:#2a3a49; }
+  .short { background:var(--bg); border-left:4px solid var(--brand); padding:14px 18px; border-radius:6px; margin:20px 0; }
+  table { width:100%; border-collapse:collapse; margin:18px 0; font-size:15px; }
+  th, td { border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--brand); color:#fff; font-weight:600; }
+  tr:nth-child(even) td { background:#fafcff; }
+  caption { caption-side:top; text-align:left; font-size:13px; color:var(--muted); margin-bottom:6px; }
+  .note { font-size:13px; color:var(--muted); }
+  ul.tight li { margin:5px 0; }
+  .related { background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:16px 20px; margin:30px 0; }
+  .related h2 { border:none; margin-top:0; }
+  .faq h3 { color:var(--brand-dark); }
+  footer { background:#0e1c2b; color:#cdd9e5; font-size:14px; }
+  footer .wrap { max-width:920px; margin:0 auto; padding:26px 18px; }
+  footer strong { color:#fff; }
+  footer a { color:#9ec5f0; }
+  .tag { display:inline-block; background:#eaf2fb; color:var(--brand-dark); font-size:12px; padding:2px 9px; border-radius:20px; margin:2px 4px 2px 0; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <span class="brand">VOOHU RJ45 Guide</span>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-vs-discrete.html">Integrated vs Discrete</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-orientation-tab-up-vs-tab-down.html">Tab-Up vs Tab-Down</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-materials-plating.html">Materials &amp; Plating</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/harsh-environment-rj45.html">Harsh Environment</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="crumb">
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a> &rsaquo;
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Resources</a> &rsaquo;
+    Through-Hole vs Surface-Mount RJ45 Jacks
+  </div>
+
+  <h1>Through-Hole vs Surface-Mount RJ45 Jacks: A PCB-Mount Selection Guide</h1>
+  <div class="updated">Updated June 29, 2026 · By VOOHU Electronics</div>
+
+  <p class="lede">When you specify an RJ45 jack — the female modular socket (母座) that the cable plug mates into — one of the first board-level decisions is how it attaches to the PCB: through-hole (THT) or surface-mount (SMT). The choice quietly drives mechanical robustness, assembly cost, board density and field reliability. This guide compares the two for RJ45 jacks specifically, with parameters sourced from IEC 60603-7, ANSI/TIA-568, IEEE 802.3 and IPC J-STD-020, and shows where VOOHU's jack range fits.</p>
+
+  <div class="short">
+    <strong>Short answer:</strong> Use <strong>through-hole (THT)</strong> for almost any panel-facing or integrated-magnetics RJ45 jack that takes repeated cable insertion — its soldered tails anchor through the board and best resist the mating force across the connector's ≥750-cycle life (IEC 60603-7). Use <strong>surface-mount (SMT)</strong> when you need a low-profile, space-saving jack on a high-volume automated line, and always pair it with metal <em>board locks</em> for mechanical strength. The mount is a mechanical decision; the contact system — not THT vs SMT — sets the Cat5e/Cat6/Cat6A electrical class.
+  </div>
+
+  <h2>What "through-hole" and "surface-mount" mean for a jack</h2>
+  <p>A <strong>through-hole (THT)</strong> RJ45 jack has solder tails (and usually metal board-lock pegs) that pass through plated holes in the PCB and are soldered on the opposite side, typically by wave or selective soldering. The barrel of each plated hole grips the lead, so mechanical loads are carried in shear by the board itself. This is why the classic sink-type integrated-magnetics jack — VOOHU's 1×1, 1×N and 2×N modules in 90° and 180° vertical mounts — is overwhelmingly through-hole.</p>
+  <p>A <strong>surface-mount (SMT)</strong> RJ45 jack terminates on pads on the board surface and is soldered in the same reflow pass as the rest of the assembly. It removes the routing-blocking holes from inner layers and suits fully automated pick-and-place lines, but each joint relies on pad adhesion, so SMT jacks add through-hole or SMT <em>board locks</em> to carry the plug-in force the solder pads alone should not.</p>
+
+  <h2>THT vs SMT RJ45 jacks compared</h2>
+  <table>
+    <caption>Table 1 — Mechanical and process comparison for PCB-mount RJ45 jacks.</caption>
+    <thead><tr><th>Attribute</th><th>Through-Hole (THT)</th><th>Surface-Mount (SMT)</th></tr></thead>
+    <tbody>
+      <tr><td>Attachment</td><td>Solder tails + board-lock pegs inserted into plated holes, soldered on far side</td><td>Terminations soldered to surface pads; board locks added for strength</td></tr>
+      <tr><td>Solder process</td><td>Wave or selective soldering (or hand)</td><td>Reflow, in the main SMT pass (J-STD-020 profile, up to ~260&nbsp;°C peak)</td></tr>
+      <tr><td>Mechanical strength under mating force</td><td>Highest — load carried through the board barrel</td><td>Lower at the joint; depends on board locks + pad adhesion</td></tr>
+      <tr><td>PCB density / routing</td><td>Holes consume inner-layer routing area; single-sided placement near the part</td><td>Frees inner layers; supports denser, double-sided layouts</td></tr>
+      <tr><td>Assembly fit</td><td>Adds a wave/selective step if the board is otherwise all-SMT</td><td>One reflow pass; lowest touch labor at volume</td></tr>
+      <tr><td>Rework</td><td>Robust joints; multi-pin desolder is laborious</td><td>Hot-air reworkable, but watch pad lift and lock damage</td></tr>
+      <tr><td>Typical RJ45 use</td><td>Front-panel jacks, integrated magjacks (sink-type), industrial &amp; PoE, harsh environments</td><td>Low-profile internal jacks, space-constrained boards, high-volume consumer lines</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Specs that stay the same — and the ones to check per mount</h2>
+  <p>Mounting style is mechanical: the contact system sets the electrical class. An 8P8C RJ45 jack carries the same core ratings whether THT or SMT. The values below are the connector-class figures you can cite and verify; confirm the exact number on the part datasheet.</p>
+  <table>
+    <caption>Table 2 — Representative RJ45 jack parameters and their governing standards.</caption>
+    <thead><tr><th>Parameter</th><th>Typical value</th><th>Source / standard</th></tr></thead>
+    <tbody>
+      <tr><td>Durability (mating cycles)</td><td>≥ 750 cycles</td><td>IEC 60603-7</td></tr>
+      <tr><td>Current rating per contact</td><td>1.5 A</td><td>IEC 60603-7</td></tr>
+      <tr><td>Contact resistance</td><td>≤ 20 mΩ</td><td>IEC 60603-7-class datasheets</td></tr>
+      <tr><td>Insulation resistance</td><td>≥ 500 MΩ</td><td>IEC 60603-7-class datasheets</td></tr>
+      <tr><td>Dielectric withstanding (jack)</td><td>1000 V AC, 1 min</td><td>IEC 60603-7-class datasheets</td></tr>
+      <tr><td>Isolation, integrated magnetics (magjack)</td><td>1500 V rms</td><td>IEEE 802.3</td></tr>
+      <tr><td>Contact plating (mating area)</td><td>Gold over nickel — e.g. 6 / 15 / 30 / 50 µin (0.15 / 0.38 / 0.76 / 1.27 µm)</td><td>Industry plating tiers</td></tr>
+      <tr><td>Category bandwidth</td><td>Cat5e 100 MHz · Cat6 250 MHz · Cat6A 500 MHz</td><td>ANSI/TIA-568</td></tr>
+      <tr><td>Operating temperature</td><td>−40 to +85 °C (industrial); 0 to +70 °C (commercial)</td><td>VOOHU integrated RJ45 range</td></tr>
+      <tr><td>Reflow peak (SMT parts)</td><td>up to ~260 °C</td><td>IPC J-STD-020</td></tr>
+    </tbody>
+  </table>
+  <p class="note">µin = microinch; 1 µin = 0.0254 µm. Heavier gold (30–50 µin) is chosen for high-cycle or corrosive service; thinner gold (6–15 µin) suits cost-sensitive indoor use. See our materials &amp; plating guide for the full trade-off.</p>
+
+  <h2>How to choose: a quick decision guide</h2>
+  <ul class="tight">
+    <li><strong>Front-panel jack taking lots of plugging?</strong> Choose THT. The through-board anchoring is the cheapest insurance against a cracked joint after hundreds of mating cycles.</li>
+    <li><strong>Integrated-magnetics (magjack) socket?</strong> These are typically THT sink-type modules (90°/180°), and VOOHU supplies 1×1, 1×N and 2×N versions from 10/100 up to 2.5G/5G/10G and HDBaseT, with or without LEDs.</li>
+    <li><strong>Industrial, PoE or harsh-environment design?</strong> Favor THT plus −40 to +85 °C parts and heavier gold; mechanical margin matters more than board area.</li>
+    <li><strong>Tight, all-SMT, high-volume consumer board?</strong> An SMT jack with board locks removes the wave-solder step and frees inner-layer routing — just confirm the MSL and reflow rating.</li>
+    <li><strong>2.5G/5G or 10GBASE-T launch?</strong> Either mount works electrically; keep tails short, control the footprint, and provide a clean shield/ground return to protect return loss and NEXT.</li>
+  </ul>
+
+  <h2>Common mistakes</h2>
+  <ul class="tight">
+    <li><strong>Trusting SMT pads alone for retention.</strong> Without board locks, repeated plug insertion peels pads — always add mechanical anchors to an SMT jack.</li>
+    <li><strong>Reflowing a wave-only part.</strong> A jack qualified for selective/wave solder can deform at reflow peak. Match the part's J-STD-020 rating to your process.</li>
+    <li><strong>Ignoring moisture sensitivity (MSL).</strong> SMT magjacks have an MSL; skipping the bake before reflow risks popcorning the body.</li>
+    <li><strong>Assuming the mount changes the data class.</strong> It does not — a Cat6A jack must meet TIA-568 limits either way; layout and shielding decide signal integrity.</li>
+    <li><strong>Letting hole placement block routing.</strong> THT tails and board locks eat inner-layer space; plan the keep-out early instead of fighting it at layout.</li>
+    <li><strong>Mismatching temperature grade.</strong> A 0–70 °C commercial jack in an outdoor enclosure is a field-return waiting to happen; specify −40 to +85 °C where needed.</li>
+  </ul>
+
+  <h2>Where VOOHU fits</h2>
+  <p>VOOHU Electronics manufactures RJ45 jacks / female modular sockets (母座) — not plugs or patch cables — including standard RJ45, low-profile (low-height), offset and combination jacks, plus integrated-magnetics (magjack) sink-type modules in 1×1, 1×N and 2×N layouts with 90° and 180° vertical mounting. The integrated range covers 100M, 1000M, 2.5G, 5G, 10G and HDBaseT, in LED and no-LED versions, with commercial (0–70 °C) and industrial (−40 to +85 °C) grades. Examples from the catalog include the Tab-Up Gigabit magjack SYT511Q218AC1A8D057 (±2% turns-ratio tolerance) and the Tab-Down 10/100 part SYT111B002HWA1D. Most of these panel-facing jacks are through-hole for mechanical robustness, and VOOHU supports customization when a specific footprint, mount or plating tier is required.</p>
+
+  <div class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>Are most RJ45 jacks through-hole or surface-mount?</h3>
+    <p>Most panel-facing RJ45 jacks — including integrated-magnetics (magjack) sink-type modules such as VOOHU's 1×1, 1×N and 2×N parts — are through-hole. The leads anchor through the PCB, which best resists the repeated plug-in force a connector sees. SMT RJ45 jacks exist for low-profile, space-constrained and high-volume designs and almost always add metal board locks for strength.</p>
+    <h3>Why is through-hole stronger for an RJ45 jack?</h3>
+    <p>A through-hole jack's solder tails pass through plated holes and are soldered on the far side, so mating and cable loads are carried in shear by the hole barrel rather than only by a surface pad. SMT joints rely on pad adhesion plus added board locks. Because an RJ45 connector is rated for at least 750 mating cycles (IEC 60603-7), THT's mechanical anchoring is valued in front-panel, industrial and PoE designs.</p>
+    <h3>Can a surface-mount RJ45 jack survive reflow soldering?</h3>
+    <p>Yes, if the part is specified for it. SMT RJ45 jacks use high-temperature thermoplastic bodies that withstand a J-STD-020 reflow peak of up to about 260 °C. Always confirm the moisture-sensitivity level (MSL) and reflow rating on the datasheet, and never reflow a part qualified only for wave or selective soldering.</p>
+    <h3>Does THT or SMT affect the electrical performance of the RJ45 jack?</h3>
+    <p>The mounting method is mechanical; the contact system sets the electrical class. A Cat5e, Cat6 or Cat6A jack must still meet ANSI/TIA-568 NEXT and return-loss limits whether it is THT or SMT. What the mount influences is launch geometry and ground return, so for 2.5G/5G and 10GBASE-T keep tails short and give the shield a clean path.</p>
+  </div>
+
+  <div class="related">
+    <h2>Related VOOHU guides</h2>
+    <ul class="tight">
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-vs-discrete.html">Integrated-magnetics vs discrete RJ45 jacks</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-orientation-tab-up-vs-tab-down.html">RJ45 jack orientation: Tab-Up vs Tab-Down</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-materials-plating.html">RJ45 jack materials &amp; contact plating tiers</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-mating-cycles-durability.html">RJ45 mating cycles &amp; durability explained</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <span class="tag">RJ45 jack</span><span class="tag">THT vs SMT</span><span class="tag">PCB-mount socket</span><span class="tag">Integrated magnetics</span><span class="tag">VOOHU</span>
+  </div>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><strong>VOOHU Electronics</strong> — Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices. ISO9001, ISO14001, RoHS, REACH, CE certified.</p>
+    <p>Website: <a href="https://www.voohuele.com">https://www.voohuele.com</a> · Email: <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> · WhatsApp: +86 133 5804 1040</p>
+    <p class="note" style="color:#7f93a6;">© 2026 VOOHU Electronics. Specifications are representative of IEC 60603-7-class RJ45 jacks; always confirm against the specific product datasheet.</p>
+  </div>
+</footer>
+
+</body>
+</html>
