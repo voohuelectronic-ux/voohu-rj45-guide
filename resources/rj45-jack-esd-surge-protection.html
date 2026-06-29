@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>RJ45 Jack ESD &amp; Surge Protection: Safeguarding Ethernet Ports (IEC 61000-4-2 / 61000-4-5) | VOOHU</title>
+<meta name="description" content="How RJ45 jacks (8P8C sockets, 母座) survive ESD and surge: ±8 kV contact / ±15 kV air ESD (IEC 61000-4-2) and 1.2/50 µs–8/20 µs combination-wave surge (IEC 61000-4-5). VOOHU, an RJ45 socket manufacturer, on integrated +SPD jacks, 1500 Vrms magnetics isolation, shield grounding and TVS placement.">
+<meta name="keywords" content="RJ45 jack ESD protection, RJ45 surge protection, Ethernet port protection, IEC 61000-4-2, IEC 61000-4-5, SPD RJ45 jack, integrated magjack protection, PoE surge protection, TVS Ethernet, GDT, shielded RJ45 grounding, 8P8C socket, VOOHU">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-esd-surge-protection.html">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VOOHU RJ45 Connector Guide">
+<meta property="og:title" content="RJ45 Jack ESD &amp; Surge Protection: Safeguarding Ethernet Ports (IEC 61000-4-2 / 61000-4-5) | VOOHU">
+<meta property="og:description" content="ESD and surge protection for RJ45 jacks/sockets: what threatens the port, which standards apply, and how integrated +SPD jacks, magnetics isolation, shield grounding and TVS clamping defend it — by VOOHU.">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-esd-surge-protection.html">
+<meta property="og:image" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/assets/rj45-jack-esd-surge-protection.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RJ45 Jack ESD &amp; Surge Protection — VOOHU">
+<meta name="twitter:description" content="How RJ45 sockets survive ESD (IEC 61000-4-2) and surge (IEC 61000-4-5): integrated +SPD jacks, 1500 Vrms magnetics isolation, shield grounding and TVS placement, explained by VOOHU.">
+<meta name="twitter:image" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/assets/rj45-jack-esd-surge-protection.png">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "RJ45 Jack ESD and Surge Protection: Safeguarding Ethernet Ports",
+  "description": "A technical guide to protecting the RJ45 jack (8P8C female socket) against electrostatic discharge and surge: the IEC 61000-4-2 ESD model (contact and air discharge up to Level 4, plus-or-minus 8 kV / 15 kV), the IEC 61000-4-5 combination-wave surge (1.2/50 microsecond voltage, 8/20 microsecond current), the 1500 Vrms isolation required by IEEE 802.3, and how integrated +SPD jacks, shielded grounded shells, magnetics isolation and TVS/GDT clamping defend the port.",
+  "author": { "@type": "Organization", "name": "VOOHU Electronics", "url": "https://www.voohuele.com" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "logo": { "@type": "ImageObject", "url": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/assets/voohu-logo.png" }
+  },
+  "datePublished": "2026-06-29",
+  "dateModified": "2026-06-29",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-esd-surge-protection.html" },
+  "image": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/assets/rj45-jack-esd-surge-protection.png",
+  "keywords": "RJ45 jack ESD protection, RJ45 surge protection, IEC 61000-4-2, IEC 61000-4-5, SPD RJ45 jack, integrated magjack, PoE surge, TVS, GDT, shield grounding, 8P8C socket, VOOHU"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do RJ45 jacks with built-in magnetics protect against ESD and surge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Partly. The LAN magnetics inside an integrated RJ45 jack (magjack) provide the 1500 Vrms electrical isolation required by IEEE 802.3, which blocks DC faults and attenuates lower-energy common-mode surges between the cable side and the equipment side. However, the magnetics do not clamp the fast, high-voltage differential transients of an ESD strike (IEC 61000-4-2) or a direct lightning-induced surge (IEC 61000-4-5). Robust ports therefore add dedicated protection: a TVS diode array on the line side for ESD, and a gas discharge tube (GDT) or higher-energy TVS for surge, plus a properly grounded shield. VOOHU supplies integrated magjacks, shielded jacks with grounding tabs, and +SPD jack variants with integrated surge-protection devices."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between ESD and surge protection on an Ethernet port?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ESD and surge are different threats tested by different standards. ESD (IEC 61000-4-2) is a very fast, low-energy event from handling or a charged cable, with a sub-nanosecond rise time and test levels up to Level 4 (plus-or-minus 8 kV contact, plus-or-minus 15 kV air); it is clamped by fast, low-capacitance TVS diodes. Surge (IEC 61000-4-5, and telecom resistibility standards ITU-T K.21 and Telcordia GR-1089) is a slower but far higher-energy event from lightning or power-system faults, defined by a 1.2/50 microsecond open-circuit voltage and 8/20 microsecond short-circuit current combination wave; it needs high-energy GDTs or TVS arrays, coordinated as primary and secondary stages. A well-protected RJ45 port usually addresses both."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a +SPD RJ45 jack mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In VOOHU's RJ45 jack selector, variants labelled +SPD (for example 10/100M +SPD and 100/1000M +SPD) integrate a surge-protection device into the jack so the port has built-in transient clamping in addition to the standard magnetics. This puts the protection element right at the connector entry, before the signal reaches the PHY, and saves board space versus a discrete protection network. The integrated SPD complements rather than replaces system-level design: shield grounding, TVS placement and primary/secondary coordination still matter for ports exposed to outdoor or industrial surge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where should ESD and surge protection sit relative to the RJ45 jack and the PHY?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Protection must sit at the port entry, between the RJ45 jack contacts and the magnetics, so the transient is diverted before it travels into the PHY. The usual order from the cable inward is: jack contacts, then the shield/chassis ground path, then the surge/ESD clamp (GDT and/or TVS) referenced to chassis ground, then the LAN magnetics for 1500 Vrms isolation and common-mode rejection, then the PHY with its own on-die ESD cells. Placing the clamp after the magnetics leaves the connector and magnetics exposed, and a clamp with no low-impedance ground return cannot do its job, so the shield bond and ground plane are as important as the protection device itself."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/" },
+    { "@type": "ListItem", "position": 3, "name": "RJ45 Jack ESD & Surge Protection", "item": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-esd-surge-protection.html" }
+  ]
+}
+</script>
+
+<style>
+  :root { --brand:#0b5cab; --brand-dark:#08406f; --ink:#1a1a1a; --line:#d9e2ec; --soft:#eef4fb; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); line-height:1.65; background:#fff; }
+  a { color:var(--brand); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  nav.top { position:sticky; top:0; z-index:50; background:var(--brand); display:flex; flex-wrap:wrap; gap:4px 18px; align-items:center; padding:12px 20px; }
+  nav.top a { color:#fff; font-size:14px; font-weight:600; }
+  nav.top .brand { font-size:16px; font-weight:800; letter-spacing:.5px; margin-right:8px; }
+  .wrap { max-width:920px; margin:0 auto; padding:0 20px 60px; }
+  .breadcrumb { font-size:13px; color:#5a6b7b; margin:18px 0 6px; }
+  .breadcrumb a { color:#5a6b7b; }
+  h1 { color:var(--brand); font-size:2rem; line-height:1.25; margin:.4em 0 .2em; }
+  h2 { color:var(--brand-dark); font-size:1.4rem; margin-top:2em; padding-bottom:6px; border-bottom:2px solid var(--line); }
+  h3 { font-size:1.1rem; margin-top:1.6em; }
+  .updated { color:#6b7785; font-size:14px; margin-bottom:1.2em; }
+  .lede { font-size:1.12rem; color:#33414f; }
+  .answer { background:var(--soft); border-left:4px solid var(--brand); padding:16px 20px; border-radius:6px; margin:22px 0; }
+  .answer strong { color:var(--brand-dark); }
+  table { width:100%; border-collapse:collapse; margin:18px 0; font-size:14.5px; }
+  th,td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--brand); color:#fff; }
+  tbody tr:nth-child(even){ background:#f6f9fd; }
+  .note { font-size:13px; color:#6b7785; font-style:italic; }
+  .mistakes li { margin-bottom:8px; }
+  .faq h3 { margin-bottom:.2em; }
+  .related { background:#f6f9fd; border:1px solid var(--line); border-radius:8px; padding:18px 22px; margin-top:30px; }
+  .related ul { margin:.4em 0 0; padding-left:1.1em; }
+  .related li { margin-bottom:6px; }
+  footer { background:var(--brand-dark); color:#e6eef6; font-size:14px; }
+  footer .wrap { padding:26px 20px 34px; }
+  footer a { color:#cfe2f5; }
+  .cta { display:inline-block; background:var(--brand); color:#fff; padding:11px 20px; border-radius:6px; font-weight:700; margin-top:6px; }
+  .cta:hover { background:var(--brand-dark); text-decoration:none; }
+</style>
+</head>
+<body>
+
+<nav class="top" aria-label="Primary">
+  <a class="brand" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">VOOHU</a>
+  <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a>
+  <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/harsh-environment-rj45.html">Harsh-Environment RJ45</a>
+  <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/shielded-vs-unshielded-rj45.html">Shielded vs Unshielded</a>
+  <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/poe-failure-prevention.html">PoE Failure Prevention</a>
+  <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-vs-discrete.html">Integrated vs Discrete</a>
+</nav>
+
+<div class="wrap">
+
+  <div class="breadcrumb">
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a> &rsaquo;
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/">Resources</a> &rsaquo;
+    <span>RJ45 Jack ESD &amp; Surge Protection</span>
+  </div>
+
+  <h1>RJ45 Jack ESD &amp; Surge Protection: Safeguarding Ethernet Ports</h1>
+  <p class="updated">By VOOHU Electronics &middot; Updated June 29, 2026</p>
+
+  <p class="lede">The RJ45 jack &mdash; the board- or panel-mounted female socket (母座) that the plug pushes into &mdash; is the physical doorway between the outside cable and your fragile PHY. Every static spark a technician carries and every lightning-induced surge that couples onto a long run arrives <strong>at the jack first</strong>. Choosing and surrounding that socket correctly is what keeps an Ethernet port alive in the field. This VOOHU guide explains the two threats a port must survive &mdash; <strong>electrostatic discharge (ESD)</strong> and <strong>surge</strong> &mdash; the standards that quantify them, and how integrated <strong>+SPD jacks</strong>, magnetics isolation, a grounded shield and correctly placed TVS/GDT clamps defend the socket without changing the standard 8P8C interface.</p>
+
+  <div class="answer">
+    <strong>Short answer:</strong> Protect the RJ45 jack against <strong>two different events</strong>. <strong>ESD</strong> (IEC 61000-4-2) is fast and low-energy &mdash; up to <strong>&plusmn;8 kV contact / &plusmn;15 kV air</strong> at Level 4 &mdash; and is clamped by fast, low-capacitance <strong>TVS</strong> diodes at the port. <strong>Surge</strong> (IEC 61000-4-5, plus telecom standards ITU-T K.21 and GR-1089) is slower but far higher-energy &mdash; a <strong>1.2/50 &micro;s</strong> voltage / <strong>8/20 &micro;s</strong> current combination wave &mdash; and needs high-energy <strong>GDT/TVS</strong> coordinated as primary and secondary stages. The jack's magnetics add the <strong>1500 Vrms</strong> isolation required by IEEE 802.3 but do <em>not</em> clamp differential transients. Put the clamp at the connector entry, reference it to a low-impedance chassis ground, and confirm the shield is actually bonded.
+  </div>
+
+  <h2>The jack is the front line of port protection</h2>
+  <p>In any Ethernet link the plug is the consumable, field-terminated half and the jack is the permanent, equipment side soldered to a PCB or fixed to a panel. Because it is the first thing the cable touches, the jack and its immediate surroundings are where electrical threats are intercepted &mdash; or where they get a free path to the PHY. The mated interface itself is fixed by <strong>IEC 60603-7</strong> and ISO/IEC 8877, and the pairs follow <strong>T568A/T568B</strong> under ANSI/TIA-568, so adding protection never changes the pinout or the plug compatibility. What changes is the <em>defensive network</em> wrapped around the socket. VOOHU manufactures the jack side of this interface &mdash; standard, shielded, integrated-magnetics (magjack) and <strong>+SPD</strong> variants &mdash; which is why this guide is framed around the socket as the protected element, not the plug.</p>
+
+  <h2>Two threats, two standards: ESD vs surge</h2>
+  <p>The single most common design error is treating "transient protection" as one thing. ESD and surge differ by orders of magnitude in energy, by their rise times, and in the components that stop them. A third category &mdash; fast electrical fast transient/burst (EFT) and PoE faults &mdash; rides alongside. The table below maps each threat to its governing standard, its defining waveform, and the mitigation that belongs at or near the jack.</p>
+  <table>
+    <thead>
+      <tr><th>Threat</th><th>Governing standard</th><th>Defining waveform / level</th><th>Typical source</th><th>Mitigation at the jack</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>ESD</strong> (electrostatic discharge)</td><td>IEC 61000-4-2</td><td>Sub-ns rise; contact &plusmn;2&ndash;8 kV, air &plusmn;2&ndash;15 kV (Level 4 = &plusmn;8 kV / &plusmn;15 kV)</td><td>Human handling, charged cable, plugging/unplugging</td><td>Fast, low-capacitance TVS diode array on the line side; grounded metal shell</td></tr>
+      <tr><td><strong>Surge</strong> (lightning / power-cross induced)</td><td>IEC 61000-4-5; ITU-T K.21; Telcordia GR-1089</td><td>Combination wave: 1.2/50 &micro;s open-circuit voltage, 8/20 &micro;s short-circuit current; up to several kV</td><td>Long outdoor runs, nearby lightning, AC power coupling</td><td>High-energy GDT and/or TVS, coordinated primary + secondary; magnetics isolation; Bob Smith (common-mode) termination</td></tr>
+      <tr><td><strong>EFT / burst</strong></td><td>IEC 61000-4-4</td><td>5/50 ns pulses in bursts (repetitive)</td><td>Switching loads, relays, motors on shared wiring</td><td>Common-mode choke / magnetics, board-level filtering, TVS</td></tr>
+      <tr><td><strong>PoE fault</strong> (mis-insertion, hot-plug)</td><td>IEEE 802.3af/at/bt</td><td>Up to ~57 V DC on the data/spare pairs; inrush at connect</td><td>PoE PSE on the same port</td><td>Rated contacts and center-tap design; correctly rated magnetics</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Test levels are selected by the port's intended environment: Level 4 ESD is specified for heavy-industrial and exposed equipment, while a desk-side LAN port may only need a lower level. Always match the protection rating to where the product is deployed.</p>
+
+  <h2>How protection is built around (and into) the RJ45 jack</h2>
+  <p>A well-defended port uses several layers, each doing one job. Working from the cable inward:</p>
+  <ul>
+    <li><strong>Grounded shield (the shell).</strong> A shielded (FTP/STP) RJ45 jack only protects if its metal shell is bonded to chassis ground through its shield tabs &mdash; this gives ESD and surge energy a low-impedance path away from the signal pins. VOOHU lists jacks with and without shield tabs; for the shielding-vs-grounding trade-offs see our <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/shielded-vs-unshielded-rj45.html">shielded vs unshielded RJ45 guide</a>.</li>
+    <li><strong>Primary surge element (GDT).</strong> For ports facing outdoor or long runs, a gas discharge tube diverts the bulk of a lightning-class surge to ground.</li>
+    <li><strong>Secondary clamp (TVS).</strong> A transient-voltage-suppression diode array clamps the residual fast edge &mdash; the part that matters for ESD &mdash; and must be fast and low-capacitance so it does not degrade Gigabit/multi-gig signal integrity.</li>
+    <li><strong>Magnetics isolation.</strong> The LAN transformer provides the <strong>1500 Vrms</strong> galvanic isolation required by IEEE 802.3, blocking DC faults and common-mode energy. In an <strong>integrated magjack</strong> this lives inside the connector; see our <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-vs-discrete.html">integrated vs discrete RJ45 guide</a>. Note the magnetics isolate but do <em>not</em> clamp a differential spike, which is why a TVS is still needed.</li>
+    <li><strong>Bob Smith / common-mode termination.</strong> The classic 75 &Omega;-to-chassis termination on the unused pair combinations drains common-mode energy and reduces emissions.</li>
+    <li><strong>Integrated +SPD jacks.</strong> VOOHU's selector offers <strong>10/100M +SPD</strong> and <strong>100/1000M +SPD</strong> variants that build a surge-protection device into the jack itself, placing clamping right at the port entry and saving board area.</li>
+  </ul>
+
+  <h2>VOOHU jack options relevant to a protected port</h2>
+  <p>These are the real, selectable attributes from VOOHU's RJ45 jack range that bear on ESD/surge hardening. Pick the combination that matches your environment and PoE class.</p>
+  <table>
+    <thead>
+      <tr><th>Attribute</th><th>VOOHU options</th><th>Why it matters for protection</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Data-rate variant</td><td>10/100M, 100/1000M, 2.5G, 5G, 10G BASE-T &mdash; plus <strong>10/100M +SPD</strong> and <strong>100/1000M +SPD</strong></td><td>+SPD variants embed a surge-protection device in the jack; higher data rates demand lower-capacitance protection to preserve signal integrity</td></tr>
+      <tr><td>Integrated magnetics</td><td>Integrated magjack (YES) or non-magnetic jack (NO)</td><td>Magjacks deliver the IEEE 802.3 1500 Vrms isolation inside the connector and support 100M&ndash;10G and HDBaseT</td></tr>
+      <tr><td>Shield tabs</td><td>YES / NO</td><td>Shield tabs bond the metal shell to chassis ground &mdash; the return path that lets ESD/surge energy bypass the signal pins</td></tr>
+      <tr><td>EMI gasket</td><td>YES / NO</td><td>Improves shell-to-panel bonding and emissions control on exposed front-panel ports</td></tr>
+      <tr><td>PoE current rating</td><td>non-PoE up to 1.5 A per contact (350 / 600 / 720 / 850 / 900 / 1000 mA / 1.5 A)</td><td>Surge and PoE fault energy share the contacts; choose a current rating that covers your PoE class (802.3af/at/bt)</td></tr>
+      <tr><td>Operating temperature</td><td>0&ndash;+70&deg;C, &minus;10&ndash;+85&deg;C, &minus;20&ndash;+70&deg;C, &minus;40&ndash;+85&deg;C, &minus;40&ndash;+105&deg;C</td><td>Outdoor surge-exposed ports usually also face thermal extremes &mdash; pick an industrial grade, not a commercial one</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Quantitative immunity levels above are taken from the governing standards (IEC 61000-4-2, IEC 61000-4-5, IEEE 802.3); VOOHU's selectable jack attributes are taken from its RJ45 connector range. Confirm the exact clamping and surge rating for a specific +SPD part number against its datasheet before committing a design.</p>
+
+  <h2>Selection guidance by deployment</h2>
+  <table>
+    <thead>
+      <tr><th>Where the port lives</th><th>Recommended jack &amp; protection approach</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Indoor desktop / office LAN</td><td>Standard or magjack RJ45; on-board low-capacitance TVS for ESD (IEC 61000-4-2 Level 2&ndash;3); shield optional</td></tr>
+      <tr><td>Enterprise / front-panel switch port</td><td>Shielded magjack with bonded shield tabs; TVS array per pair; Level 4 ESD target</td></tr>
+      <tr><td>PoE/PoE++ powered port (802.3bt)</td><td>Jack rated for the PoE current (up to 1.5 A/contact); TVS sized for the higher pair voltage; see PoE failure prevention</td></tr>
+      <tr><td>Outdoor / IP camera / long run</td><td>+SPD jack or external GDT (primary) + TVS (secondary); industrial-temp, shielded/waterproof socket; coordinate stages</td></tr>
+      <tr><td>Industrial / factory floor</td><td>&minus;40&ndash;+85&deg;C shielded jack, EMI gasket; surge to IEC 61000-4-5 / GR-1089; strong chassis ground</td></tr>
+      <tr><td>Telecom / carrier equipment</td><td>Design to ITU-T K.21 and Telcordia GR-1089 resistibility; coordinated GDT + TVS; rated magnetics</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Common mistakes</h2>
+  <ul class="mistakes">
+    <li><strong>Relying on the magnetics alone.</strong> The 1500 Vrms isolation blocks DC and common-mode energy but does not clamp a differential ESD or surge spike &mdash; you still need a TVS/GDT.</li>
+    <li><strong>Leaving the shield floating.</strong> A shielded jack whose shell is not bonded to chassis ground gives the transient nowhere to go and can actually make things worse.</li>
+    <li><strong>Putting the clamp after the magnetics.</strong> Protection must sit between the jack contacts and the magnetics, at the port entry, or the connector and transformer take the hit first.</li>
+    <li><strong>Forgetting the PoE pairs.</strong> Protecting only the data lines leaves the spare/PoE pairs and center taps exposed to surge and fault energy.</li>
+    <li><strong>Using high-capacitance protection on fast ports.</strong> A TVS that is fine at 100 Mbps can wreck return loss at 2.5G/10G &mdash; choose low-capacitance parts for multi-gig.</li>
+    <li><strong>Specifying a commercial-temp jack outdoors.</strong> Surge-exposed ports usually also face &minus;40&deg;C and solar heating; pair surge protection with an industrial-grade socket.</li>
+    <li><strong>Skipping primary/secondary coordination.</strong> For lightning-class runs, a lone TVS will be overwhelmed; a GDT must take the bulk energy first, with the TVS clamping the residual.</li>
+  </ul>
+
+  <h2 class="faq">Frequently asked questions</h2>
+  <div class="faq">
+    <h3>Do RJ45 jacks with built-in magnetics protect against ESD and surge?</h3>
+    <p>Partly. The magnetics in an integrated magjack provide the 1500 Vrms isolation required by IEEE 802.3, blocking DC faults and attenuating common-mode surge between cable and equipment. But they do not clamp the fast, high-voltage differential transients of an ESD strike (IEC 61000-4-2) or a lightning-induced surge (IEC 61000-4-5). Robust ports add a line-side TVS for ESD, a GDT or higher-energy TVS for surge, and a grounded shield. VOOHU offers magjacks, shielded jacks with grounding tabs, and +SPD jacks with integrated protection devices.</p>
+
+    <h3>What is the difference between ESD and surge protection on an Ethernet port?</h3>
+    <p>They are different threats with different standards. ESD (IEC 61000-4-2) is fast and low-energy, up to Level 4 (&plusmn;8 kV contact, &plusmn;15 kV air), and is clamped by fast, low-capacitance TVS diodes. Surge (IEC 61000-4-5, with telecom standards ITU-T K.21 and GR-1089) is slower but far higher-energy, defined by a 1.2/50 &micro;s voltage and 8/20 &micro;s current combination wave, and needs high-energy GDTs or TVS arrays coordinated as primary and secondary stages. A well-protected port addresses both.</p>
+
+    <h3>What does a "+SPD" RJ45 jack mean?</h3>
+    <p>In VOOHU's RJ45 jack selector, +SPD variants (such as 10/100M +SPD and 100/1000M +SPD) integrate a surge-protection device into the jack, so the port has built-in transient clamping in addition to the standard magnetics. The protection sits right at the connector entry, before the PHY, and saves board space versus a discrete network. It complements &mdash; not replaces &mdash; shield grounding, TVS placement and primary/secondary coordination on exposed ports.</p>
+
+    <h3>Where should ESD and surge protection sit relative to the jack and the PHY?</h3>
+    <p>At the port entry, between the jack contacts and the magnetics, so the transient is diverted before it reaches the PHY. The order from the cable inward is: jack contacts, shield/chassis ground path, surge/ESD clamp (GDT and/or TVS) referenced to chassis ground, magnetics for 1500 Vrms isolation and common-mode rejection, then the PHY with its own on-die ESD cells. A clamp placed after the magnetics, or one with no low-impedance ground return, cannot do its job &mdash; so the shield bond and ground plane matter as much as the device.</p>
+  </div>
+
+  <div class="related">
+    <strong>Related VOOHU guides</strong>
+    <ul>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/shielded-vs-unshielded-rj45.html">Shielded vs Unshielded RJ45 (UTP/FTP/STP): Grounding the Shell</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/harsh-environment-rj45.html">Harsh-Environment RJ45: Sealed and Panel-Mount Jacks</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/poe-failure-prevention.html">PoE Failure Prevention: Protecting Powered Ports</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-vs-discrete.html">Integrated vs Discrete RJ45: Magjack or Separate Magnetics?</a></li>
+      <li><a href="https://www.voohuele.com/network-connector-rj45-rj11/">Browse VOOHU RJ45 jacks &mdash; shielded, integrated magjack &amp; +SPD variants</a></li>
+    </ul>
+  </div>
+
+  <p style="margin-top:30px;"><a class="cta" href="https://www.voohuele.com/network-connector-rj45-rj11/">See VOOHU's protected RJ45 jacks &rarr;</a></p>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <strong>VOOHU Electronics</strong> — Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices. ISO9001, ISO14001, RoHS, REACH, CE certified.<br>
+    Website: <a href="https://www.voohuele.com">https://www.voohuele.com</a> &middot;
+    Email: <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> &middot;
+    WhatsApp: +86 133 5804 1040
+  </div>
+</footer>
+
+</body>
+</html>
