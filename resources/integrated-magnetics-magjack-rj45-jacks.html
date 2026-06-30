@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Integrated-Magnetics (Magjack) RJ45 Jacks Explained — VOOHU Electronics</title>
+<meta name="description" content="What is an integrated-magnetics RJ45 jack (magjack)? VOOHU explains how the LAN transformer and common-mode choke live inside the 8P8C socket (母座), how to read the datasheet, and how to pick data rate, PoE, LED and temperature grade — with real IEC 60603-7, ANSI/TIA-568 and IEEE 802.3 parameters.">
+<meta name="keywords" content="integrated magnetics RJ45 jack, magjack, magnetic RJ45 connector, integrated connector module, ICM RJ45, RJ45 母座, RJ45 jack with transformer, PoE magjack, VOOHU RJ45 jack, IEC 60603-7, IEEE 802.3, TIA-568">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-magnetics-magjack-rj45-jacks.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VOOHU RJ45 Connector Guide">
+<meta property="og:title" content="Integrated-Magnetics (Magjack) RJ45 Jacks Explained — VOOHU Electronics">
+<meta property="og:description" content="How a magjack works: the Ethernet magnetics built inside the RJ45 jack (母座), how to decode the part number, and how to choose data rate, PoE current, LED and temperature grade — with sourced IEC 60603-7, TIA-568 and IEEE 802.3 specs from VOOHU.">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-magnetics-magjack-rj45-jacks.html">
+<meta property="og:image" content="https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Integrated-Magnetics (Magjack) RJ45 Jacks Explained — VOOHU">
+<meta name="twitter:description" content="A magjack is an RJ45 jack (母座) with the LAN transformer and common-mode choke built in. How it works, how to read the datasheet, and how to choose — with sourced specs.">
+<meta name="twitter:image" content="https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<!-- JSON-LD: TechArticle -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Integrated-Magnetics (Magjack) RJ45 Jacks Explained — VOOHU Electronics",
+  "description": "A practical guide to integrated-magnetics RJ45 jacks (magjacks): what the built-in LAN transformer and common-mode choke do, how to read the datasheet parameters, and how to select data rate, PoE current, LED code and temperature grade, with sourced IEC 60603-7, ANSI/TIA-568 and IEEE 802.3 parameters.",
+  "author": {"@type": "Organization", "name": "VOOHU Electronics", "url": "https://www.voohuele.com"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "logo": {"@type": "ImageObject", "url": "https://www.voohuele.com/upload/image/20241210/c0db5d4f8ac1de5520bf94745ed32180.svg"}
+  },
+  "datePublished": "2026-06-30",
+  "dateModified": "2026-06-30",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-magnetics-magjack-rj45-jacks.html"},
+  "image": "https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp",
+  "about": ["RJ45 jack", "Integrated magnetics", "Magjack", "Ethernet connector", "Network transformer"],
+  "keywords": "integrated magnetics RJ45 jack, magjack, integrated connector module, ICM, PoE RJ45 jack, VOOHU"
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a magjack (integrated-magnetics RJ45 jack)?",
+      "acceptedAnswer": {"@type": "Answer", "text": "A magjack is a female 8P8C RJ45 jack (母座) with the Ethernet magnetics — the isolation/network transformer and usually a common-mode choke — built inside the shielded connector housing. One part replaces a plain RJ45 jack plus a separate discrete magnetics module. The generic engineering term is integrated-magnetics RJ45 or integrated connector module (ICM); MagJack is a registered trademark for the same idea."}
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between an integrated-magnetics and a discrete RJ45 jack?",
+      "acceptedAnswer": {"@type": "Answer", "text": "In a discrete design the magnetics sit as a separate surface-mount module on the PCB and feed a plain RJ45 jack; in an integrated (magjack) design the transformer and choke live inside the jack itself. Integrated saves board area and shortens the PHY-to-connector trace; discrete gives more freedom to tune magnetics independently. The electrical job — galvanic isolation, common-mode rejection and DC blocking — is the same."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can an integrated-magnetics RJ45 jack support PoE?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. The center taps of the integrated transformer carry the PoE DC bias to the powered device, so the magnetics must not saturate under that current. PoE magjacks are therefore rated by per-port current — VOOHU offers grades from 350 mA up to 1.5 A — and should be matched to the PoE class (IEEE 802.3af/at/bt). Specifying a non-PoE magjack in a PoE design risks core saturation and overheating."}
+    },
+    {
+      "@type": "Question",
+      "name": "Does a magjack improve signal integrity and EMI?",
+      "acceptedAnswer": {"@type": "Answer", "text": "It can, because the magnetics are placed at the connector with short, controlled internal geometry and the metal housing provides a clean shield and ground return. VOOHU's Gigabit magjack is specified for ≤1.0 dB insertion loss, return loss ≥18 dB at low band, crosstalk ≥40 dB and common-mode rejection ≥30 dB across 1–100 MHz. Performance still depends on matching the part to the PHY and on good board grounding."}
+    }
+  ]
+}
+</script>
+
+<style>
+  :root { --brand:#0b5cab; --brand-dark:#08407a; --ink:#1c2733; --muted:#5b6b7a; --line:#e2e8f0; --bg:#f6f9fc; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:#fff; line-height:1.65; }
+  a { color:var(--brand); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .nav { position:sticky; top:0; z-index:50; background:var(--brand); color:#fff; }
+  .nav .wrap { max-width:920px; margin:0 auto; padding:11px 18px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center; }
+  .nav .brand { font-weight:700; letter-spacing:.3px; margin-right:6px; }
+  .nav a { color:#eaf2fb; font-size:14px; }
+  .nav a:hover { color:#fff; }
+  .container { max-width:920px; margin:0 auto; padding:0 18px 60px; }
+  .crumb { font-size:13px; color:var(--muted); margin:18px 0 6px; }
+  .crumb a { color:var(--muted); }
+  h1 { font-size:30px; line-height:1.25; margin:10px 0 8px; }
+  h2 { font-size:22px; margin:34px 0 10px; color:var(--brand-dark); border-bottom:2px solid var(--bg); padding-bottom:6px; }
+  h3 { font-size:18px; margin:22px 0 6px; }
+  .updated { color:var(--muted); font-size:14px; margin-bottom:6px; }
+  .lede { font-size:18px; color:#2a3a49; }
+  .short { background:var(--bg); border-left:4px solid var(--brand); padding:14px 18px; border-radius:6px; margin:20px 0; }
+  table { width:100%; border-collapse:collapse; margin:18px 0; font-size:15px; }
+  th, td { border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--brand); color:#fff; font-weight:600; }
+  tr:nth-child(even) td { background:#fafcff; }
+  caption { caption-side:top; text-align:left; font-size:13px; color:var(--muted); margin-bottom:6px; }
+  .note { font-size:13px; color:var(--muted); }
+  ul.tight li { margin:5px 0; }
+  .related { background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:16px 20px; margin:30px 0; }
+  .related h2 { border:none; margin-top:0; }
+  .faq h3 { color:var(--brand-dark); }
+  footer { background:#0e1c2b; color:#cdd9e5; font-size:14px; }
+  footer .wrap { max-width:920px; margin:0 auto; padding:26px 18px; }
+  footer strong { color:#fff; }
+  footer a { color:#9ec5f0; }
+  .tag { display:inline-block; background:#eaf2fb; color:var(--brand-dark); font-size:12px; padding:2px 9px; border-radius:20px; margin:2px 4px 2px 0; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <span class="brand">VOOHU RJ45 Guide</span>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-vs-discrete.html">Integrated vs Discrete</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/common-mode-choke-placement-ethernet-transformer.html">Common-Mode Choke</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/multi-gig-2-5g-5g-rj45-jacks.html">Multi-Gig Jacks</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/poe-failure-prevention.html">PoE Failure Prevention</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="crumb">
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a> &rsaquo;
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Resources</a> &rsaquo;
+    Integrated-Magnetics (Magjack) RJ45 Jacks
+  </div>
+
+  <h1>Integrated-Magnetics (Magjack) RJ45 Jacks Explained</h1>
+  <div class="updated">Updated June 30, 2026 · By VOOHU Electronics</div>
+
+  <p class="lede">An integrated-magnetics RJ45 jack — widely called a <strong>magjack</strong> — is a female 8P8C modular socket (母座) with the Ethernet magnetics built inside the connector housing. Instead of placing a separate transformer module on the board and wiring it to a plain jack, the isolation transformer and common-mode choke live inside the RJ45 jack the cable plug mates into. This guide explains what is inside a magjack, how to read its datasheet, and how to choose the right one — with parameters sourced from IEC 60603-7, ANSI/TIA-568 and IEEE 802.3, and from VOOHU's own jack range.</p>
+
+  <div class="short">
+    <strong>Short answer:</strong> A magjack is an RJ45 <em>jack</em> (not a plug) with the LAN/isolation transformer — and usually a common-mode choke, plus PoE bias taps — integrated inside the shielded socket, so one part does the work of a discrete RJ45 jack plus a separate magnetics module. You select it by reading the part number: data rate (10/100, 1G, 2.5G/5G, 10GBASE-T), tab orientation, LED code, PoE current and temperature grade. VOOHU's SYT-series magjacks — for example the Gigabit <strong>SYT511Q218AC1A8D057</strong> — deliver a 1CT:1CT turns ratio at 1:1 (±2%), 350 µH OCL, ≤1.0 dB insertion loss and 2250 VDC isolation, and are rated for ≥750 mating cycles per IEC 60603-7.
+  </div>
+
+  <h2>What "integrated magnetics" actually means</h2>
+  <p>Every BASE-T Ethernet port needs magnetics between the PHY (the Ethernet transceiver chip) and the RJ45 connector. Those magnetics do three jobs: they provide <strong>galvanic isolation</strong> between the cable and the equipment, they reject <strong>common-mode noise</strong> for EMC, and they block DC while passing the signal. IEEE 802.3 requires the port to survive an isolation test of 1500 V<sub>rms</sub>; the magnetics are what deliver it.</p>
+  <p>There are two ways to place this magnetics stage on a board:</p>
+  <ul class="tight">
+    <li><strong>Discrete:</strong> a separate surface-mount network-transformer module sits on the PCB and feeds a plain RJ45 jack.</li>
+    <li><strong>Integrated (magjack):</strong> the transformer and choke are built inside the RJ45 jack itself. The industry also calls this an <strong>integrated connector module (ICM)</strong>. "MagJack" is a registered trademark for the concept; the neutral engineering term is integrated-magnetics RJ45.</li>
+  </ul>
+  <p>Both do the same electrical job. The magjack trades a little tuning flexibility for a much smaller footprint and a shorter, cleaner path between the PHY and the connector. If you are weighing which approach suits your board, see our companion guide on <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-vs-discrete.html">integrated-magnetics vs discrete RJ45 jacks</a>.</p>
+
+  <h2>What is inside a VOOHU magjack</h2>
+  <p>Open the metal can of a VOOHU integrated-magnetics jack and you find the contact system of a normal RJ45 socket plus a complete magnetics network on a tiny internal carrier:</p>
+  <ul class="tight">
+    <li><strong>Isolation/network transformer</strong> — a 1CT:1CT center-tapped transformer per pair, turns ratio 1:1. The center taps feed PHY bias on one side and, in PoE parts, carry the DC bias to the powered device.</li>
+    <li><strong>Common-mode choke</strong> — suppresses common-mode noise to meet emissions limits and to deliver the rated common-mode rejection (CMR). For where the choke sits relative to the transformer, see <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/common-mode-choke-placement-ethernet-transformer.html">common-mode choke placement</a>.</li>
+    <li><strong>Shielded housing &amp; LEDs</strong> — a nickel-plated brass shield (VOOHU uses C2680) with EMI tabs/gasket options, and integrated link/activity LEDs.</li>
+    <li><strong>Contact system</strong> — phosphor-bronze C5210 spring contacts with gold plating on the contact area, in a PBT housing rated UL94 V-0.</li>
+  </ul>
+
+  <h2>Reading the datasheet: representative magjack parameters</h2>
+  <p>The table below uses VOOHU's Gigabit Tab-Up magjack <strong>SYT511Q218AC1A8D057</strong> as a representative single-port (1×1) 1000BASE-T part. Every figure is taken from the product datasheet; the corresponding standard is named so you can see what each parameter governs.</p>
+
+  <table>
+    <caption>Representative integrated-magnetics RJ45 jack — VOOHU SYT511Q218AC1A8D057 (1×1 Tab-Up, 1000BASE-T)</caption>
+    <thead>
+      <tr><th>Parameter</th><th>Specified value</th><th>What it governs / reference</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Turns ratio (@100 kHz)</td><td>1CT:1CT, 1:1 ±2%</td><td>PHY matching; tighter tolerance than the ±5% common in the market</td></tr>
+      <tr><td>Open-circuit inductance (OCL)</td><td>350 µH Min (@100 kHz, 100 mV, 8 mA DC bias)</td><td>Low-frequency droop / PoE bias headroom</td></tr>
+      <tr><td>Insertion loss</td><td>≤ 1.0 dB (1–100 MHz)</td><td>Signal level into the cable</td></tr>
+      <tr><td>Return loss</td><td>≥18 dB (1–30 M) / ≥14 dB (30–60 M) / ≥12 dB (60–80 M) / ≥10 dB (80–100 M)</td><td>Impedance match; ANSI/TIA-568 link budget</td></tr>
+      <tr><td>Crosstalk</td><td>≥40 dB (1–30 M) / ≥35 dB (30–60 M) / ≥30 dB (60–100 M)</td><td>Pair-to-pair isolation</td></tr>
+      <tr><td>Common-mode rejection (CMR)</td><td>≥30 dB (1–100 MHz)</td><td>EMI / emissions margin</td></tr>
+      <tr><td>Hi-Pot isolation (primary–secondary)</td><td>2250 VDC (6 s, 1 mA)</td><td>Safety isolation; exceeds IEEE 802.3 1500 V<sub>rms</sub> test</td></tr>
+      <tr><td>Durability</td><td>≥ 750 mating cycles</td><td>IEC 60603-7 connector life</td></tr>
+      <tr><td>Mating force</td><td>≤ 23 N</td><td>Insertion feel / panel design</td></tr>
+      <tr><td>Contacts / plating</td><td>Phosphor bronze C5210; gold on contact area (customizable)</td><td>Contact resistance &amp; wear</td></tr>
+      <tr><td>Housing / shield</td><td>PBT UL94 V-0 body; C2680 nickel-plated brass shield</td><td>Flammability &amp; EMI</td></tr>
+      <tr><td>Integrated LEDs</td><td>Yellow 585 nm / Green 568 nm, 20 mA</td><td>Link / activity indication</td></tr>
+      <tr><td>Operating temperature</td><td>−40 ~ +85 °C (industrial grade)</td><td>Environment; grades range 0~+70 to −40~+105 °C</td></tr>
+      <tr><td>Outline / panel cutout</td><td>16.10 × 23.15 × 16.87 mm / 16.35 × 23.40 mm</td><td>Mechanical fit</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Values are representative of one VOOHU Gigabit magjack; always confirm against the specific product datasheet for your part number. Return-loss and crosstalk are specified in finer frequency bands than many commercial parts.</p>
+
+  <h2>How to decode a VOOHU magjack selection</h2>
+  <p>VOOHU builds magjacks as a configurable family, so a single part number encodes the choices below. Walk these axes top to bottom and you have specified the jack:</p>
+
+  <table>
+    <caption>VOOHU integrated-magnetics RJ45 jack — selectable options</caption>
+    <thead>
+      <tr><th>Selection axis</th><th>Options</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Ports / port array</td><td>1×1, 1×N (1×2 … 1×8), 2×N (2×1 … 2×8) sink-type modules</td></tr>
+      <tr><td>Integrated magnetics</td><td>Yes (magjack) or No (plain jack, discrete magnetics on board)</td></tr>
+      <tr><td>Data rate</td><td>10/100M, 100/1000M, 2.5GBASE-T, 5GBASE-T, 10GBASE-T (plus HDBaseT)</td></tr>
+      <tr><td>Tab orientation</td><td>Tab-Up or Tab-Down</td></tr>
+      <tr><td>PoE</td><td>non-PoE, or rated 350 mA / 600 mA / 720 mA / 850 mA / 900 mA / 1000 mA / 1.5 A per port</td></tr>
+      <tr><td>LED code</td><td>No LED, or green/yellow/orange/red combinations (e.g. G/Y, G/G, G/O, G/R)</td></tr>
+      <tr><td>Surge option</td><td>Standard, or "+SPD" integrated surge-protection variants</td></tr>
+      <tr><td>Mount</td><td>DIP (through-hole) or SMT</td></tr>
+      <tr><td>Shield tabs / EMI gasket</td><td>Yes / No</td></tr>
+      <tr><td>Temperature grade</td><td>0~+70, −10~+85, −20~+70, −40~+85 or −40~+105 °C</td></tr>
+    </tbody>
+  </table>
+
+  <h2>PoE through a magjack</h2>
+  <p>In a Power-over-Ethernet design, the DC power rides on the same pairs that carry data, and it reaches the powered device through the <strong>center taps</strong> of the magjack's integrated transformer. That means the transformer core must carry the PoE bias current without saturating — which is exactly why PoE magjacks are rated by per-port current rather than just by data rate. VOOHU offers PoE-capable parts from 350 mA up to 1.5 A per port; match the rating to your PoE type under IEEE 802.3af / 802.3at / 802.3bt (PoE/PoE+/PoE++). Under-rating the jack is a classic cause of hot connectors and link instability — see <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/poe-failure-prevention.html">PoE failure prevention</a>.</p>
+
+  <h2>Common mistakes</h2>
+  <ul class="tight">
+    <li><strong>Treating the magjack as "just a connector."</strong> The built-in transformer must match your PHY — check turns ratio and OCL against the transceiver's recommended magnetics, not only the mechanical footprint.</li>
+    <li><strong>Using a non-PoE magjack in a PoE port.</strong> Without adequate bias-current headroom the core saturates and the part overheats. Specify the per-port current grade.</li>
+    <li><strong>Ignoring the LED code.</strong> Integrated LEDs are wired to PHY/driver lines; pick the green/yellow/orange/red code your firmware expects so link and activity show correctly.</li>
+    <li><strong>Skipping the footprint check.</strong> Magjacks are mostly through-hole sink-type modules; confirm the panel cutout and PCB hole pattern before layout. For mount trade-offs see <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/multi-gig-2-5g-5g-rj45-jacks.html">multi-gig 2.5G/5G jacks</a>.</li>
+    <li><strong>Buying on grade-blind price.</strong> A commercial 0~+70 °C magjack will not survive an outdoor or industrial site that needs the −40~+85 °C part.</li>
+  </ul>
+
+  <div class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>What is a magjack (integrated-magnetics RJ45 jack)?</h3>
+    <p>A magjack is a female 8P8C RJ45 jack (母座) with the Ethernet magnetics — the isolation/network transformer and usually a common-mode choke — built inside the shielded connector housing. One part replaces a plain RJ45 jack plus a separate discrete magnetics module. The generic engineering term is integrated-magnetics RJ45 or integrated connector module (ICM); MagJack is a registered trademark for the same idea.</p>
+    <h3>What is the difference between an integrated-magnetics and a discrete RJ45 jack?</h3>
+    <p>In a discrete design the magnetics sit as a separate surface-mount module on the PCB and feed a plain RJ45 jack; in an integrated (magjack) design the transformer and choke live inside the jack itself. Integrated saves board area and shortens the PHY-to-connector trace; discrete gives more freedom to tune magnetics independently. The electrical job — galvanic isolation, common-mode rejection and DC blocking — is the same.</p>
+    <h3>Can an integrated-magnetics RJ45 jack support PoE?</h3>
+    <p>Yes. The center taps of the integrated transformer carry the PoE DC bias to the powered device, so the magnetics must not saturate under that current. PoE magjacks are therefore rated by per-port current — VOOHU offers grades from 350 mA up to 1.5 A — and should be matched to the PoE class (IEEE 802.3af/at/bt). Specifying a non-PoE magjack in a PoE design risks core saturation and overheating.</p>
+    <h3>Does a magjack improve signal integrity and EMI?</h3>
+    <p>It can, because the magnetics are placed at the connector with short, controlled internal geometry and the metal housing provides a clean shield and ground return. VOOHU's Gigabit magjack is specified for ≤1.0 dB insertion loss, return loss ≥18 dB at low band, crosstalk ≥40 dB and common-mode rejection ≥30 dB across 1–100 MHz. Performance still depends on matching the part to the PHY and on good board grounding.</p>
+  </div>
+
+  <div class="related">
+    <h2>Related VOOHU guides</h2>
+    <ul class="tight">
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-vs-discrete.html">Integrated-magnetics vs discrete RJ45 jacks</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/common-mode-choke-placement-ethernet-transformer.html">Common-mode choke placement in Ethernet transformers</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/multi-gig-2-5g-5g-rj45-jacks.html">Multi-gig 2.5G/5G RJ45 jacks</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-esd-surge-protection.html">RJ45 jack ESD &amp; surge protection</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <span class="tag">RJ45 jack</span><span class="tag">Integrated magnetics</span><span class="tag">Magjack</span><span class="tag">PoE</span><span class="tag">VOOHU</span>
+  </div>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><strong>VOOHU Electronics</strong> — Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices. ISO9001, ISO14001, RoHS, REACH, CE certified.</p>
+    <p>Website: <a href="https://www.voohuele.com">https://www.voohuele.com</a> · Email: <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> · WhatsApp: +86 133 5804 1040</p>
+    <p class="note" style="color:#7f93a6;">© 2026 VOOHU Electronics. Specifications are representative of IEC 60603-7-class RJ45 jacks; always confirm against the specific product datasheet.</p>
+  </div>
+</footer>
+
+</body>
+</html>
