@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RJ45 Jack LED Indicators: Link, Activity &amp; Speed Explained — VOOHU Electronics</title>
+<meta name="description" content="What do the LED lights on an RJ45 jack (母座) mean? VOOHU explains link, activity and speed indicators, the green/amber conventions, built-in LEDs vs light guides, and how the PHY drives them — with real VOOHU jack specs (green ~568 nm, yellow ~585 nm, 20 mA) and the IEC 60603-7 / TIA-568 / IEEE 802.3 facts.">
+<meta name="keywords" content="RJ45 jack LED, RJ45 LED indicators, link activity LED, Ethernet port LED colors, green amber Ethernet LED, RJ45 母座 LED, light guide light pipe RJ45, bi-color speed LED, RJ45 jack with LED, VOOHU RJ45 jack, IEC 60603-7, IEEE 802.3, TIA-568">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-led-indicators.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VOOHU RJ45 Connector Guide">
+<meta property="og:title" content="RJ45 Jack LED Indicators: Link, Activity &amp; Speed Explained — VOOHU Electronics">
+<meta property="og:description" content="Link, activity and speed LEDs on an RJ45 jack (母座): what the green and amber lights mean, why no Ethernet standard fixes the colors, built-in LEDs vs light guides, and how PHYs drive them — with sourced VOOHU jack specs.">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-led-indicators.html">
+<meta property="og:image" content="https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RJ45 Jack LED Indicators: Link, Activity &amp; Speed — VOOHU">
+<meta name="twitter:description" content="What the green/amber LEDs on an RJ45 jack (母座) mean, why the colors are vendor-defined not standardized, built-in LEDs vs light guides, and how the PHY drives them.">
+<meta name="twitter:image" content="https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<!-- JSON-LD: TechArticle -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "RJ45 Jack LED Indicators: Link, Activity & Speed Explained — VOOHU Electronics",
+  "description": "A practical guide to the LED indicators on an RJ45 jack (母座): what the link, activity and speed lights mean, why the green/amber colors are vendor-defined rather than standardized, built-in LEDs versus PCB LEDs with a light guide, and how the PHY drives them, with sourced VOOHU jack specifications and IEC 60603-7, ANSI/TIA-568 and IEEE 802.3 references.",
+  "author": {"@type": "Organization", "name": "VOOHU Electronics", "url": "https://www.voohuele.com"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "logo": {"@type": "ImageObject", "url": "https://www.voohuele.com/upload/image/20241210/c0db5d4f8ac1de5520bf94745ed32180.svg"}
+  },
+  "datePublished": "2026-07-01",
+  "dateModified": "2026-07-01",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-led-indicators.html"},
+  "image": "https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp",
+  "about": ["RJ45 jack", "LED indicator", "Link LED", "Activity LED", "Ethernet connector"],
+  "keywords": "RJ45 jack LED, link activity LED, Ethernet port LED colors, light guide, bi-color speed LED, VOOHU RJ45 jack"
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What do the LED colors on an RJ45 jack mean?",
+      "acceptedAnswer": {"@type": "Answer", "text": "On most RJ45 jacks the two LEDs show link, activity and sometimes speed. A common convention is that a solid green light means a valid Ethernet link is up, a blinking light means data is passing (activity), and a second amber or green LED shows the negotiated speed. These meanings are conventions set by the PHY or equipment vendor, not a fixed rule, so always confirm against the device manual. VOOHU integrated LEDs are specified as green at about 568 nm and yellow at about 585 nm, driven at up to 20 mA."}
+    },
+    {
+      "@type": "Question",
+      "name": "Are RJ45 jack LED colors standardized by IEEE 802.3?",
+      "acceptedAnswer": {"@type": "Answer", "text": "No. IEEE 802.3 defines the electrical link and its 1500 Vrms isolation, IEC 60603-7 defines the 8P8C jack mechanics, and ANSI/TIA-568 defines the pinout, but none of them fixes the LED colors or blink behavior. The link, activity and speed mapping is chosen by the Ethernet PHY or MAC vendor and is programmable in the PHY registers, which is why the same green-plus-amber pair can mean different things on different products."}
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between LEDs built into the jack and a light guide (light pipe)?",
+      "acceptedAnswer": {"@type": "Answer", "text": "There are two ways to light an RJ45 port. In the first, surface-mount LEDs are built into the jack housing and wired to dedicated LED leads on the connector, so the light appears at the port opening directly. In the second, the LEDs sit on the PCB and a transparent plastic light guide (light pipe) channels their light up to the panel face. VOOHU offers integrated-LED jacks and also lists light guides as an optional accessory for board-mounted LEDs."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do the LED indicators affect Ethernet signal integrity?",
+      "acceptedAnswer": {"@type": "Answer", "text": "No, when they are laid out correctly. The LEDs sit on their own leads and are driven by low-speed DC signals from the PHY, completely separate from the eight 8P8C signal contacts and, in a magjack, from the internal magnetics. Good practice is to keep the LED traces and their series resistors away from the differential pairs and to respect the connector shield and ground return, so the indicators never load or couple into the data path."}
+    }
+  ]
+}
+</script>
+
+<style>
+  :root { --brand:#0b5cab; --brand-dark:#08407a; --ink:#1c2733; --muted:#5b6b7a; --line:#e2e8f0; --bg:#f6f9fc; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:#fff; line-height:1.65; }
+  a { color:var(--brand); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .nav { position:sticky; top:0; z-index:50; background:var(--brand); color:#fff; }
+  .nav .wrap { max-width:920px; margin:0 auto; padding:11px 18px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center; }
+  .nav .brand { font-weight:700; letter-spacing:.3px; margin-right:6px; }
+  .nav a { color:#eaf2fb; font-size:14px; }
+  .nav a:hover { color:#fff; }
+  .container { max-width:920px; margin:0 auto; padding:0 18px 60px; }
+  .crumb { font-size:13px; color:var(--muted); margin:18px 0 6px; }
+  .crumb a { color:var(--muted); }
+  h1 { font-size:30px; line-height:1.25; margin:10px 0 8px; }
+  h2 { font-size:22px; margin:34px 0 10px; color:var(--brand-dark); border-bottom:2px solid var(--bg); padding-bottom:6px; }
+  h3 { font-size:18px; margin:22px 0 6px; }
+  .updated { color:var(--muted); font-size:14px; margin-bottom:6px; }
+  .lede { font-size:18px; color:#2a3a49; }
+  .short { background:var(--bg); border-left:4px solid var(--brand); padding:14px 18px; border-radius:6px; margin:20px 0; }
+  table { width:100%; border-collapse:collapse; margin:18px 0; font-size:15px; }
+  th, td { border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--brand); color:#fff; font-weight:600; }
+  tr:nth-child(even) td { background:#fafcff; }
+  caption { caption-side:top; text-align:left; font-size:13px; color:var(--muted); margin-bottom:6px; }
+  .note { font-size:13px; color:var(--muted); }
+  ul.tight li { margin:5px 0; }
+  .related { background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:16px 20px; margin:30px 0; }
+  .related h2 { border:none; margin-top:0; }
+  .faq h3 { color:var(--brand-dark); }
+  footer { background:#0e1c2b; color:#cdd9e5; font-size:14px; }
+  footer .wrap { max-width:920px; margin:0 auto; padding:26px 18px; }
+  footer strong { color:#fff; }
+  footer a { color:#9ec5f0; }
+  .tag { display:inline-block; background:#eaf2fb; color:var(--brand-dark); font-size:12px; padding:2px 9px; border-radius:20px; margin:2px 4px 2px 0; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <span class="brand">VOOHU RJ45 Guide</span>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-magnetics-magjack-rj45-jacks.html">Magjack Jacks</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-orientation-tab-up-vs-tab-down.html">Tab-Up vs Tab-Down</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/multi-gig-2-5g-5g-rj45-jacks.html">Multi-Gig Jacks</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/poe-standards-af-at-bt-explained.html">PoE Standards</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="crumb">
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a> &rsaquo;
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Resources</a> &rsaquo;
+    RJ45 Jack LED Indicators
+  </div>
+
+  <h1>RJ45 Jack LED Indicators: Link, Activity &amp; Speed Explained</h1>
+  <div class="updated">Updated July 1, 2026 · By VOOHU Electronics</div>
+
+  <p class="lede">Almost every RJ45 jack (母座) you meet has one or two tiny lights tucked into the corners of the port. Those LEDs tell an installer, at a glance, whether the link is up, whether traffic is flowing, and sometimes how fast the port negotiated. This guide explains what the link, activity and speed indicators on an RJ45 <em>jack</em> actually mean, why no Ethernet standard fixes the colors, the two ways LEDs get into the socket, and how the PHY drives them — with real specifications from VOOHU's own LED-equipped jack range and references to IEC 60603-7, ANSI/TIA-568 and IEEE 802.3.</p>
+
+  <div class="short">
+    <strong>Short answer:</strong> The LEDs on an RJ45 jack are status indicators wired to the Ethernet PHY, not part of the data path. A common convention is <strong>solid green = link up</strong>, <strong>blinking = activity</strong>, and a second <strong>amber/green LED = speed</strong> — but these mappings are chosen by the chip or equipment vendor, so they are conventions, not a standard. IEC 60603-7 fixes the jack mechanics, ANSI/TIA-568 fixes the pinout and IEEE 802.3 fixes the electrical link, but none of them fixes the LED color. VOOHU builds jacks with integrated LEDs (green ≈568 nm, yellow ≈585 nm, driven at up to 20 mA) in codes such as G/Y, G/G, G/O and G/R, plus no-LED and light-guide options — across the same 母座 range that runs from 10/100M to 10GBASE-T.
+  </div>
+
+  <h2>What the two lights on an RJ45 port actually indicate</h2>
+  <p>Physically, an LED-equipped RJ45 jack carries up to two indicator LEDs, one in each upper corner of the port opening, on leads that are entirely separate from the eight signal contacts. Between them they convey three pieces of information, which a vendor maps onto the available LEDs and colors:</p>
+
+  <table>
+    <caption>The three things RJ45 jack LEDs convey (behavior is a convention, not a standard)</caption>
+    <thead>
+      <tr><th>Function</th><th>What it tells you</th><th>Common convention</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Link</strong></td><td>A valid Ethernet link has been established with the device at the other end.</td><td>Solid (steady) green when the link is up; off when there is no link.</td></tr>
+      <tr><td><strong>Activity</strong></td><td>Frames are actually being transmitted or received on the port.</td><td>The same LED blinks, or a paired LED blinks, while traffic flows.</td></tr>
+      <tr><td><strong>Speed</strong></td><td>The data rate the port auto-negotiated (e.g. 100M vs 1G vs 2.5G+).</td><td>A second LED, or a color change (e.g. amber = the higher speed, green = the lower), or the LED being off for the lowest rate.</td></tr>
+    </tbody>
+  </table>
+  <p>Because there are usually only two LEDs for three jobs, most designs combine them: the left LED becomes a <em>Link/Activity</em> light (solid when up, blinking on traffic) and the right LED becomes a <em>Speed</em> light. That is a widespread pattern, but it is not guaranteed — the next section explains why.</p>
+
+  <h2>Why there is no "standard" RJ45 LED color</h2>
+  <p>It is a common misconception that green and amber Ethernet LEDs are defined somewhere in the Ethernet specifications. They are not. The relevant standards each cover a different part of the port, and none of them legislates the indicator:</p>
+  <ul class="tight">
+    <li><strong>IEC 60603-7</strong> defines the 8P8C jack's mechanical interface and durability (the reason a VOOHU jack is rated for <strong>≥750 mating cycles</strong>).</li>
+    <li><strong>ANSI/TIA-568</strong> defines the T568A/T568B pinout and the link transmission budget.</li>
+    <li><strong>IEEE 802.3</strong> defines the electrical link, auto-negotiation and the <strong>1500 V<sub>rms</sub></strong> isolation test the port must survive.</li>
+  </ul>
+  <p>The LED behavior, by contrast, is set inside the <strong>Ethernet PHY</strong>. Most PHYs expose one or more LED output pins whose function — link, activity, speed, collision, duplex — is <em>programmable</em> through the management registers accessed over the MDIO/MDC interface (IEEE 802.3 Clause 22/45). So the identical green-plus-amber jack can read "green = link, amber = 1 Gbit" on one product and "green = 1 Gbit, amber = activity" on another. This is exactly why you should treat the front-panel legend or the device manual — not the color alone — as the source of truth. On the jack side, VOOHU simply provides the LED colors and positions the design calls for; the meaning is assigned by your PHY firmware.</p>
+
+  <h2>Two ways LEDs get into an RJ45 jack</h2>
+  <p>There are two mechanical approaches to lighting the port, and the choice affects your bill of materials and your panel design:</p>
+  <ul class="tight">
+    <li><strong>LEDs built into the jack.</strong> Surface-mount LED dies are assembled inside the connector housing and brought out to dedicated LED leads. The light appears right at the port opening, the PCB only has to route the LED drive lines, and the part is a single "RJ45 jack with LED." This is the typical arrangement for integrated-magnetics (magjack) sockets — see the <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-magnetics-magjack-rj45-jacks.html">magjack guide</a>.</li>
+    <li><strong>PCB LEDs plus a light guide (light pipe).</strong> The LEDs are ordinary parts on the board and a clear plastic <strong>light guide</strong> channels their emission up to the bezel next to the port. VOOHU lists light guides as an optional accessory for exactly this. It is flexible — you pick any LED you like — but it needs the light guide to be aligned with the panel cutout.</li>
+  </ul>
+  <p>Either way, the indicator is optical only. A "no-LED" jack is mechanically and electrically identical to the LED version minus the lamps and their leads, which is why VOOHU offers both from the same 母座 tooling.</p>
+
+  <h2>How the LEDs are driven</h2>
+  <p>The indicator LEDs are small signal LEDs, not lighting LEDs, and they are driven from the PHY's LED pins. Two practical points matter when you specify an LED jack:</p>
+  <ul class="tight">
+    <li><strong>Polarity and current.</strong> Many PHYs <em>sink</em> LED current (the pin pulls low to light the LED, with the anode tied to a supply rail through a series resistor); others source it. The series resistor sets the current. VOOHU's integrated LEDs are specified for up to <strong>20 mA</strong>, so the resistor is sized for the LED forward voltage and the desired brightness within that limit.</li>
+    <li><strong>Color and wavelength.</strong> VOOHU's integrated indicators use <strong>green at about 568 nm</strong> and <strong>yellow at about 585 nm</strong>, the wavelengths that read cleanly as "green" and "amber/yellow" behind a panel. Orange and red options are also available for codes such as G/O and G/R.</li>
+  </ul>
+  <p>Because the drive is DC and low speed, the LED leads carry no high-frequency energy — but keep their traces and resistors clear of the differential pairs so nothing couples into the signal. In a magjack the LEDs are also fully separate from the internal transformer and choke.</p>
+
+  <h2>VOOHU LED jack options at a glance</h2>
+  <p>VOOHU builds LED indication as one selectable axis of its configurable RJ45 jack family, so a single part number captures the color code alongside data rate, orientation and PoE. The table gathers the LED-related options and the jack figures that a designer usually needs, all from VOOHU's own range.</p>
+
+  <table>
+    <caption>VOOHU RJ45 jack — LED and related options (representative of the SYT / standard jack range)</caption>
+    <thead>
+      <tr><th>Attribute</th><th>Option / value</th><th>Note</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>LED colors available</td><td>Green (~568 nm), Yellow (~585 nm), Orange, Red</td><td>Bi-color pairs are common</td></tr>
+      <tr><td>LED code combinations</td><td>No-LED, G/Y, G/G, G/O, G/R</td><td>Pick the code your PHY firmware expects</td></tr>
+      <tr><td>LED drive current</td><td>Up to 20 mA</td><td>Set by an external series resistor</td></tr>
+      <tr><td>LED position</td><td>Left &amp; right of the port opening</td><td>Standard bezel corners</td></tr>
+      <tr><td>Light delivery</td><td>LEDs built into the housing, or PCB LEDs via a light guide</td><td>Light guide is an optional accessory</td></tr>
+      <tr><td>Data rate of the jack</td><td>10/100M, 100/1000M, 2.5G/5GBASE-T, 10GBASE-T, HDBaseT</td><td>Integrated-magnetics or plain</td></tr>
+      <tr><td>Tab orientation</td><td>Tab-Up or Tab-Down</td><td>See tab-orientation guide</td></tr>
+      <tr><td>Durability</td><td>≥750 mating cycles</td><td>IEC 60603-7 connector life</td></tr>
+      <tr><td>Operating temperature</td><td>0~+70 up to −40~+85 °C</td><td>Grade options for industrial/outdoor</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Values are representative of VOOHU's LED-equipped RJ45 jack range; confirm the exact color code, current and grade against the specific product datasheet for your part number.</p>
+
+  <h2>Speed indication on multi-gig jacks</h2>
+  <p>As ports move to 2.5G, 5G and 10GBASE-T, the speed LED earns its keep: an installer needs to know instantly whether a port fell back to Gigabit instead of negotiating 2.5G. The common trick is a <strong>bi-color LED</strong> — one die shows the higher rate, another the lower — so a single window can distinguish two or three speeds by color. The jack itself does not change how it lights; it just carries the extra color the design specifies. If your port is multi-gig, plan the color code together with the port, and see our <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/multi-gig-2-5g-5g-rj45-jacks.html">multi-gig 2.5G/5G RJ45 jack guide</a> for the matching magnetics and PHY considerations.</p>
+
+  <h2>Common mistakes</h2>
+  <ul class="tight">
+    <li><strong>Assuming the colors are standardized.</strong> Green/amber meanings come from the PHY, not from IEEE 802.3 — read the device legend, and set the PHY LED registers to the behavior your panel promises.</li>
+    <li><strong>Ordering the wrong LED code.</strong> A jack wired G/Y will not light the way firmware expects if the design assumed G/G. Confirm the code (and which corner is which) before you commit the part number.</li>
+    <li><strong>Forgetting the series resistor.</strong> The jack's LEDs need an external resistor sized for the ≤20 mA rating; driving them straight off a rail shortens their life or exceeds the PHY pin limit.</li>
+    <li><strong>Mis-aligning a light guide.</strong> With board-mounted LEDs, a light guide that is off-center from the panel cutout produces dim or dead-looking indicators even though the LEDs work.</li>
+    <li><strong>Routing LED traces across the pairs.</strong> Keep the DC LED lines and resistors away from the differential signal pairs and honor the shield/ground return; see the <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-orientation-tab-up-vs-tab-down.html">tab-orientation and layout guide</a>.</li>
+  </ul>
+
+  <div class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>What do the LED colors on an RJ45 jack mean?</h3>
+    <p>On most RJ45 jacks the two LEDs show link, activity and sometimes speed. A common convention is that a solid green light means a valid Ethernet link is up, a blinking light means data is passing (activity), and a second amber or green LED shows the negotiated speed. These meanings are conventions set by the PHY or equipment vendor, not a fixed rule, so always confirm against the device manual. VOOHU integrated LEDs are specified as green at about 568 nm and yellow at about 585 nm, driven at up to 20 mA.</p>
+    <h3>Are RJ45 jack LED colors standardized by IEEE 802.3?</h3>
+    <p>No. IEEE 802.3 defines the electrical link and its 1500 V<sub>rms</sub> isolation, IEC 60603-7 defines the 8P8C jack mechanics, and ANSI/TIA-568 defines the pinout, but none of them fixes the LED colors or blink behavior. The link, activity and speed mapping is chosen by the Ethernet PHY or MAC vendor and is programmable in the PHY registers, which is why the same green-plus-amber pair can mean different things on different products.</p>
+    <h3>What is the difference between LEDs built into the jack and a light guide (light pipe)?</h3>
+    <p>There are two ways to light an RJ45 port. In the first, surface-mount LEDs are built into the jack housing and wired to dedicated LED leads on the connector, so the light appears at the port opening directly. In the second, the LEDs sit on the PCB and a transparent plastic light guide (light pipe) channels their light up to the panel face. VOOHU offers integrated-LED jacks and also lists light guides as an optional accessory for board-mounted LEDs.</p>
+    <h3>Do the LED indicators affect Ethernet signal integrity?</h3>
+    <p>No, when they are laid out correctly. The LEDs sit on their own leads and are driven by low-speed DC signals from the PHY, completely separate from the eight 8P8C signal contacts and, in a magjack, from the internal magnetics. Good practice is to keep the LED traces and their series resistors away from the differential pairs and to respect the connector shield and ground return, so the indicators never load or couple into the data path.</p>
+  </div>
+
+  <div class="related">
+    <h2>Related VOOHU guides</h2>
+    <ul class="tight">
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-magnetics-magjack-rj45-jacks.html">Integrated-magnetics (magjack) RJ45 jacks explained</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/multi-gig-2-5g-5g-rj45-jacks.html">Multi-gig 2.5G/5G RJ45 jacks</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-orientation-tab-up-vs-tab-down.html">RJ45 jack orientation: tab-up vs tab-down</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-esd-surge-protection.html">RJ45 jack ESD &amp; surge protection</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <span class="tag">RJ45 jack</span><span class="tag">LED indicators</span><span class="tag">Link &amp; Activity</span><span class="tag">Light guide</span><span class="tag">VOOHU</span>
+  </div>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><strong>VOOHU Electronics</strong> — Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices. ISO9001, ISO14001, RoHS, REACH, CE certified.</p>
+    <p>Website: <a href="https://www.voohuele.com">https://www.voohuele.com</a> · Email: <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> · WhatsApp: +86 133 5804 1040</p>
+    <p class="note" style="color:#7f93a6;">© 2026 VOOHU Electronics. Specifications are representative of IEC 60603-7-class RJ45 jacks; always confirm against the specific product datasheet.</p>
+  </div>
+</footer>
+
+</body>
+</html>
