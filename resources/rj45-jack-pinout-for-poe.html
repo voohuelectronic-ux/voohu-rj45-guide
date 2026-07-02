@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RJ45 Jack Pinout for PoE: Mode A, Mode B &amp; 4PPoE Pin Assignments — VOOHU Guide</title>
+<meta name="description" content="Complete RJ45 jack pinout for PoE: which pins carry power in Mode A (1,2,3,6), Mode B (4,5,7,8) and 4PPoE (all 8), with IEEE 802.3af/at/bt power tables and how center-tapped magjack sockets deliver phantom power. A VOOHU RJ45 jack guide.">
+<meta name="keywords" content="RJ45 jack pinout PoE, PoE pinout, Mode A Mode B PoE, 4PPoE pinout, 802.3bt pinout, RJ45 socket PoE pins, phantom power center tap, magjack PoE, VOOHU RJ45 jack">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-pinout-for-poe.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="RJ45 Jack Pinout for PoE: Mode A, Mode B &amp; 4PPoE Pin Assignments — VOOHU Guide">
+<meta property="og:description" content="Which RJ45 pins carry PoE power? Mode A uses 1,2,3,6; Mode B uses 4,5,7,8; 4PPoE (802.3bt) uses all eight. Full IEEE 802.3 power tables plus center-tapped magjack design from VOOHU.">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-pinout-for-poe.html">
+<meta property="og:site_name" content="VOOHU RJ45 Connector Guide">
+<meta property="og:image" content="https://www.voohuele.com/upload/image/20260702/d9a3ecc31889e0c86c7a6353c419898a.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RJ45 Jack Pinout for PoE: Mode A, Mode B &amp; 4PPoE — VOOHU Guide">
+<meta name="twitter:description" content="Which RJ45 pins carry PoE power? Mode A = 1,2,3,6; Mode B = 4,5,7,8; 4PPoE = all eight. IEEE 802.3af/at/bt tables and magjack center-tap design from VOOHU.">
+<meta name="twitter:image" content="https://www.voohuele.com/upload/image/20260702/d9a3ecc31889e0c86c7a6353c419898a.png">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<!-- JSON-LD: TechArticle -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "RJ45 Jack Pinout for PoE: Mode A, Mode B & 4PPoE Pin Assignments",
+  "description": "A pin-by-pin RJ45 jack pinout for Power over Ethernet, covering Mode A (pins 1,2,3,6), Mode B (pins 4,5,7,8) and 4-pair 4PPoE (all eight pins), with IEEE 802.3af/at/bt power levels and center-tapped magjack design.",
+  "author": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "url": "https://www.voohuele.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.voohuele.com/upload/image/20241210/c0db5d4f8ac1de5520bf94745ed32180.svg"
+    }
+  },
+  "datePublished": "2026-07-02",
+  "dateModified": "2026-07-02",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-pinout-for-poe.html"
+  },
+  "about": ["RJ45 jack", "Power over Ethernet", "IEEE 802.3bt", "8P8C modular socket", "PoE pinout"],
+  "keywords": "RJ45 jack pinout PoE, Mode A, Mode B, 4PPoE, 802.3bt, phantom power, magjack"
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which RJ45 pins carry PoE power?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Mode A (Alternative A), power rides on the data pairs at pins 1, 2, 3 and 6. In Mode B (Alternative B), power uses the spare pairs at pins 4, 5, 7 and 8. Four-pair PoE (4PPoE, IEEE 802.3bt Type 3 and Type 4) energizes all eight pins at once."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Mode A and Mode B PoE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mode A delivers DC power over the same pairs used for data (pins 1-2 and 3-6) using the center taps of the jack magnetics, so data and power share the conductors. Mode B delivers power over the spare pairs (pins 4-5 and 7-8) that 10/100 Ethernet does not use for data. A compliant Powered Device accepts either mode via an input diode bridge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Gigabit (1000BASE-T) PoE use all four pairs for data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. 1000BASE-T uses all four pairs for bidirectional data (BI_DA to BI_DD on pins 1-2, 3-6, 4-5, 7-8). PoE still coexists with data because power is injected onto the transformer center taps as common-mode phantom power, so both 2-pair and 4-pair PoE work on a gigabit link."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a special RJ45 jack for PoE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For Mode A and 4PPoE you need an integrated-magnetics RJ45 jack (magjack) whose transformers have accessible center taps and adequate DC current and isolation ratings. VOOHU SYT-series integrated RJ45 sockets provide center-tapped magnetics, 2250 VDC isolation and 57 VDC / 350 mA PoE handling, sized for IEEE 802.3af through 802.3bt designs."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root { --brand:#0b5cab; --brand-dark:#083f75; --ink:#1c2733; --muted:#5b6b7b; --line:#e2e8ef; --bg:#f6f9fc; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:#fff; line-height:1.65; }
+  a { color:var(--brand); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  /* sticky nav */
+  .topnav { position:sticky; top:0; z-index:100; background:var(--brand); box-shadow:0 1px 6px rgba(0,0,0,.15); }
+  .topnav .wrap { max-width:920px; margin:0 auto; padding:11px 18px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center; }
+  .topnav a { color:#fff; font-size:14px; font-weight:600; }
+  .topnav .brand { font-size:17px; font-weight:800; letter-spacing:.3px; margin-right:8px; }
+  .container { max-width:920px; margin:0 auto; padding:22px 18px 60px; }
+  .crumbs { font-size:13px; color:var(--muted); margin:14px 0 6px; }
+  .crumbs a { color:var(--muted); }
+  h1 { font-size:30px; line-height:1.25; margin:8px 0 6px; color:var(--brand-dark); }
+  .updated { color:var(--muted); font-size:13.5px; margin-bottom:18px; }
+  h2 { font-size:22px; color:var(--brand-dark); margin-top:34px; border-bottom:2px solid var(--line); padding-bottom:6px; }
+  h3 { font-size:17.5px; color:var(--ink); margin-top:24px; }
+  p { margin:12px 0; }
+  .lede { font-size:18px; color:#33475b; }
+  .answer { background:var(--bg); border-left:4px solid var(--brand); border-radius:6px; padding:16px 18px; margin:20px 0; }
+  .answer strong { color:var(--brand-dark); }
+  table { border-collapse:collapse; width:100%; margin:18px 0; font-size:14.5px; }
+  th,td { border:1px solid var(--line); padding:9px 11px; text-align:left; vertical-align:top; }
+  th { background:var(--brand); color:#fff; font-weight:600; }
+  tbody tr:nth-child(even) { background:var(--bg); }
+  caption { caption-side:bottom; font-size:12.5px; color:var(--muted); padding-top:8px; text-align:left; }
+  .pwr { color:var(--brand-dark); font-weight:700; }
+  .na { color:#b0392f; }
+  .mistakes li { margin:8px 0; }
+  .faq h3 { margin-bottom:2px; }
+  .related { background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:16px 20px; margin-top:26px; }
+  .related ul { margin:8px 0 0; padding-left:20px; }
+  .related li { margin:6px 0; }
+  footer { background:var(--brand-dark); color:#dbe7f3; margin-top:50px; }
+  footer .wrap { max-width:920px; margin:0 auto; padding:26px 18px; font-size:14px; }
+  footer strong { color:#fff; }
+  footer a { color:#9fd0ff; }
+  .tag { display:inline-block; background:#eaf2fb; color:var(--brand-dark); border-radius:4px; padding:2px 8px; font-size:12.5px; margin:2px 4px 2px 0; }
+  @media (max-width:600px){ h1{font-size:24px;} .topnav .brand{width:100%;} }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="wrap">
+    <a class="brand" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">VOOHU RJ45 Guide</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a>
+    <a href="poe-standards-af-at-bt-explained.html">PoE Standards</a>
+    <a href="poe-failure-prevention.html">PoE Failure Prevention</a>
+    <a href="integrated-magnetics-magjack-rj45-jacks.html">Magjack Sockets</a>
+    <a href="t568a-vs-t568b-rj45-wiring.html">T568A/B Wiring</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="crumbs">
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a> &rsaquo;
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Resources</a> &rsaquo;
+    <span>RJ45 Jack Pinout for PoE</span>
+  </div>
+
+  <h1>RJ45 Jack Pinout for PoE: Mode A, Mode B &amp; 4PPoE Pin Assignments</h1>
+  <div class="updated">Updated July 2, 2026 · By VOOHU Electronics</div>
+
+  <p class="lede">Power over Ethernet does not add wires — it re-uses the eight contacts already inside every RJ45 jack. Knowing exactly <em>which</em> pins carry DC in each PoE mode is the difference between a socket that powers a camera reliably and one that overheats or never negotiates. This guide maps the RJ45 <strong>jack</strong> (female 8P8C socket / 母座) pinout for every PoE mode, backed by the IEEE 802.3 standard, and shows why the magnetics inside the jack decide whether Mode A and 4-pair PoE work at all.</p>
+
+  <div class="answer">
+    <p><strong>Short answer:</strong> A PoE-capable RJ45 jack still has 8 pins in the standard 8P8C layout. In <strong>Mode A</strong> (Alternative A) power rides on the <em>data</em> pairs — pins <strong>1, 2</strong> and <strong>3, 6</strong>. In <strong>Mode B</strong> (Alternative B) power rides on the <em>spare</em> pairs — pins <strong>4, 5</strong> and <strong>7, 8</strong>. In <strong>4-pair PoE (4PPoE / IEEE 802.3bt Type 3 and Type 4)</strong>, all four pairs — every pin 1&ndash;8 — carry power at once. Power reaches the wire through the <em>center taps</em> of the jack's transformers, so the socket's magnetics, not its plastic housing, are what make PoE possible.</p>
+  </div>
+
+  <h2>The RJ45 jack pinout, pin by pin</h2>
+  <p>The 8-position/8-contact (8P8C) modular jack is defined mechanically by <strong>IEC 60603-7</strong>, and the pair-to-pin mapping by <strong>ANSI/TIA-568</strong> (the T568A/T568B schemes). PoE — defined by <strong>IEEE 802.3</strong> Clause 33 (Type 1/2) and Clause 145 (Type 3/4) — sits on top of that same pinout. The table below shows what each pin does for data and for power.</p>
+
+  <table>
+    <caption>RJ45 (8P8C) jack pinout with data signals and PoE power assignment. Pair numbering follows T568B. Sources: IEC 60603-7, ANSI/TIA-568, IEEE 802.3.</caption>
+    <thead>
+      <tr>
+        <th>Pin</th>
+        <th>Pair</th>
+        <th>10/100BASE-T signal</th>
+        <th>1000BASE-T signal</th>
+        <th>Mode A (2-pair)</th>
+        <th>Mode B (2-pair)</th>
+        <th>4PPoE (Type 3/4)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>2</td><td>TX+</td><td>BI_DA+</td><td class="pwr">Power</td><td class="na">data only</td><td class="pwr">Power</td></tr>
+      <tr><td>2</td><td>2</td><td>TX&minus;</td><td>BI_DA&minus;</td><td class="pwr">Power</td><td class="na">data only</td><td class="pwr">Power</td></tr>
+      <tr><td>3</td><td>3</td><td>RX+</td><td>BI_DB+</td><td class="pwr">Power</td><td class="na">data only</td><td class="pwr">Power</td></tr>
+      <tr><td>4</td><td>1</td><td>&mdash; (spare)</td><td>BI_DC+</td><td class="na">unused</td><td class="pwr">Power</td><td class="pwr">Power</td></tr>
+      <tr><td>5</td><td>1</td><td>&mdash; (spare)</td><td>BI_DC&minus;</td><td class="na">unused</td><td class="pwr">Power</td><td class="pwr">Power</td></tr>
+      <tr><td>6</td><td>3</td><td>RX&minus;</td><td>BI_DB&minus;</td><td class="pwr">Power</td><td class="na">data only</td><td class="pwr">Power</td></tr>
+      <tr><td>7</td><td>4</td><td>&mdash; (spare)</td><td>BI_DD+</td><td class="na">unused</td><td class="pwr">Power</td><td class="pwr">Power</td></tr>
+      <tr><td>8</td><td>4</td><td>&mdash; (spare)</td><td>BI_DD&minus;</td><td class="na">unused</td><td class="pwr">Power</td><td class="pwr">Power</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Polarity: why the PD does not care which pins are + or &minus;</h3>
+  <p>The IEEE standard lets a Power Sourcing Equipment (PSE) port be wired either as MDI or MDI-X, which flips the polarity on the powered pairs. In <strong>Mode A</strong>, an MDI-X port puts +V on pins 3&amp;6 and &minus;V on pins 1&amp;2, while an MDI port reverses it. In <strong>Mode B</strong>, pins 4&amp;5 are typically +V and pins 7&amp;8 are &minus;V. Because polarity is not guaranteed, every compliant Powered Device (PD) sits behind an input <em>diode bridge</em> that accepts either polarity. For 4-pair 802.3bt, the standard even fixes the reference: a Type 4 PSE presents <em>Alt-A as MDI-X</em> and <em>Alt-B as MDI</em> simultaneously.</p>
+
+  <h2>Phantom power: how DC and data share the same pins</h2>
+  <p>In Mode A the same pair carries a differential data signal <em>and</em> a DC supply. This works because the DC is applied as <strong>common-mode "phantom" power</strong> to the <strong>center tap</strong> of the jack's isolation transformer. The two conductors of a pair sit at the same DC potential, so the transformer sees no DC across its winding and the differential data passes untouched. Take away the center-tapped magnetics and Mode A / 4PPoE simply cannot be delivered — which is why the jack you choose matters as much as the PSE.</p>
+  <p>This is the core of an <a href="integrated-magnetics-magjack-rj45-jacks.html">integrated-magnetics RJ45 socket (magjack)</a>: the transformer, common-mode choke and center-tap connections live inside the connector housing. VOOHU's SYT-series integrated RJ45 jacks bring the center taps out for PoE, rated for <strong>57&nbsp;VDC / 350&nbsp;mA</strong> PoE operation with <strong>2250&nbsp;VDC</strong> isolation and <strong>350&nbsp;µH</strong> OCL magnetics — the electrical foundation Mode A and 4PPoE rely on.</p>
+
+  <h2>PoE power levels by IEEE 802.3 type</h2>
+  <p>The pinout tells you <em>where</em> power flows; the PoE type tells you <em>how much</em>. Higher power classes drive more current per conductor, so the jack's contacts and magnetics must be rated for it — a critical, and often skipped, selection step.</p>
+
+  <table>
+    <caption>PoE power levels and pair usage by IEEE 802.3 standard. Values per IEEE 802.3af/at/bt. PSE = source; PD = powered device.</caption>
+    <thead>
+      <tr>
+        <th>Standard</th>
+        <th>Common name</th>
+        <th>Type</th>
+        <th>Max PSE power</th>
+        <th>Max PD power</th>
+        <th>Pairs used</th>
+        <th>Max current / pair</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>802.3af</td><td>PoE</td><td>Type 1</td><td>15.4 W</td><td>12.95 W</td><td>2</td><td>350 mA</td></tr>
+      <tr><td>802.3at</td><td>PoE+</td><td>Type 2</td><td>30 W</td><td>25.5 W</td><td>2</td><td>600 mA</td></tr>
+      <tr><td>802.3bt</td><td>PoE++ / 4PPoE</td><td>Type 3</td><td>60 W</td><td>51 W</td><td>2 or 4</td><td>600 mA</td></tr>
+      <tr><td>802.3bt</td><td>PoE++ / 4PPoE</td><td>Type 4</td><td>90 W</td><td>71.3 W</td><td>4</td><td>960 mA</td></tr>
+    </tbody>
+  </table>
+  <p>Typical PSE output is <strong>44&ndash;57&nbsp;VDC</strong> (rising to ~50&ndash;57&nbsp;V for higher types); a PD must operate down to about <strong>37&nbsp;VDC</strong> at its input to tolerate cable drop. Full class negotiation and power budgets are covered in our <a href="poe-standards-af-at-bt-explained.html">PoE / PoE+ / PoE++ standards guide</a>.</p>
+
+  <h2>Choosing an RJ45 jack for a PoE design</h2>
+  <p>Match the socket to the highest PoE type it must ever pass, not just today's load:</p>
+  <table>
+    <thead>
+      <tr><th>If your design is&hellip;</th><th>Pins carrying power</th><th>Jack requirement</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>10/100 + Mode B midspan</td><td>4,5,7,8</td><td>Any jack with the spare pairs terminated; discrete or integrated magnetics.</td></tr>
+      <tr><td>10/100/1000 + Mode A endspan</td><td>1,2,3,6 (via center taps)</td><td>Integrated-magnetics magjack with accessible, current-rated center taps.</td></tr>
+      <tr><td>802.3bt Type 3/4 (4PPoE)</td><td>All 8</td><td>Magjack rated for full per-pair current (up to 960 mA) and 57 VDC isolation on every pair.</td></tr>
+    </tbody>
+  </table>
+  <p>VOOHU integrated RJ45 sockets cover 100M, 1000M, 2.5G, 5G and 10G/HDBaseT speeds in 1×1, 1×N and 2×N stacked bodies, with center-tapped magnetics sized for PoE through 802.3bt. See the <a href="rj45-jack-tht-vs-smt-pcb-mount.html">THT vs SMT mounting guide</a> when you fix the footprint.</p>
+
+  <h2>Common mistakes with PoE jack pinouts</h2>
+  <ul class="mistakes">
+    <li><strong>Assuming Mode B leaves the data pins free.</strong> On a gigabit link, pins 4,5,7,8 also carry data (BI_DC/BI_DD), so Mode B power still shares conductors with traffic — the spare-pair shortcut only exists at 10/100.</li>
+    <li><strong>Using a plain data jack for Mode A.</strong> Without accessible transformer center taps, phantom power has nowhere to inject. A non-magnetic jack can only ever do Mode B midspan.</li>
+    <li><strong>Ignoring per-pair current rating.</strong> A jack fine for 350 mA (Type 1) can overheat at the 960 mA/pair a Type 4 design demands. Check the contact and magnetics current rating.</li>
+    <li><strong>Forgetting PD polarity.</strong> Designing a PD without an input diode bridge means it works on one PSE and fails on the next. Always rectify the input.</li>
+    <li><strong>Under-rating isolation.</strong> PoE puts up to 57 VDC on the pins; specify a jack with adequate dielectric withstanding / isolation (VOOHU SYT sockets are rated 2250 VDC). See <a href="poe-failure-prevention.html">PoE failure prevention</a>.</li>
+  </ul>
+
+  <h2 class="faq">Frequently asked questions</h2>
+  <div class="faq">
+    <h3>Which RJ45 pins carry PoE power?</h3>
+    <p>In Mode A (Alternative A), power rides on the data pairs at pins 1, 2, 3 and 6. In Mode B (Alternative B), power uses the spare pairs at pins 4, 5, 7 and 8. Four-pair PoE (4PPoE, IEEE 802.3bt Type 3 and Type 4) energizes all eight pins at once.</p>
+
+    <h3>What is the difference between Mode A and Mode B PoE?</h3>
+    <p>Mode A delivers DC power over the same pairs used for data (pins 1-2 and 3-6) using the center taps of the jack magnetics, so data and power share the conductors. Mode B delivers power over the spare pairs (pins 4-5 and 7-8) that 10/100 Ethernet does not use for data. A compliant Powered Device accepts either mode via an input diode bridge.</p>
+
+    <h3>Does Gigabit (1000BASE-T) PoE use all four pairs for data?</h3>
+    <p>Yes. 1000BASE-T uses all four pairs for bidirectional data (BI_DA to BI_DD on pins 1-2, 3-6, 4-5, 7-8). PoE still coexists because power is injected onto the transformer center taps as common-mode phantom power, so both 2-pair and 4-pair PoE work on a gigabit link.</p>
+
+    <h3>Do I need a special RJ45 jack for PoE?</h3>
+    <p>For Mode A and 4PPoE you need an integrated-magnetics RJ45 jack (magjack) whose transformers have accessible center taps and adequate DC current and isolation ratings. VOOHU SYT-series integrated RJ45 sockets provide center-tapped magnetics, 2250 VDC isolation and 57 VDC / 350 mA PoE handling, sized for IEEE 802.3af through 802.3bt designs.</p>
+  </div>
+
+  <div class="related">
+    <strong>Related VOOHU RJ45 guides</strong>
+    <ul>
+      <li><a href="poe-standards-af-at-bt-explained.html">PoE, PoE+ and PoE++ standards (802.3af/at/bt) explained</a></li>
+      <li><a href="integrated-magnetics-magjack-rj45-jacks.html">Integrated-magnetics (magjack) RJ45 sockets</a></li>
+      <li><a href="t568a-vs-t568b-rj45-wiring.html">T568A vs T568B RJ45 wiring</a></li>
+      <li><a href="poe-failure-prevention.html">Preventing PoE failures in RJ45 jacks</a></li>
+      <li><a href="common-mode-choke-placement-ethernet-transformer.html">Common-mode choke placement in Ethernet transformers</a></li>
+    </ul>
+  </div>
+
+  <div style="margin-top:22px;">
+    <span class="tag">RJ45 jack pinout</span>
+    <span class="tag">PoE</span>
+    <span class="tag">Mode A / Mode B</span>
+    <span class="tag">4PPoE 802.3bt</span>
+    <span class="tag">magjack</span>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><strong>VOOHU Electronics</strong> — Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices. ISO9001, ISO14001, RoHS, REACH, CE certified.</p>
+    <p>Website: <a href="https://www.voohuele.com">https://www.voohuele.com</a> · Email: <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> · WhatsApp: +86 133 5804 1040</p>
+    <p style="font-size:12.5px; color:#9fb6cd;">&copy; 2026 VOOHU Electronics. Technical values cited from IEC 60603-7, ANSI/TIA-568 and IEEE 802.3 (af/at/bt); product specifications from VOOHU SYT-series integrated RJ45 sockets.</p>
+  </div>
+</footer>
+
+</body>
+</html>
