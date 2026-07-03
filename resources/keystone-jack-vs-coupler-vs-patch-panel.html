@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RJ45 Keystone Jack vs Coupler vs Patch Panel: Choosing the Right Female Socket — VOOHU Electronics</title>
+<meta name="description" content="Keystone jack vs coupler vs patch panel explained: what each RJ45 female socket (母座) does, how it terminates, and when to use it. VOOHU compares them with real IEC 60603-7, ANSI/TIA-568 and IEEE 802.3 parameters for structured cabling.">
+<meta name="keywords" content="RJ45 keystone jack vs coupler, RJ45 coupler vs patch panel, keystone jack, RJ45 female socket, RJ45 母座, IDC punch-down jack, straight-through coupler, modular patch panel, VOOHU RJ45 jack, IEC 60603-7, ANSI/TIA-568">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/keystone-jack-vs-coupler-vs-patch-panel.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VOOHU RJ45 Connector Guide">
+<meta property="og:title" content="RJ45 Keystone Jack vs Coupler vs Patch Panel: Choosing the Right Female Socket — VOOHU Electronics">
+<meta property="og:description" content="Keystone jack, inline coupler or patch panel? VOOHU explains what each RJ45 female socket (母座) does and when to use it, with sourced IEC 60603-7 and ANSI/TIA-568 parameters.">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/keystone-jack-vs-coupler-vs-patch-panel.html">
+<meta property="og:image" content="https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RJ45 Keystone Jack vs Coupler vs Patch Panel — VOOHU">
+<meta name="twitter:description" content="Three RJ45 female sockets (母座), three jobs: terminate a cable, join two cords, or aggregate a rack. VOOHU compares keystone jack vs coupler vs patch panel with sourced specs.">
+<meta name="twitter:image" content="https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<!-- JSON-LD: TechArticle -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "RJ45 Keystone Jack vs Coupler vs Patch Panel: Choosing the Right Female Socket — VOOHU Electronics",
+  "description": "A practical comparison of three RJ45 female modular sockets (母座) used in structured cabling — the field-terminable keystone jack, the straight-through inline coupler, and the rack-mount patch panel — covering termination method, role in the channel, and sourced IEC 60603-7, ANSI/TIA-568 and IEEE 802.3 parameters.",
+  "author": {"@type": "Organization", "name": "VOOHU Electronics", "url": "https://www.voohuele.com"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "logo": {"@type": "ImageObject", "url": "https://www.voohuele.com/upload/image/20241210/c0db5d4f8ac1de5520bf94745ed32180.svg"}
+  },
+  "datePublished": "2026-07-03",
+  "dateModified": "2026-07-03",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/keystone-jack-vs-coupler-vs-patch-panel.html"},
+  "image": "https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp",
+  "about": ["RJ45 keystone jack", "RJ45 coupler", "Patch panel", "Female modular socket", "Structured cabling"],
+  "keywords": "RJ45 keystone jack vs coupler, coupler vs patch panel, RJ45 female socket, IDC punch-down, straight-through coupler, modular patch panel, IEC 60603-7, ANSI/TIA-568"
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between an RJ45 keystone jack and a coupler?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A keystone jack is a single RJ45 female socket that you terminate a solid horizontal cable into, using an IDC punch-down (110 or Krone) wired to the T568A or T568B color code. A coupler is two RJ45 sockets wired straight-through back-to-back, with no termination — it simply joins two already-plugged patch cords to extend a run. Put simply: a keystone jack ends a cable in a socket, while a coupler links two plugs. VOOHU manufactures both the female sockets and straight-through RJ45 couplers (Cat3 through Cat7A)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a patch panel, or can I just use keystone jacks in wall plates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both use the same kind of RJ45 female socket. A wall plate holds one or two keystone jacks at the work-area outlet, while a patch panel aggregates 24 or 48 terminations in a 19-inch rack at the telecom room so you can cross-connect to switches, label ports and manage moves/adds/changes. For a handful of drops, keystone jacks in plates are enough; once you have many runs or need organized cross-connects, a patch panel is the right aggregation point."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does an RJ45 coupler slow down or degrade the network?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A coupler adds one more mated connection to the channel, which contributes a little insertion loss and a small NEXT/return-loss penalty. ANSI/TIA-568 permits up to four connections in a channel, so a single category-rated coupler is fine — but avoid stacking couplers or mixing categories, because that erodes the margin. For a permanent run, terminate the cable into a keystone jack rather than relying on a coupler and two patch cords."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are keystone jacks and patch panel ports the same thing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On a modular (keystone) patch panel they are literally the same — you snap individual keystone jacks into empty slots, mixing categories, shielding or colors as needed. A loaded or fixed patch panel instead has the jacks built in, with the IDC punch-downs on the rear. Either way the front presents an 8P8C RJ45 socket rated for at least 750 mating cycles per IEC 60603-7."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root { --brand:#0b5cab; --brand-dark:#08407a; --ink:#1c2733; --muted:#5b6b7a; --line:#e2e8f0; --bg:#f6f9fc; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:#fff; line-height:1.65; }
+  a { color:var(--brand); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .nav { position:sticky; top:0; z-index:50; background:var(--brand); color:#fff; }
+  .nav .wrap { max-width:920px; margin:0 auto; padding:11px 18px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center; }
+  .nav .brand { font-weight:700; letter-spacing:.3px; margin-right:6px; }
+  .nav a { color:#eaf2fb; font-size:14px; }
+  .nav a:hover { color:#fff; }
+  .container { max-width:920px; margin:0 auto; padding:0 18px 60px; }
+  .crumb { font-size:13px; color:var(--muted); margin:18px 0 6px; }
+  .crumb a { color:var(--muted); }
+  h1 { font-size:30px; line-height:1.25; margin:10px 0 8px; }
+  h2 { font-size:22px; margin:34px 0 10px; color:var(--brand-dark); border-bottom:2px solid var(--bg); padding-bottom:6px; }
+  h3 { font-size:18px; margin:22px 0 6px; }
+  .updated { color:var(--muted); font-size:14px; margin-bottom:6px; }
+  .lede { font-size:18px; color:#2a3a49; }
+  .short { background:var(--bg); border-left:4px solid var(--brand); padding:14px 18px; border-radius:6px; margin:20px 0; }
+  table { width:100%; border-collapse:collapse; margin:18px 0; font-size:15px; }
+  th, td { border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--brand); color:#fff; font-weight:600; }
+  tr:nth-child(even) td { background:#fafcff; }
+  caption { caption-side:top; text-align:left; font-size:13px; color:var(--muted); margin-bottom:6px; }
+  .note { font-size:13px; color:var(--muted); }
+  ul.tight li { margin:5px 0; }
+  .related { background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:16px 20px; margin:30px 0; }
+  .related h2 { border:none; margin-top:0; }
+  .faq h3 { color:var(--brand-dark); }
+  footer { background:#0e1c2b; color:#cdd9e5; font-size:14px; }
+  footer .wrap { max-width:920px; margin:0 auto; padding:26px 18px; }
+  footer strong { color:#fff; }
+  footer a { color:#9ec5f0; }
+  .tag { display:inline-block; background:#eaf2fb; color:var(--brand-dark); font-size:12px; padding:2px 9px; border-radius:20px; margin:2px 4px 2px 0; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <span class="brand">VOOHU RJ45 Guide</span>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/t568a-vs-t568b-rj45-wiring.html">T568A vs T568B</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-vs-discrete.html">Integrated vs Discrete</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-materials-plating.html">Materials &amp; Plating</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/shielded-vs-unshielded-rj45.html">Shielded vs Unshielded</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="crumb">
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a> &rsaquo;
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Resources</a> &rsaquo;
+    Keystone Jack vs Coupler vs Patch Panel
+  </div>
+
+  <h1>RJ45 Keystone Jack vs Coupler vs Patch Panel: Choosing the Right Female Socket</h1>
+  <div class="updated">Updated July 3, 2026 · By VOOHU Electronics</div>
+
+  <p class="lede">A keystone jack, an inline coupler and a patch panel all present the same thing to a network cable — a female 8P8C RJ45 socket (母座) that a plug clicks into. What differs is the <em>job</em> each one does: a keystone jack <strong>terminates</strong> a cable into a socket, a coupler <strong>joins</strong> two cords with no termination, and a patch panel <strong>aggregates</strong> many terminations in a rack. Confusing them leads to failed certification and messy installs. This guide from VOOHU Electronics compares all three for structured cabling, with parameters sourced from IEC 60603-7, ANSI/TIA-568 and IEEE 802.3.</p>
+
+  <div class="short">
+    <strong>Short answer:</strong> Choose a <strong>keystone jack</strong> to permanently terminate a solid horizontal cable into a socket (IDC punch-down, wired T568A/T568B) at a wall plate, surface box or modular patch panel. Choose an <strong>inline coupler</strong> only to join two already-terminated patch cords or make a pass-through plate — it adds no termination but does add a mated connection. Choose a <strong>patch panel</strong> to terminate and organize many cables at the rack. All three expose an 8P8C socket rated for ≥ 750 mating cycles (IEC 60603-7); the coupler is the one to use sparingly, because every extra mated connection spends channel margin.
+  </div>
+
+  <h2>The three sockets at a glance</h2>
+  <p>Structured cabling reuses one interface — the 8P8C modular jack standardized in IEC 60603-7 and specified for transmission by ANSI/TIA-568 — in three physical packages. Knowing which package does which job is the whole decision.</p>
+
+  <h3>Keystone jack — the terminating socket</h3>
+  <p>A <strong>keystone jack</strong> is a single RJ45 female socket in the industry-standard "keystone" snap-in form factor (a roughly 14.5&nbsp;×&nbsp;16&nbsp;mm faceplate opening). The front is the 8P8C plug interface; the rear is an <strong>insulation-displacement contact (IDC)</strong> block — 110- or Krone/LSA-style — where you punch down the eight conductors of a solid horizontal cable to the T568A or T568B color code. It clicks into wall plates, surface-mount boxes and modular patch panels. This is the workhorse of a permanent link: it turns a run of cable into a clean, re-pluggable outlet.</p>
+
+  <h3>Inline coupler — the straight-through join</h3>
+  <p>A <strong>coupler</strong> is two RJ45 sockets wired back-to-back, pin&nbsp;1→1 through pin&nbsp;8→8, with <em>no</em> termination hardware. You plug a patch cord into each end to join them, extending or passing through a run. Couplers come as inline barrels and as keystone-form "feed-through" modules that snap into a plate or panel. They are quick and tool-free, but each coupler inserts an extra mated connection into the channel — so they are best for temporary extensions and pass-through outlets, not as a substitute for terminating the cable. VOOHU builds straight-through RJ45 couplers across Cat3, Cat5e, Cat6, Cat6A, Cat7 and Cat7A.</p>
+
+  <h3>Patch panel — the rack-mount aggregation point</h3>
+  <p>A <strong>patch panel</strong> is a 19-inch rack unit (commonly 24 or 48 ports, 1U/2U) that terminates and organizes many horizontal cables in the telecom room or data-center rack. A <strong>loaded/fixed</strong> panel has the jacks built in with rear IDC punch-downs; a <strong>modular/keystone</strong> panel is an empty frame you populate with individual keystone jacks, and a <strong>feed-through</strong> panel uses couplers for tool-free pass-through. The front faces patch cords to the switch; the back faces the permanent cabling. It is where labeling, testing and moves/adds/changes happen.</p>
+
+  <h2>Keystone jack vs coupler vs patch panel — role comparison</h2>
+  <table>
+    <caption>Table 1 — What each RJ45 female socket does and where it belongs.</caption>
+    <thead><tr><th>Attribute</th><th>Keystone jack</th><th>Inline coupler</th><th>Patch panel</th></tr></thead>
+    <tbody>
+      <tr><td>Primary role</td><td>Terminate a solid cable into a socket</td><td>Join two patch cords / extend a run</td><td>Terminate &amp; aggregate many cables at the rack</td></tr>
+      <tr><td>Termination method</td><td>IDC punch-down (110 / Krone), T568A/B</td><td>None — straight-through, plug-to-plug</td><td>IDC (loaded) or keystone-loaded; feed-through = coupler</td></tr>
+      <tr><td>RJ45 sockets</td><td>1 (female)</td><td>2 (female, back-to-back)</td><td>24 / 48 (female)</td></tr>
+      <tr><td>Mounts in</td><td>Wall plate, surface box, keystone panel</td><td>Wall plate, surface box, or inline</td><td>19-inch rack (1U / 2U)</td></tr>
+      <tr><td>Connections added to channel</td><td>1 (the terminated jack)</td><td>2 (a coupler = two mated interfaces)</td><td>1 per port</td></tr>
+      <tr><td>Tools needed</td><td>Punch-down tool</td><td>None</td><td>Punch-down tool (loaded/keystone)</td></tr>
+      <tr><td>Best for</td><td>Permanent structured-cabling drops</td><td>Temporary extension, pass-through outlet</td><td>Telecom room / data-center cross-connect</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Why "connections" matter: ANSI/TIA-568 models a channel with a maximum of four mated connections. A coupler consumes two of them at one point, which is why stacking couplers quickly exhausts the budget.</p>
+
+  <h2>Sourced parameters for the RJ45 socket</h2>
+  <p>Regardless of package, the female 8P8C socket carries the same governing ratings. The figures below are connector-class values you can cite and then confirm on the specific product datasheet.</p>
+  <table>
+    <caption>Table 2 — Representative RJ45 jack / socket parameters and their standards.</caption>
+    <thead><tr><th>Parameter</th><th>Typical value</th><th>Source / standard</th></tr></thead>
+    <tbody>
+      <tr><td>Interface</td><td>8P8C modular (RJ45)</td><td>IEC 60603-7</td></tr>
+      <tr><td>Durability (plug/jack mating)</td><td>≥ 750 cycles</td><td>IEC 60603-7</td></tr>
+      <tr><td>IDC wire range (keystone / loaded panel)</td><td>22–26 AWG solid</td><td>ANSI/TIA-568.2-D</td></tr>
+      <tr><td>Current rating per contact</td><td>1.5 A</td><td>IEC 60603-7</td></tr>
+      <tr><td>Contact plating (mating area)</td><td>Gold over nickel, 50 µin (1.27 µm) typical</td><td>IEC 60603-7-class datasheets</td></tr>
+      <tr><td>Contact resistance</td><td>≤ 20 mΩ</td><td>IEC 60603-7-class datasheets</td></tr>
+      <tr><td>Insulation resistance</td><td>≥ 500 MΩ</td><td>IEC 60603-7-class datasheets</td></tr>
+      <tr><td>Dielectric withstanding</td><td>1000 V AC, 1 min</td><td>IEC 60603-7-class datasheets</td></tr>
+      <tr><td>Category bandwidth</td><td>Cat5e 100 MHz · Cat6 250 MHz · Cat6A 500 MHz · Cat8 2000 MHz</td><td>ANSI/TIA-568.2</td></tr>
+      <tr><td>Operating temperature</td><td>−40 to +85 °C (industrial); 0 to +70 °C (commercial)</td><td>VOOHU RJ45 range</td></tr>
+    </tbody>
+  </table>
+  <p class="note">µin = microinch; 1 µin = 0.0254 µm. The IDC of a keystone jack accepts solid conductors and is designed for repeated re-terminations, but that count is far lower than the ≥ 750-cycle rating of the front plug/jack interface — treat the punch-down as semi-permanent.</p>
+
+  <h2>How to choose: a quick decision guide</h2>
+  <ul class="tight">
+    <li><strong>Permanent drop from a cable run?</strong> Terminate it into a <strong>keystone jack</strong>. Do not leave a run ending in a plug fed through a coupler.</li>
+    <li><strong>Many runs converging at a rack?</strong> Use a <strong>patch panel</strong> — modular/keystone if you want to mix categories, shielding and colors; loaded if you want fixed, lower-cost density.</li>
+    <li><strong>Need to lengthen a finished patch cord for now?</strong> A single category-matched <strong>coupler</strong> is fine; plan to re-terminate properly for anything permanent.</li>
+    <li><strong>Pass-through wall plate (patch cord on both sides)?</strong> Use a <strong>feed-through (coupler) keystone</strong> — no punch-down needed.</li>
+    <li><strong>10G / Cat6A or Cat8 link?</strong> Every mated interface costs return loss and NEXT margin; minimize couplers, keep categories consistent end-to-end, and honor the 4-connection channel limit.</li>
+    <li><strong>PoE or industrial run?</strong> Choose the shielding and −40 to +85 °C grade you need at the jack, and keep coupler count to zero where you can.</li>
+  </ul>
+
+  <h2>Common mistakes</h2>
+  <ul class="tight">
+    <li><strong>Using couplers as permanent terminations.</strong> Two patch cords and a coupler are not a substitute for punching the cable into a keystone jack — it adds connections and failure points.</li>
+    <li><strong>Stacking couplers.</strong> Each one is two mated interfaces; a couple in series can push a channel past the TIA-568 four-connection limit and fail certification.</li>
+    <li><strong>Mixing categories.</strong> A Cat6A run through a Cat5e coupler or panel is only a Cat5e channel. Match the category (and shielding) of every socket in the path.</li>
+    <li><strong>Splitting pairs at the IDC.</strong> Follow the jack's printed T568A or T568B map exactly; untwisting too much or swapping the scheme mid-run wrecks NEXT.</li>
+    <li><strong>Breaking the shield path.</strong> With FTP/STP, a jack, coupler or panel that doesn't carry the shield to ground leaves an antenna, not a screen.</li>
+    <li><strong>Wrong wire gauge in the IDC.</strong> Punch only the specified 22–26 AWG solid conductors; stranded or out-of-range wire gives intermittent contacts.</li>
+  </ul>
+
+  <h2>Where VOOHU fits</h2>
+  <p>VOOHU Electronics manufactures RJ45 female sockets (母座) — not plugs, patch cords or panel chassis. Our catalog spans the equipment-side jacks that mate with structured cabling — standard RJ45, low-profile (low-height), offset and combination jacks, plus integrated-magnetics (magjack) sink-type modules in 1×1, 1×N and 2×N layouts (90°/180° vertical, LED and no-LED, from 10/100 up to 2.5G/5G/10G and HDBaseT) — and a full line of <strong>straight-through RJ45 couplers</strong> in Cat3, Cat5e, Cat6, Cat6A, Cat7 and Cat7A for inline joins and feed-through outlets. So whether your design needs the socket that lives inside a switch, camera or access point, or the coupler that passes a link through a plate or panel, you can source both from one jack specialist, in commercial (0–70 °C) and industrial (−40 to +85 °C) grades, with customization on footprint, shielding and plating tier.</p>
+
+  <div class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>What is the difference between an RJ45 keystone jack and a coupler?</h3>
+    <p>A keystone jack is a single RJ45 socket you terminate a solid cable into, via an IDC punch-down wired to the T568A or T568B color code. A coupler is two sockets wired straight-through back-to-back, with no termination — it joins two already-plugged patch cords. In short, a keystone jack ends a cable in a socket; a coupler links two plugs. VOOHU makes both the sockets and straight-through couplers (Cat3–Cat7A).</p>
+    <h3>Do I need a patch panel, or can I just use keystone jacks in wall plates?</h3>
+    <p>Both use the same RJ45 female socket. A wall plate holds one or two keystone jacks at the outlet; a patch panel aggregates 24 or 48 terminations in a rack so you can cross-connect to switches, label ports and manage changes. A few drops are fine on plates; many runs or organized cross-connects call for a patch panel.</p>
+    <h3>Does an RJ45 coupler slow down or degrade the network?</h3>
+    <p>A coupler adds one more mated connection, contributing a little insertion loss and a small NEXT/return-loss penalty. ANSI/TIA-568 allows up to four connections per channel, so one category-rated coupler is fine — but don't stack couplers or mix categories. For a permanent run, terminate into a keystone jack instead.</p>
+    <h3>Are keystone jacks and patch panel ports the same thing?</h3>
+    <p>On a modular (keystone) patch panel, yes — you snap keystone jacks into the empty slots. A loaded/fixed panel has the jacks built in with rear IDC. Either way the front is an 8P8C RJ45 socket rated for at least 750 mating cycles per IEC 60603-7.</p>
+  </div>
+
+  <div class="related">
+    <h2>Related VOOHU guides</h2>
+    <ul class="tight">
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/t568a-vs-t568b-rj45-wiring.html">T568A vs T568B: RJ45 wiring color codes</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/shielded-vs-unshielded-rj45.html">Shielded vs unshielded RJ45 (UTP/FTP/STP)</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-materials-plating.html">RJ45 jack materials &amp; contact plating tiers</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-mating-cycles-durability.html">RJ45 mating cycles &amp; durability explained</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <span class="tag">RJ45 keystone jack</span><span class="tag">Coupler</span><span class="tag">Patch panel</span><span class="tag">Female socket 母座</span><span class="tag">VOOHU</span>
+  </div>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><strong>VOOHU Electronics</strong> — Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices. ISO9001, ISO14001, RoHS, REACH, CE certified.</p>
+    <p>Website: <a href="https://www.voohuele.com">https://www.voohuele.com</a> · Email: <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> · WhatsApp: +86 133 5804 1040</p>
+    <p class="note" style="color:#7f93a6;">© 2026 VOOHU Electronics. Specifications are representative of IEC 60603-7-class RJ45 sockets; always confirm against the specific product datasheet.</p>
+  </div>
+</footer>
+
+</body>
+</html>
