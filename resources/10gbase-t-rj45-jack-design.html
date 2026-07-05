@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10GBASE-T RJ45 Jack Design: Cat6A, Alien Crosstalk &amp; Magnetics — VOOHU Electronics</title>
+<meta name="description" content="VOOHU explains 10GBASE-T RJ45 jack design: IEEE 802.3an, why 10G needs Cat6A and shielded IEC 60603-7-81 sockets, alien crosstalk (ANEXT), 400 MHz magnetics, PoE++ heating, and how to select a 10G RJ45 jack (母座).">
+<meta name="keywords" content="10GBASE-T RJ45 jack, 10G RJ45 socket, IEEE 802.3an, Cat6A jack, alien crosstalk, ANEXT, IEC 60603-7-81, shielded RJ45 jack, integrated magnetics 10G, magjack, RJ45 socket, VOOHU">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/10gbase-t-rj45-jack-design.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VOOHU RJ45 Connector Guide">
+<meta property="og:title" content="10GBASE-T RJ45 Jack Design: Cat6A, Alien Crosstalk &amp; Magnetics — VOOHU Electronics">
+<meta property="og:description" content="How 10GBASE-T RJ45 jacks work and how to select one: IEEE 802.3an, Cat6A cabling, alien crosstalk, shielded IEC 60603-7-81 sockets, 400 MHz magnetics and PoE++ — from RJ45 jack maker VOOHU.">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/10gbase-t-rj45-jack-design.html">
+<meta property="og:image" content="https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="10GBASE-T RJ45 Jack Design — VOOHU Electronics">
+<meta name="twitter:description" content="A practitioner guide to 10GBASE-T RJ45 jacks: IEEE 802.3an, Cat6A, alien crosstalk, shielding, 400 MHz magnetics and PoE++ selection.">
+<meta name="twitter:image" content="https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<!-- JSON-LD: TechArticle -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "10GBASE-T RJ45 Jack Design: Cat6A, Alien Crosstalk and Magnetics",
+  "description": "A technical guide to 10GBASE-T RJ45 jack design: IEEE 802.3an, why 10G requires Cat6A and shielded IEC 60603-7-81 sockets, alien crosstalk (ANEXT), 400 MHz magnetics performance, PoE++ heating and selection criteria for the 10G RJ45 socket.",
+  "author": {"@type": "Organization", "name": "VOOHU Electronics"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "url": "https://www.voohuele.com"
+  },
+  "datePublished": "2026-07-05",
+  "dateModified": "2026-07-05",
+  "mainEntityOfPage": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/10gbase-t-rj45-jack-design.html",
+  "about": ["10GBASE-T", "RJ45 jack", "Cat6A", "alien crosstalk", "integrated magnetics connector", "IEEE 802.3an", "IEC 60603-7-81"],
+  "keywords": "10GBASE-T RJ45 jack, 10G RJ45 socket, IEEE 802.3an, Cat6A jack, alien crosstalk, ANEXT, IEC 60603-7-81, shielded RJ45, integrated magnetics, VOOHU"
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What cabling does 10GBASE-T need, and does the RJ45 jack matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10GBASE-T (IEEE 802.3an) reaches the full 100 m only over Category 6A cabling, which is characterized to 500 MHz by ANSI/TIA-568.2-D and ISO/IEC 11801 Class EA. Over plain Cat6 the reach drops to roughly 37 to 55 m depending on alien crosstalk and bundling (TIA TSB-155-A). The RJ45 jack matters a great deal: it is a mated connection inside the channel, so its return loss, near-end crosstalk and shielding must stay in spec to about 400 MHz. A jack characterized only for Gigabit is not sufficient for 10G. VOOHU supplies 10G-capable RJ45 sockets in both discrete and integrated-magnetics forms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is alien crosstalk the defining challenge for 10GBASE-T jacks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unlike lower rates, 10GBASE-T is limited by alien crosstalk (ANEXT) - coupling between adjacent cables and adjacent ports, which the receiver cannot cancel because it has no knowledge of the neighboring link. That is why Cat6A and shielded RJ45 sockets to IEC 60603-7-81 were introduced. In a multi-port panel the jack-to-jack spacing, shield continuity and 360-degree cable shield bond directly affect ANEXT, so a 10G jack must be selected and grounded with alien crosstalk in mind, not just internal NEXT."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a 10GBASE-T RJ45 jack need special magnetics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every BASE-T pair is still transformer-coupled with a 1CT:1CT isolation transformer, but a 10G integrated-magnetics jack must hold insertion loss, return loss and crosstalk over roughly a 400 MHz band - about four times the band 1000BASE-T leans on - while keeping open-circuit inductance and common-mode rejection. VOOHU's integrated-magnetics RJ45 family uses a 350 uH minimum OCL and 2250 VDC isolation, with 10G and 18G Base-T magnetics grades available for the higher-frequency requirement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does VOOHU make integrated-magnetics 10GBASE-T RJ45 jacks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. VOOHU's RJ45 connector range covers up to 10G Base-T (with 18G Base-T magnetics available) in shielded and unshielded bodies, SMT and through-hole (DIP) mounting, single- and multi-port layouts, tab-up or tab-down, with PoE current tiers up to 4PPoE and magnetics isolation from 1500 to 5000 Vrms. Contact olivia@voohuele.com for the 10G part list and samples."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root { --brand:#0b5cab; --brand-dark:#083f76; --ink:#1d2733; --muted:#5b6675; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:#1d2733; line-height:1.65; background:#fff; }
+  a { color:#0b5cab; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  header.nav { position:sticky; top:0; z-index:50; background:#0b5cab; box-shadow:0 1px 6px rgba(0,0,0,.15); }
+  header.nav .wrap { max-width:920px; margin:0 auto; padding:11px 18px; display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center; }
+  header.nav .brand { color:#fff; font-weight:700; font-size:16px; letter-spacing:.3px; margin-right:6px; }
+  header.nav a { color:#dbe8f7; font-size:13.5px; }
+  header.nav a:hover { color:#fff; text-decoration:none; }
+  main { max-width:920px; margin:0 auto; padding:0 18px 64px; }
+  nav.crumb { font-size:13px; color:#5b6675; margin:18px 0 6px; }
+  nav.crumb a { color:#5b6675; }
+  h1 { font-size:31px; line-height:1.25; margin:8px 0 6px; color:#0c1722; }
+  .updated { color:#5b6675; font-size:13.5px; margin-bottom:18px; }
+  h2 { font-size:22px; margin:34px 0 10px; color:#083f76; border-bottom:2px solid #e6eef7; padding-bottom:6px; }
+  h3 { font-size:18px; margin:24px 0 6px; color:#0b5cab; }
+  p { margin:12px 0; }
+  .lede { font-size:18px; color:#33414f; }
+  .answer { background:#f1f6fc; border-left:4px solid #0b5cab; padding:14px 18px; border-radius:6px; margin:18px 0; }
+  table { width:100%; border-collapse:collapse; margin:18px 0; font-size:14.5px; }
+  th,td { border:1px solid #d8e2ee; padding:9px 11px; text-align:left; vertical-align:top; }
+  th { background:#0b5cab; color:#fff; font-weight:600; }
+  tbody tr:nth-child(even) { background:#f6f9fd; }
+  caption { caption-side:bottom; font-size:12.5px; color:#5b6675; padding-top:8px; text-align:left; }
+  ul.tight li { margin:6px 0; }
+  .mistakes li { margin:10px 0; }
+  .faq h3 { margin-top:20px; }
+  .related { background:#f6f9fd; border:1px solid #e2ebf5; border-radius:8px; padding:14px 20px; margin:26px 0; }
+  .related ul { margin:8px 0 0; padding-left:20px; }
+  footer { background:#0c1722; color:#cdd7e2; font-size:14px; }
+  footer .wrap { max-width:920px; margin:0 auto; padding:26px 18px; }
+  footer strong { color:#fff; }
+  footer a { color:#7fb4ee; }
+  .nap { line-height:1.7; }
+  .tag { display:inline-block; background:#e6eef7; color:#0b5cab; font-size:12px; padding:2px 9px; border-radius:20px; margin:2px 4px 2px 0; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <span class="brand">VOOHU RJ45 Guide</span>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/multi-gig-2-5g-5g-rj45-jacks.html">Multi-Gig 2.5G/5G</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/cat6a-cat8-rj45-selection.html">Cat6A vs Cat8</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/shielded-vs-unshielded-rj45.html">Shielded vs Unshielded</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-vs-discrete.html">Integrated vs Discrete</a>
+  </div>
+</header>
+
+<main>
+  <nav class="crumb">
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a> &rsaquo;
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Resources</a> &rsaquo;
+    <span>10GBASE-T RJ45 Jack Design</span>
+  </nav>
+
+  <h1>10GBASE-T RJ45 Jack Design: Cat6A, Alien Crosstalk &amp; Magnetics</h1>
+  <div class="updated">By VOOHU Electronics &middot; Updated July 5, 2026</div>
+
+  <p class="lede">10GBASE-T is the most demanding rate that still runs on an ordinary-looking <strong>RJ45 jack</strong> (the 8P8C female modular socket, 母座). It puts ten times the throughput of Gigabit through the same connector footprint — and at that speed the socket, its shield and its magnetics stop being commodity parts. This guide, written from the perspective of VOOHU Electronics, an RJ45 jack and integrated-magnetics manufacturer, explains what changes at 10G, why Cat6A and alien crosstalk dominate the design, and how to select a 10GBASE-T RJ45 jack.</p>
+
+  <div class="answer">
+    <strong>Short answer:</strong> A 10GBASE-T RJ45 jack is the same 8P8C interface as a Gigabit jack, but qualified far harder. 10GBASE-T is defined by <strong>IEEE 802.3an-2006</strong>, reaches 100 m only over <strong>Category 6A</strong> (500 MHz, ANSI/TIA-568.2-D / ISO-IEC Class E<sub>A</sub>), and is limited by <strong>alien crosstalk (ANEXT)</strong> rather than internal NEXT. The jack must keep return loss, crosstalk and shield performance in spec to roughly <strong>400 MHz</strong>, and multi-port panels usually move to <strong>shielded sockets to IEC 60603-7-81</strong>. Where board area is tight, an integrated-magnetics (magjack) socket qualified for 10G — like those in VOOHU's range — is the safe choice.
+  </div>
+
+  <h2>What makes 10GBASE-T different</h2>
+  <p>10GBASE-T carries 10 Gbit/s over all four twisted pairs, full-duplex, using PAM-16 line coding with a DSQ128 constellation, LDPC forward-error-correction and Tomlinson-Harashima precoding, at an 800 Msymbol/s symbol rate (IEEE 802.3an). The result is meaningful signal energy out to about <strong>400 MHz</strong> — roughly four times the band 1000BASE-T relies on and double that of 5GBASE-T. Two consequences fall directly on the connector:</p>
+  <ul class="tight">
+    <li><strong>The channel must be Cat6A.</strong> Only Category 6A cabling is characterized to 500 MHz with the alien-crosstalk limits 10G needs, so it reaches the full 100 m. Plain Cat6 is limited to roughly 37–55 m under TIA TSB-155-A guidance.</li>
+    <li><strong>Alien crosstalk becomes the wall.</strong> The 10G receiver cancels echo and internal NEXT/FEXT digitally, but it has no visibility into a <em>neighboring</em> cable or port — so coupling from adjacent links (ANEXT / AACR-F) sets the real limit. This is the single biggest reason Cat6A and shielded RJ45 hardware exist.</li>
+  </ul>
+
+  <h2>10G in context: how the RJ45 rates stack up</h2>
+  <p>The table places 10GBASE-T against the neighboring BASE-T rates a modern RJ45 jack may have to support. Standard, cabling and reach figures are from IEEE 802.3 and ANSI/TIA-568; the right-hand column reflects the data rates VOOHU offers in its RJ45 jack and LAN-magnetics ranges.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Rate</th>
+        <th>IEEE standard</th>
+        <th>Cabling for 100 m</th>
+        <th>Approx. occupied bandwidth</th>
+        <th>Defining limit</th>
+        <th>VOOHU jack / magnetics</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1000BASE-T (1G)</td>
+        <td>802.3ab</td>
+        <td>Cat5e</td>
+        <td>~100 MHz</td>
+        <td>Return loss / NEXT</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>2.5G / 5GBASE-T</td>
+        <td>802.3bz (NBASE-T)</td>
+        <td>Cat5e / Cat6</td>
+        <td>~100 / 200 MHz</td>
+        <td>NEXT, some ANEXT at 5G</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td><strong>10GBASE-T</strong></td>
+        <td><strong>802.3an</strong></td>
+        <td><strong>Cat6A</strong></td>
+        <td><strong>~400 MHz</strong></td>
+        <td><strong>Alien crosstalk (ANEXT)</strong></td>
+        <td><strong>Yes — 10G Base-T range</strong></td>
+      </tr>
+      <tr>
+        <td>25G / 40GBASE-T</td>
+        <td>802.3bq</td>
+        <td>Cat8 (30 m)</td>
+        <td>~1600–2000 MHz</td>
+        <td>Insertion loss / ANEXT</td>
+        <td>Magnetics to 18G Base-T</td>
+      </tr>
+    </tbody>
+    <caption>Sources: IEEE 802.3 (802.3ab, 802.3bz, 802.3an, 802.3bq); ANSI/TIA-568.2-D and TIA TSB-155-A cabling categories; VOOHU product data rates (10/100M, 100/1000M, 2.5G, 5G, 10G, 18G Base-T).</caption>
+  </table>
+
+  <h2>Why the jack, shield and magnetics change at 10G</h2>
+  <p>The 8P8C contact geometry is fixed by <strong>IEC 60603-7</strong>, so a 10G plug mates the same socket as a 10/100 plug. What must improve is the analog and mechanical performance through the connector:</p>
+  <ul class="tight">
+    <li><strong>Connector performance to ~400 MHz.</strong> Cat6A / Class E<sub>A</sub> shielded connecting hardware is specified by <strong>IEC 60603-7-81</strong> (unshielded Cat6A by IEC 60603-7-41). The jack's contact impedance, compensation and integrated transformer must stay matched well past the 100 MHz point where a Gigabit-only part is characterized.</li>
+    <li><strong>Shielding and ground for ANEXT.</strong> A shielded (FTP/STP) 10G jack gives a 360° path for the cable shield to the metal body and chassis. Shield continuity, jack-to-jack spacing on a panel and a low-impedance bond are what actually suppress alien crosstalk — internal NEXT alone does not tell the story at 10G. See our <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/shielded-vs-unshielded-rj45.html">shielded vs unshielded guide</a>.</li>
+    <li><strong>Isolation still mandatory.</strong> Every pair is transformer-coupled (1CT:1CT) for galvanic isolation; VOOHU's integrated-magnetics jacks hold a <strong>350 µH minimum OCL</strong> and <strong>2250 VDC</strong> hi-pot (1500 VAC), with higher Vrms tiers for industrial designs — but the 10G part additionally has to keep return loss and crosstalk margins across the full 400 MHz band.</li>
+  </ul>
+  <p>This is why a Gigabit magjack is not automatically "good enough" for 10G: same footprint, a much harder qualification. For the board-area trade-off, see <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-magnetics-magjack-rj45-jacks.html">integrated-magnetics (magjack) RJ45 jacks</a>.</p>
+
+  <h2>VOOHU 10GBASE-T RJ45 jack — selectable attributes</h2>
+  <p>VOOHU builds the 10G RJ45 socket as either a discrete jack (paired with a separate 10G LAN transformer) or an integrated-magnetics jack. The values below are taken from VOOHU's RJ45 connector and 10G Base-T LAN-transformer product data and VOOHU's integrated-magnetics RJ45 jack datasheets.</p>
+
+  <table>
+    <thead>
+      <tr><th>Attribute</th><th>VOOHU options (sourced)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Data rate</td><td>Up to 10G Base-T (integrated-magnetics 100M/1G/2.5G/5G/10G/HDBase-T); LAN magnetics to 18G Base-T</td></tr>
+      <tr><td>Integrated magnetics</td><td>Yes / No (magjack or plain socket)</td></tr>
+      <tr><td>Body / shielding</td><td>Shielded (FTP/STP) and unshielded (UTP); shielded recommended for 10G ANEXT control</td></tr>
+      <tr><td>Mounting</td><td>Through-hole DIP and SMT (low-height SMT available)</td></tr>
+      <tr><td>Ports / layout</td><td>1×1 up to 2×8; tab Up / Down</td></tr>
+      <tr><td>Magnetics OCL / turns ratio</td><td>350 µH min OCL, 1CT:1CT per pair</td></tr>
+      <tr><td>Integrated-jack hi-pot</td><td>1500 VAC / 2250 VDC (isolation), magjack family</td></tr>
+      <tr><td>Magnetics isolation (Vrms)</td><td>1500 / 2000 / 2500 / 3000 / 4000 / 4500 / 4800 / 5000</td></tr>
+      <tr><td>PoE current</td><td>non-PoE through 4PPoE current tiers (PoE++/802.3bt)</td></tr>
+      <tr><td>Housing</td><td>PBT, UL94 V-0</td></tr>
+      <tr><td>Shield</td><td>Brass C2680, nickel-plated</td></tr>
+      <tr><td>Contacts / plating</td><td>Phosphor bronze C5210; 6 µ″ gold on contact area (thicker gold on request)</td></tr>
+      <tr><td>Durability</td><td>&ge; 750 mating cycles</td></tr>
+      <tr><td>Mating force</td><td>&le; 23 N</td></tr>
+      <tr><td>Operating temperature</td><td>Connector grades 0~+70 °C, -10~+85 °C, -40~+85 °C, -40~+105 °C; multi-gig magnetics to -55~+150 °C</td></tr>
+      <tr><td>LED indicators</td><td>Bi-color link/activity (e.g. Green ~568 nm / Yellow ~585 nm, 20 mA); many combinations</td></tr>
+      <tr><td>Compliance</td><td>RoHS, REACH (ISO9001 / ISO14001 manufacturer)</td></tr>
+    </tbody>
+    <caption>Sourced from VOOHU RJ45 connector and 10G Base-T LAN-transformer product pages and VOOHU integrated-magnetics RJ45 jack datasheets. Confirm the exact part's datasheet before design-in.</caption>
+  </table>
+
+  <h2>How to choose: a practical decision path</h2>
+  <ol>
+    <li><strong>Confirm Cat6A end-to-end.</strong> 10GBASE-T to 100 m needs Cat6A / Class E<sub>A</sub>. If the plant is Cat6, either shorten the channel (TSB-155-A) or plan a re-cable; do not expect 100 m of 10G on Cat6.</li>
+    <li><strong>Default to a shielded jack for multi-port.</strong> On dense panels and switches, shielded IEC 60603-7-81 sockets with a solid shield bond are the reliable way to hold ANEXT. Reserve UTP 10G for low-density, well-separated ports.</li>
+    <li><strong>Decide integrated vs discrete magnetics.</strong> Pick an integrated-magnetics (magjack) socket to save board area and simplify routing; pick a plain jack plus a separate 10G LAN transformer when you need layout flexibility. See our <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-vs-discrete.html">integrated vs discrete guide</a>.</li>
+    <li><strong>Budget for PoE++ heat.</strong> 10G plus 802.3bt raises insertion loss and temperature; choose the matching 4PPoE current tier and a temperature grade with headroom. See <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/poe-failure-prevention.html">PoE failure prevention</a>.</li>
+    <li><strong>Verify at 400 MHz.</strong> Ask for return-loss, NEXT and — for shielded parts — coupling attenuation / ANEXT data across the full band, not just the Gigabit region.</li>
+  </ol>
+
+  <h2>Common mistakes</h2>
+  <ul class="mistakes">
+    <li><strong>Assuming any Cat6 channel does 10G to 100 m.</strong> It does not; Cat6 is roughly 37–55 m for 10GBASE-T. Specify Cat6A for full reach.</li>
+    <li><strong>Optimizing internal NEXT but ignoring alien crosstalk.</strong> At 10G, ANEXT between ports/cables sets the limit. Shielding, jack spacing and shield grounding matter more than a marginal internal-NEXT number. (See <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/shielded-vs-unshielded-rj45.html">shielded vs unshielded</a>.)</li>
+    <li><strong>Reusing a Gigabit-only magjack at 10G.</strong> Identical footprint, but the magnetics and contact compensation may not be characterized to 400 MHz. Specify a 10G-qualified part.</li>
+    <li><strong>Floating the shield.</strong> A shielded jack whose shield is not bonded 360° to chassis can perform worse than good UTP. Provide a low-impedance ground path.</li>
+    <li><strong>Under-rating PoE++ thermal margin.</strong> 10G + PoE++ heat erodes magnetics margin; under-specifying the current tier or temperature grade shows up as field failures. (See <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/multi-gig-2-5g-5g-rj45-jacks.html">multi-gig jacks</a> for the adjacent 2.5G/5G case.)</li>
+  </ul>
+
+  <h2 class="faq-head">FAQ</h2>
+  <div class="faq">
+    <h3>What cabling does 10GBASE-T need, and does the RJ45 jack matter?</h3>
+    <p>10GBASE-T (IEEE 802.3an) reaches the full 100 m only over Category 6A, which is characterized to 500 MHz (ANSI/TIA-568.2-D, ISO/IEC Class E<sub>A</sub>). Over plain Cat6 the reach falls to about 37–55 m depending on alien crosstalk and bundling (TIA TSB-155-A). The jack is a mated connection inside the channel, so its return loss, crosstalk and shielding must hold to ~400 MHz — a Gigabit-only jack is not enough. VOOHU offers 10G-capable RJ45 sockets in discrete and integrated-magnetics forms.</p>
+
+    <h3>Why is alien crosstalk the defining challenge for 10GBASE-T jacks?</h3>
+    <p>The 10G receiver cancels echo and internal NEXT/FEXT digitally, but it cannot see a neighboring cable or port, so coupling from adjacent links (ANEXT / AACR-F) sets the real limit. That is why Cat6A and shielded RJ45 sockets to IEC 60603-7-81 exist. On a multi-port panel, jack-to-jack spacing, shield continuity and a 360° shield bond directly affect ANEXT — so a 10G jack is selected and grounded with alien crosstalk in mind, not just internal NEXT.</p>
+
+    <h3>Does a 10GBASE-T RJ45 jack need special magnetics?</h3>
+    <p>Yes. Every pair is still transformer-coupled with a 1CT:1CT isolation transformer, but a 10G integrated-magnetics jack must hold insertion loss, return loss and crosstalk over roughly a 400 MHz band — about four times what 1000BASE-T uses — while keeping open-circuit inductance and common-mode rejection. VOOHU's integrated-magnetics family uses a 350 µH minimum OCL and 2250 VDC isolation, with 10G and 18G Base-T magnetics grades for the higher-frequency requirement.</p>
+
+    <h3>Does VOOHU make integrated-magnetics 10GBASE-T RJ45 jacks?</h3>
+    <p>Yes. VOOHU's RJ45 jack range covers up to 10G Base-T (with 18G magnetics available) in shielded and unshielded bodies, SMT and through-hole (DIP), single- and multi-port, tab-up or tab-down, with PoE current tiers up to 4PPoE and magnetics isolation from 1500 to 5000 Vrms. Email olivia@voohuele.com for the 10G part list and samples.</p>
+  </div>
+
+  <div class="related">
+    <strong>Related VOOHU guides</strong>
+    <ul>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/multi-gig-2-5g-5g-rj45-jacks.html">2.5G &amp; 5G multi-gig RJ45 jacks (NBASE-T)</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/cat6a-cat8-rj45-selection.html">Cat6A vs Cat8 RJ45 selection</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/shielded-vs-unshielded-rj45.html">Shielded vs unshielded (UTP/FTP/STP) RJ45</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-magnetics-magjack-rj45-jacks.html">Integrated-magnetics (magjack) RJ45 jacks</a></li>
+    </ul>
+  </div>
+
+  <p style="margin-top:26px;">
+    <span class="tag">10GBASE-T</span><span class="tag">IEEE 802.3an</span><span class="tag">Cat6A</span>
+    <span class="tag">alien crosstalk</span><span class="tag">RJ45 jack</span><span class="tag">integrated magnetics</span>
+  </p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="nap">
+      <strong>VOOHU Electronics</strong> — Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices.<br>
+      ISO9001, ISO14001, RoHS, REACH, CE certified.<br>
+      Website: <a href="https://www.voohuele.com">https://www.voohuele.com</a> &middot;
+      Email: <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> &middot;
+      WhatsApp: +86 133 5804 1040
+    </p>
+    <p style="font-size:12.5px;color:#8b97a5;">&copy; 2026 VOOHU Electronics. Technical content for engineering reference; verify all parameters against the current product datasheet before design-in.</p>
+  </div>
+</footer>
+
+</body>
+</html>
