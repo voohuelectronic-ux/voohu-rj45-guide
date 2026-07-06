@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auto-MDI/MDI-X on RJ45 Jacks: Do You Still Need a Crossover Cable? — VOOHU Guide</title>
+<meta name="description" content="Auto-MDI/MDI-X explained for RJ45 jacks: what MDI vs MDI-X means, the pin/pair swap on a switch port, why Gigabit makes crossover cables obsolete, and how the jack routes pairs to the PHY that does the crossover. A VOOHU RJ45 jack guide.">
+<meta name="keywords" content="Auto MDI-X, MDI vs MDI-X, RJ45 crossover cable, auto crossover, straight-through vs crossover, RJ45 jack pinout, 1000BASE-T auto MDI-X, MDIX, VOOHU RJ45 jack">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/auto-mdi-x-rj45-jack-crossover.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Auto-MDI/MDI-X on RJ45 Jacks: Do You Still Need a Crossover Cable? — VOOHU Guide">
+<meta property="og:description" content="MDI vs MDI-X, why the switch port swaps TX/RX pairs, and why 1000BASE-T's mandatory auto-MDI-X retired the crossover cable. Plus how the RJ45 jack and PHY split the job. From VOOHU.">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/auto-mdi-x-rj45-jack-crossover.html">
+<meta property="og:site_name" content="VOOHU RJ45 Connector Guide">
+<meta property="og:image" content="https://www.voohuele.com/upload/image/20260702/d9a3ecc31889e0c86c7a6353c419898a.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Auto-MDI/MDI-X on RJ45 Jacks: Do You Still Need a Crossover Cable? — VOOHU">
+<meta name="twitter:description" content="MDI vs MDI-X in one page: the pin swap, why Gigabit killed the crossover cable, and how the RJ45 jack routes pairs to the PHY that auto-crosses. From VOOHU.">
+<meta name="twitter:image" content="https://www.voohuele.com/upload/image/20260702/d9a3ecc31889e0c86c7a6353c419898a.png">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<!-- JSON-LD: TechArticle -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Auto-MDI/MDI-X on RJ45 Jacks: Do You Still Need a Crossover Cable?",
+  "description": "How automatic MDI/MDI-X crossover works on RJ45 ports: the MDI vs MDI-X pin/pair swap, why 1000BASE-T makes crossover cables obsolete, and how the RJ45 jack routes all four pairs to the PHY that performs the crossover.",
+  "author": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "url": "https://www.voohuele.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.voohuele.com/upload/image/20241210/c0db5d4f8ac1de5520bf94745ed32180.svg"
+    }
+  },
+  "datePublished": "2026-07-06",
+  "dateModified": "2026-07-06",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/auto-mdi-x-rj45-jack-crossover.html"
+  },
+  "about": ["Auto MDI-X", "MDI vs MDI-X", "RJ45 jack", "crossover cable", "1000BASE-T", "8P8C modular socket"],
+  "keywords": "Auto MDI-X, MDI vs MDI-X, RJ45 crossover cable, auto crossover, RJ45 jack pinout, 1000BASE-T"
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I still need a crossover cable for modern Ethernet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Automatic MDI/MDI-X is a mandatory capability of 1000BASE-T (IEEE 802.3 Clause 40) and is built into 2.5G, 5G and 10GBASE-T as well, so any Gigabit-or-faster port auto-detects and swaps its transmit and receive pairs. A plain straight-through cable links PC-to-PC, switch-to-switch or PC-to-switch. Most modern 10/100 gear also supports auto-MDI-X; a crossover cable is only needed when connecting two legacy 10/100 devices where neither port implements the feature."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between MDI and MDI-X?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MDI (Medium Dependent Interface) is the pinout of an end device such as a PC or router: it transmits on pins 1 and 2 and receives on pins 3 and 6. MDI-X (MDI Crossover) is the pinout of a switch or hub port, which swaps those roles internally so it receives on pins 1 and 2 and transmits on pins 3 and 6. Because the switch already crosses over, an ordinary straight-through cable connects an MDI device to an MDI-X port correctly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the RJ45 jack perform the crossover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The RJ45 jack is a passive 8P8C socket that lands all eight contacts onto the four pairs and passes them, through the isolation magnetics, to the Ethernet PHY. The auto-MDI/MDI-X decision is made in the PHY silicon during auto-negotiation. The jack's job is to route every pair correctly to the PHY; if the socket only wires two pairs, or is mis-terminated, no amount of auto-crossover can fix it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does auto-MDI-X require auto-negotiation to be enabled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most implementations, yes. The crossover state is resolved as part of the auto-negotiation process, so both link partners settle on one MDI end and one MDI-X end. Hard-forcing a fixed speed and duplex disables auto-negotiation on many PHYs and can disable auto-MDI-X with it, which is a common cause of a dead link that only comes up after swapping to a crossover cable. Leaving auto-negotiation on is the reliable choice."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root { --brand:#0b5cab; --brand-dark:#083f75; --ink:#1c2733; --muted:#5b6b7b; --line:#e2e8ef; --bg:#f6f9fc; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:#fff; line-height:1.65; }
+  a { color:var(--brand); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  /* sticky nav */
+  .topnav { position:sticky; top:0; z-index:100; background:var(--brand); box-shadow:0 1px 6px rgba(0,0,0,.15); }
+  .topnav .wrap { max-width:920px; margin:0 auto; padding:11px 18px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center; }
+  .topnav a { color:#fff; font-size:14px; font-weight:600; }
+  .topnav .brand { font-size:17px; font-weight:800; letter-spacing:.3px; margin-right:8px; }
+  .container { max-width:920px; margin:0 auto; padding:22px 18px 60px; }
+  .crumbs { font-size:13px; color:var(--muted); margin:14px 0 6px; }
+  .crumbs a { color:var(--muted); }
+  h1 { font-size:30px; line-height:1.25; margin:8px 0 6px; color:var(--brand-dark); }
+  .updated { color:var(--muted); font-size:13.5px; margin-bottom:18px; }
+  h2 { font-size:22px; color:var(--brand-dark); margin-top:34px; border-bottom:2px solid var(--line); padding-bottom:6px; }
+  h3 { font-size:17.5px; color:var(--ink); margin-top:24px; }
+  p { margin:12px 0; }
+  .lede { font-size:18px; color:#33475b; }
+  .answer { background:var(--bg); border-left:4px solid var(--brand); border-radius:6px; padding:16px 18px; margin:20px 0; }
+  .answer strong { color:var(--brand-dark); }
+  table { border-collapse:collapse; width:100%; margin:18px 0; font-size:14.5px; }
+  th,td { border:1px solid var(--line); padding:9px 11px; text-align:left; vertical-align:top; }
+  th { background:var(--brand); color:#fff; font-weight:600; }
+  tbody tr:nth-child(even) { background:var(--bg); }
+  caption { caption-side:bottom; font-size:12.5px; color:var(--muted); padding-top:8px; text-align:left; }
+  .pwr { color:var(--brand-dark); font-weight:700; }
+  .na { color:#b0392f; }
+  .mistakes li { margin:8px 0; }
+  .faq h3 { margin-bottom:2px; }
+  .related { background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:16px 20px; margin-top:26px; }
+  .related ul { margin:8px 0 0; padding-left:20px; }
+  .related li { margin:6px 0; }
+  footer { background:var(--brand-dark); color:#dbe7f3; margin-top:50px; }
+  footer .wrap { max-width:920px; margin:0 auto; padding:26px 18px; font-size:14px; }
+  footer strong { color:#fff; }
+  footer a { color:#9fd0ff; }
+  .tag { display:inline-block; background:#eaf2fb; color:var(--brand-dark); border-radius:4px; padding:2px 8px; font-size:12.5px; margin:2px 4px 2px 0; }
+  @media (max-width:600px){ h1{font-size:24px;} .topnav .brand{width:100%;} }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="wrap">
+    <a class="brand" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">VOOHU RJ45 Guide</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a>
+    <a href="rj45-jack-pinout-for-poe.html">Jack Pinout</a>
+    <a href="t568a-vs-t568b-rj45-wiring.html">T568A/B Wiring</a>
+    <a href="integrated-magnetics-magjack-rj45-jacks.html">Magjack Sockets</a>
+    <a href="multi-gig-2-5g-5g-rj45-jacks.html">Multi-Gig Jacks</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="crumbs">
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a> &rsaquo;
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Resources</a> &rsaquo;
+    <span>Auto-MDI/MDI-X on RJ45 Jacks</span>
+  </div>
+
+  <h1>Auto-MDI/MDI-X on RJ45 Jacks: Do You Still Need a Crossover Cable?</h1>
+  <div class="updated">Updated July 6, 2026 · By VOOHU Electronics</div>
+
+  <p class="lede">For years, connecting two "same-type" devices — PC to PC, or switch to switch — meant reaching for a special <em>crossover</em> cable. Modern Ethernet quietly retired that ritual with <strong>Automatic MDI/MDI-X</strong>: the port itself decides which pins transmit and which receive. This guide explains MDI vs MDI-X at the <strong>RJ45 jack</strong> (female 8P8C socket / 母座) level, why Gigabit made crossover cables obsolete, and the one part of the job the jack does and does not do.</p>
+
+  <div class="answer">
+    <p><strong>Short answer:</strong> <strong>MDI</strong> is the pinout of an end device (PC/router) — it transmits on pins <strong>1&amp;2</strong> and receives on <strong>3&amp;6</strong>. <strong>MDI-X</strong> is the switch pinout, which swaps those internally (receive on 1&amp;2, transmit on 3&amp;6) so a plain straight-through cable links the two. <strong>Auto-MDI/MDI-X</strong> lets a port detect its partner and flip automatically. It is <strong>mandatory in 1000BASE-T</strong> (IEEE&nbsp;802.3 Clause&nbsp;40) and standard on 2.5G/5G/10GBASE-T, so with any Gigabit-or-faster gear <strong>you no longer need a crossover cable</strong>. The RJ45 <strong>jack</strong> does not perform the crossover — it routes all four pairs to the PHY, and the PHY does the swapping.</p>
+  </div>
+
+  <h2>MDI vs MDI-X: what the switch port actually swaps</h2>
+  <p>The 8-position/8-contact (8P8C) modular jack is defined mechanically by <strong>IEC&nbsp;60603-7</strong>, and the pair-to-pin mapping by <strong>ANSI/TIA-568</strong> (T568A/T568B). On top of that pinout, <strong>IEEE&nbsp;802.3</strong> defines two roles for a port: <strong>MDI</strong> (Medium Dependent Interface) for end stations, and <strong>MDI-X</strong> (MDI Crossover) for switches and hubs. The only difference is which pair carries transmit and which carries receive.</p>
+
+  <table>
+    <caption>MDI vs MDI-X pin assignment on an RJ45 jack for 10/100BASE-T. Pair numbering follows T568B; only pairs 2 and 3 (pins 1-2, 3-6) are used at 10/100. Sources: ANSI/TIA-568, IEEE 802.3.</caption>
+    <thead>
+      <tr>
+        <th>Pin</th>
+        <th>Pair (T568B)</th>
+        <th>MDI &mdash; end device (PC/router)</th>
+        <th>MDI-X &mdash; switch/hub</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>2</td><td class="pwr">TX+ (transmit)</td><td class="na">RX+ (receive)</td></tr>
+      <tr><td>2</td><td>2</td><td class="pwr">TX&minus;</td><td class="na">RX&minus;</td></tr>
+      <tr><td>3</td><td>3</td><td class="na">RX+ (receive)</td><td class="pwr">TX+ (transmit)</td></tr>
+      <tr><td>4</td><td>1</td><td>&mdash; (spare)</td><td>&mdash; (spare)</td></tr>
+      <tr><td>5</td><td>1</td><td>&mdash; (spare)</td><td>&mdash; (spare)</td></tr>
+      <tr><td>6</td><td>3</td><td class="na">RX&minus;</td><td class="pwr">TX&minus;</td></tr>
+      <tr><td>7</td><td>4</td><td>&mdash; (spare)</td><td>&mdash; (spare)</td></tr>
+      <tr><td>8</td><td>4</td><td>&mdash; (spare)</td><td>&mdash; (spare)</td></tr>
+    </tbody>
+  </table>
+
+  <p>Read the two right-hand columns and the historical problem is obvious: connect an MDI device to an MDI-X switch and transmit lands on the partner's receive — it just works with a straight cable. But connect <em>MDI to MDI</em> (two PCs) or <em>MDI-X to MDI-X</em> (two switch ports) and both sides transmit on the same pins. That is what the old <strong>crossover cable</strong> fixed: it physically swapped pair 2 (pins 1-2) with pair 3 (pins 3-6) inside the cable so transmit met receive again.</p>
+
+  <h2>How Auto-MDI/MDI-X removes the crossover cable</h2>
+  <p>Automatic MDI/MDI-X moves that swap off the cable and into the port. When a link comes up, each PHY can configure its RJ45 interface as either MDI or MDI-X. To keep two auto-capable ports from <em>both</em> flipping at once (which would re-create the mismatch), the standard uses a pseudo-random algorithm: each end seeds a random value and toggles its MDI/MDI-X state across link attempts until the pair resolves to exactly one MDI end and one MDI-X end. The whole negotiation finishes in well under a second, before the link LED settles.</p>
+  <p>Crucially, this is resolved during <strong>Auto-Negotiation</strong> (IEEE&nbsp;802.3 Clause&nbsp;28). For 10BASE-T and 100BASE-TX, auto-MDI-X is an <em>optional</em> vendor feature. For <strong>1000BASE-T it is mandatory</strong> (Clause&nbsp;40), and it carries forward into 2.5GBASE-T, 5GBASE-T (IEEE&nbsp;802.3bz) and 10GBASE-T (Clause&nbsp;55). Gigabit and faster also use <em>all four pairs bidirectionally</em>, so their auto-crossover additionally corrects pair swaps and polarity — which is why essentially any cable, straight or crossover, brings up a modern link.</p>
+
+  <table>
+    <caption>Automatic MDI/MDI-X support by Ethernet standard, and the effect on cabling. Sources: IEEE 802.3 (Clause 28 Auto-Negotiation, Clause 40 for 1000BASE-T, Clause 55 for 10GBASE-T; IEEE 802.3bz for 2.5G/5G).</caption>
+    <thead>
+      <tr>
+        <th>Standard</th>
+        <th>Speed</th>
+        <th>Pairs used</th>
+        <th>Auto-MDI/MDI-X</th>
+        <th>Crossover cable needed?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>10BASE-T</td><td>10 Mb/s</td><td>2 (pins 1-2, 3-6)</td><td>Optional (vendor)</td><td class="na">Only if neither port supports auto-MDI-X</td></tr>
+      <tr><td>100BASE-TX</td><td>100 Mb/s</td><td>2 (pins 1-2, 3-6)</td><td>Optional (vendor)</td><td class="na">Only if neither port supports auto-MDI-X</td></tr>
+      <tr><td>1000BASE-T</td><td>1 Gb/s</td><td>4 (all pins)</td><td class="pwr">Mandatory (Cl. 40)</td><td class="pwr">Never &mdash; any cable links</td></tr>
+      <tr><td>2.5G/5GBASE-T</td><td>2.5 / 5 Gb/s</td><td>4 (all pins)</td><td class="pwr">Yes (802.3bz)</td><td class="pwr">Never</td></tr>
+      <tr><td>10GBASE-T</td><td>10 Gb/s</td><td>4 (all pins)</td><td class="pwr">Yes (Cl. 55)</td><td class="pwr">Never</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Where the RJ45 jack fits — and where it does not</h2>
+  <p>Auto-MDI/MDI-X lives in the <strong>PHY</strong>, not the connector. The RJ45 jack is a passive socket: it lands the eight contacts onto four pairs and passes them — through the isolation transformer and common-mode choke — to the PHY, which decides MDI vs MDI-X. So the jack cannot "do" crossover, but a poorly chosen jack can <em>prevent</em> it from working. Two rules for board and panel designers:</p>
+  <p><strong>1. Route all four pairs.</strong> Gigabit auto-crossover needs every pair present. A socket wired for only two pairs (a 10/100-only design) blocks not just Gigabit but the pair-swap correction that comes with it. Choose a true 8-contact jack that carries pairs 1-2, 3-6, 4-5 and 7-8 to the PHY.</p>
+  <p><strong>2. Keep the pin-to-pair mapping standard.</strong> Auto-MDI/MDI-X reconciles the crossover <em>between two link partners</em>; it does not rescue a mis-terminated jack, a split pair, or contacts landed on the wrong PHY lanes on your own PCB. Terminate to T568A or T568B consistently and let the PHY handle the rest.</p>
+  <p>For an <a href="integrated-magnetics-magjack-rj45-jacks.html">integrated-magnetics RJ45 socket (magjack)</a>, the transformer and choke sit inside the housing but are transparent to MDI/MDI-X — the crossover still happens in the PHY. VOOHU's <strong>SYT-series</strong> integrated RJ45 jacks route pairs 1-2/3-6/4-5/7-8 through built-in magnetics (350&nbsp;µH OCL, 1CT:1CT, 2250&nbsp;VDC isolation, insertion loss &le;1.0&nbsp;dB) and are offered from 10/100M up to 10G&nbsp;Base-T, so one socket supports auto-crossover at every speed the PHY negotiates. Discrete jacks in VOOHU's RJ45 catalog cover the same pin arrangement in DIP (THT) and SMT mounts, tab-up or tab-down, single-port through 2&times;8 multiport, rated to 750 mating cycles and up to &minus;40~+85&nbsp;°C industrial temperature.</p>
+
+  <h2>Common mistakes</h2>
+  <ul class="mistakes">
+    <li><strong>Making crossover cables for modern gear.</strong> Any 1000BASE-T (or faster) port has mandatory auto-MDI-X — a straight-through cable is correct for switch-to-switch and PC-to-PC. Crossover cables only add confusion.</li>
+    <li><strong>Assuming every 10/100 device auto-crosses.</strong> At 10/100 the feature is optional. Linking two legacy fast-Ethernet devices where <em>neither</em> supports auto-MDI-X still needs a crossover cable.</li>
+    <li><strong>Hard-forcing speed/duplex.</strong> Disabling auto-negotiation can disable auto-MDI-X on the same PHY, producing a dead link that "only works with a crossover cable." Leave auto-negotiation on.</li>
+    <li><strong>Blaming the cable for a jack fault.</strong> Auto-MDI-X corrects crossover between partners, not a split pair or mis-wired socket. If a certified cable fails on one port only, suspect the jack termination, not the crossover logic.</li>
+    <li><strong>Specifying a 2-pair jack for a Gigabit port.</strong> Without all four pairs landed to the PHY, Gigabit and its auto-crossover cannot come up. Use a full 8-contact socket.</li>
+  </ul>
+
+  <h2 class="faq">Frequently asked questions</h2>
+  <div class="faq">
+    <h3>Do I still need a crossover cable for modern Ethernet?</h3>
+    <p>No. Automatic MDI/MDI-X is mandatory in 1000BASE-T (IEEE 802.3 Clause 40) and built into 2.5G/5G/10GBASE-T, so any Gigabit-or-faster port auto-detects and swaps its transmit and receive pairs. A plain straight-through cable links PC-to-PC, switch-to-switch or PC-to-switch. Most modern 10/100 gear also supports auto-MDI-X; a crossover cable is only needed when connecting two legacy 10/100 devices where neither port implements it.</p>
+
+    <h3>What is the difference between MDI and MDI-X?</h3>
+    <p>MDI (Medium Dependent Interface) is the pinout of an end device such as a PC or router: it transmits on pins 1 and 2 and receives on pins 3 and 6. MDI-X (MDI Crossover) is the switch/hub pinout, which swaps those roles internally so it receives on 1 and 2 and transmits on 3 and 6. Because the switch already crosses over, an ordinary straight-through cable connects an MDI device to an MDI-X port correctly.</p>
+
+    <h3>Does the RJ45 jack perform the crossover?</h3>
+    <p>No. The RJ45 jack is a passive 8P8C socket that lands all eight contacts onto the four pairs and passes them, through the isolation magnetics, to the Ethernet PHY. The auto-MDI/MDI-X decision is made in the PHY during auto-negotiation. The jack's job is to route every pair correctly to the PHY; if the socket only wires two pairs, or is mis-terminated, no amount of auto-crossover can fix it.</p>
+
+    <h3>Does auto-MDI-X require auto-negotiation to be enabled?</h3>
+    <p>In most implementations, yes. The crossover state is resolved as part of auto-negotiation, so both link partners settle on one MDI end and one MDI-X end. Hard-forcing a fixed speed and duplex disables auto-negotiation on many PHYs and can disable auto-MDI-X with it — a common cause of a dead link that only comes up after swapping to a crossover cable. Leaving auto-negotiation on is the reliable choice.</p>
+  </div>
+
+  <div class="related">
+    <strong>Related VOOHU RJ45 guides</strong>
+    <ul>
+      <li><a href="t568a-vs-t568b-rj45-wiring.html">T568A vs T568B RJ45 wiring</a></li>
+      <li><a href="rj45-jack-pinout-for-poe.html">RJ45 jack pinout for PoE (Mode A/B and 4PPoE)</a></li>
+      <li><a href="integrated-magnetics-magjack-rj45-jacks.html">Integrated-magnetics (magjack) RJ45 sockets</a></li>
+      <li><a href="multi-gig-2-5g-5g-rj45-jacks.html">Multi-gig 2.5G/5G RJ45 jacks</a></li>
+      <li><a href="rj45-jack-orientation-tab-up-vs-tab-down.html">RJ45 jack orientation: tab-up vs tab-down</a></li>
+    </ul>
+  </div>
+
+  <div style="margin-top:22px;">
+    <span class="tag">Auto MDI-X</span>
+    <span class="tag">MDI vs MDI-X</span>
+    <span class="tag">crossover cable</span>
+    <span class="tag">RJ45 jack pinout</span>
+    <span class="tag">1000BASE-T</span>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><strong>VOOHU Electronics</strong> — Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices. ISO9001, ISO14001, RoHS, REACH, CE certified.</p>
+    <p>Website: <a href="https://www.voohuele.com">https://www.voohuele.com</a> · Email: <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> · WhatsApp: +86 133 5804 1040</p>
+    <p style="font-size:12.5px; color:#9fb6cd;">&copy; 2026 VOOHU Electronics. Technical values cited from IEC 60603-7, ANSI/TIA-568 and IEEE 802.3 (Clauses 28, 40, 55; 802.3bz); product specifications from VOOHU RJ45 and SYT-series integrated RJ45 sockets.</p>
+  </div>
+</footer>
+
+</body>
+</html>
