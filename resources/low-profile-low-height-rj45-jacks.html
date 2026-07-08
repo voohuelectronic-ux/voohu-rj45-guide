@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Low-Profile (Low-Height) RJ45 Jacks: Design &amp; Selection Guide — VOOHU</title>
+<meta name="description" content="How to choose a low-profile (low-height) RJ45 jack for slim and high-density devices: stack-height trade-offs, integrated vs discrete magnetics, SMT vs through-hole, PoE and multi-gig support. Real VOOHU 母座 spec matrix and IEC 60603-7 / TIA-568 references.">
+<meta name="keywords" content="low-profile RJ45 jack, low-height RJ45 connector, slim RJ45 socket, low profile 8P8C jack, RJ45 母座, SMT RJ45 jack, RJ45 stack height, high-density RJ45, VOOHU RJ45 jack, VOOHU low height RJ45">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/low-profile-low-height-rj45-jacks.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Low-Profile (Low-Height) RJ45 Jacks: Design &amp; Selection Guide — VOOHU">
+<meta property="og:description" content="Stack-height trade-offs, integrated vs discrete magnetics, SMT vs through-hole, PoE and multi-gig support for low-profile RJ45 jacks — with a real VOOHU spec matrix.">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/low-profile-low-height-rj45-jacks.html">
+<meta property="og:site_name" content="VOOHU RJ45 Connector Guide">
+<meta property="og:image" content="https://www.voohuele.com/upload/image/20251119/7a2e79c328c125841c1c3a98dc38418e.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Low-Profile (Low-Height) RJ45 Jacks: Design &amp; Selection Guide — VOOHU">
+<meta name="twitter:description" content="Choose a low-profile RJ45 jack without losing speed, PoE or reliability. Trade-offs, mistakes and a real VOOHU 母座 spec matrix.">
+<meta name="twitter:image" content="https://www.voohuele.com/upload/image/20251119/7a2e79c328c125841c1c3a98dc38418e.jpg">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<!-- JSON-LD: TechArticle -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Low-Profile (Low-Height) RJ45 Jacks: Design & Selection Guide — VOOHU",
+  "description": "A practical guide to selecting low-profile (low-height) RJ45 jacks for slim and high-density devices, covering stack-height trade-offs, integrated versus discrete magnetics, SMT versus through-hole mounting, PoE current and multi-gig data-rate support, referenced to IEC 60603-7, ANSI/TIA-568 and IEEE 802.3.",
+  "author": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "url": "https://www.voohuele.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "url": "https://www.voohuele.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.voohuele.com/upload/image/20241210/c0db5d4f8ac1de5520bf94745ed32180.svg"
+    }
+  },
+  "datePublished": "2026-07-08",
+  "dateModified": "2026-07-08",
+  "inLanguage": "en",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/low-profile-low-height-rj45-jacks.html"
+  },
+  "about": ["RJ45 jack", "8P8C modular socket", "low-profile connector", "Ethernet magnetics", "PoE"],
+  "keywords": "low-profile RJ45 jack, low-height RJ45 connector, slim RJ45 socket, SMT RJ45 jack, RJ45 stack height, high-density RJ45"
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a low-profile (low-height) RJ45 jack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A low-profile RJ45 jack is an 8P8C modular socket (母座) engineered with a reduced mounted height above the PCB so it fits thin chassis and high-density boards. It keeps the standard IEC 60603-7 mating interface, so any standard RJ45 plug still fits, and only the connector body envelope is trimmed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can low-profile RJ45 jacks still include integrated magnetics (magjack)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but the LAN magnetics need internal volume, so the flattest designs often move magnetics onto the PCB as discrete components or use a compact integrated module. VOOHU offers RJ45 low-height jacks both with and without integrated magnetics, so the designer can trade height against board area."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do low-profile RJ45 jacks support PoE and multi-gig speeds?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. VOOHU's RJ45 low-height line spans 10/100M through 10GBASE-T and supports per-contact currents up to 1.5 A, so PoE, PoE+ and PoE++ (IEEE 802.3af/at/bt) and 2.5G/5G/10G links are supported without giving up the low profile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I choose SMT or through-hole (DIP) for a low-profile RJ45 jack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SMT (surface-mount) enables the flattest, reflow-friendly designs but needs board-lock retention to survive plug insertion force; through-hole (DIP) gives stronger mechanical anchoring for high mating-cycle ports. VOOHU offers both mount styles across its low-height RJ45 range."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root { --brand:#0b5cab; --brand-dark:#083f77; --ink:#1c2733; --muted:#5b6b7a; --line:#e2e8f0; --bg:#f6f9fc; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); line-height:1.65; background:#fff; }
+  a { color:var(--brand); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  nav.top { position:sticky; top:0; z-index:100; background:var(--brand); box-shadow:0 1px 6px rgba(0,0,0,.15); }
+  nav.top .wrap { max-width:920px; margin:0 auto; padding:11px 20px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center; }
+  nav.top .brand { color:#fff; font-weight:700; letter-spacing:.5px; margin-right:8px; }
+  nav.top a { color:#e8f1fb; font-size:14px; }
+  nav.top a:hover { color:#fff; }
+  .container { max-width:920px; margin:0 auto; padding:0 20px 64px; }
+  .crumb { font-size:13px; color:var(--muted); margin:18px 0 4px; }
+  h1 { font-size:31px; line-height:1.25; margin:.4em 0 .3em; color:var(--brand-dark); }
+  h2 { font-size:22px; margin:1.7em 0 .5em; color:var(--brand-dark); border-bottom:2px solid var(--line); padding-bottom:6px; }
+  h3 { font-size:17px; margin:1.4em 0 .3em; color:var(--ink); }
+  .updated { font-size:13px; color:var(--muted); margin-bottom:8px; }
+  .lede { font-size:18px; color:#33424f; }
+  .answer { background:var(--bg); border-left:4px solid var(--brand); border-radius:8px; padding:16px 20px; margin:22px 0; }
+  .answer strong { color:var(--brand-dark); }
+  table { border-collapse:collapse; width:100%; margin:18px 0; font-size:14.5px; }
+  th, td { border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--brand); color:#fff; font-weight:600; }
+  tbody tr:nth-child(even) { background:var(--bg); }
+  caption { caption-side:bottom; font-size:12.5px; color:var(--muted); padding-top:8px; text-align:left; }
+  ul, ol { padding-left:22px; }
+  li { margin:5px 0; }
+  .mistake { background:#fff7f5; border:1px solid #f3d6cd; border-radius:8px; padding:4px 18px; margin:14px 0; }
+  .faq h3 { color:var(--brand-dark); }
+  .related { background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:6px 22px; margin:26px 0; }
+  footer { background:#0e1a26; color:#c6d3de; font-size:14px; }
+  footer .wrap { max-width:920px; margin:0 auto; padding:26px 20px 34px; }
+  footer strong { color:#fff; }
+  footer a { color:#8fc0f2; }
+  .tag { display:inline-block; background:#eaf2fb; color:var(--brand-dark); border-radius:20px; padding:2px 11px; font-size:12.5px; margin:2px 4px 2px 0; }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <span class="brand">VOOHU RJ45 Guide</span>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a>
+    <a href="./rj45-jack-tht-vs-smt-pcb-mount.html">THT vs SMT</a>
+    <a href="./integrated-magnetics-magjack-rj45-jacks.html">Integrated Magnetics</a>
+    <a href="./rj45-jack-orientation-tab-up-vs-tab-down.html">Tab Orientation</a>
+    <a href="./multi-gig-2-5g-5g-rj45-jacks.html">Multi-Gig Jacks</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="crumb">
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a> &rsaquo;
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Resources</a> &rsaquo;
+    Low-Profile (Low-Height) RJ45 Jacks
+  </div>
+
+  <h1>Low-Profile (Low-Height) RJ45 Jacks: Design &amp; Selection Guide</h1>
+  <div class="updated">Updated July 8, 2026 &middot; By VOOHU Electronics</div>
+
+  <p class="lede">When a product gets thinner or a line card gets denser, the RJ45 port is often the tallest thing on the board. A <strong>low-profile (low-height) RJ45 jack</strong> keeps the standard 8P8C mating interface a plug expects, but trims the connector body so it fits where a normal tab-down jack will not. This guide explains what actually changes when you go low-profile, the trade-offs to watch, and how to read VOOHU's low-height RJ45 <em>母座</em> (female socket) spec matrix so you pick the right part the first time.</p>
+
+  <div class="answer">
+    <strong>Short answer:</strong> A low-profile RJ45 jack is a standard 8P8C socket with a reduced mounted height above the PCB. The mating interface is unchanged (per <strong>IEC 60603-7</strong>), so every ordinary RJ45 plug still fits &mdash; only the connector envelope shrinks. You can keep PoE and speeds up to 10GBASE-T; the real trade-offs are <strong>internal room for integrated magnetics and LEDs</strong>, <strong>SMT vs through-hole retention</strong>, and <strong>PoE thermal density</strong> inside a smaller body. VOOHU's RJ45 (Low Height) line is configurable for mount style, port count (1&times;1 to 2&times;8), tab orientation, integrated magnetics, data rate and PoE current.
+  </div>
+
+  <h2>What "low-profile" and "low-height" actually mean</h2>
+  <p>For an RJ45 jack, "profile" or "height" refers to how far the connector body rises above the PCB after it is mounted &mdash; the Z-height, or stack height. A conventional tab-down 8P8C modular jack is a relatively tall component, and on a thin device it is frequently the part that sets the minimum chassis thickness. Low-profile (VOOHU brands this line <strong>RJ45 (Low Height)</strong>) re-engineers the shell, spring-contact geometry and mounting so the same electrical port occupies less vertical space.</p>
+  <p>The key point for compatibility: the <strong>mating cavity itself is fixed by IEC 60603-7</strong>. A low-profile jack still accepts any standards-compliant RJ45 plug and still delivers the mechanical durability the standard requires &mdash; a minimum of <strong>750 mating cycles</strong> under IEC 60603-7 / ANSI-TIA-568 test regimes. Low profile is about the package, not the plug interface.</p>
+
+  <h3>Where low-profile RJ45 jacks are used</h3>
+  <ul>
+    <li><strong>Slim consumer &amp; edge devices</strong> &mdash; thin routers, desktop switches, set-top boxes (STB), optical modems (ONU), docks and mini-PCs where chassis Z-height is tight.</li>
+    <li><strong>High-density line cards &amp; blades</strong> &mdash; where many ports must fit a fixed 1U/half-U opening and every millimeter of component height matters for airflow and board-to-board pitch.</li>
+    <li><strong>Industrial gateways &amp; IoT nodes</strong> &mdash; sealed, space-constrained enclosures that still need a wired Ethernet port.</li>
+    <li><strong>Flush / panel-aligned designs</strong> &mdash; where the port opening must line up with a shallow bezel.</li>
+  </ul>
+
+  <h2>Standard-profile vs low-profile RJ45 jack: what changes</h2>
+  <table>
+    <caption>Comparison of a conventional RJ45 jack versus a low-profile (low-height) jack. Configuration values shown are from VOOHU's RJ45 (Low Height) product matrix; mechanical/electrical minimums are per the cited standards.</caption>
+    <thead>
+      <tr><th>Attribute</th><th>Standard-profile RJ45 jack</th><th>Low-profile (low-height) RJ45 jack</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Mounted height (Z-height)</td><td>Full-height body &mdash; often the tallest port on a thin board</td><td>Reduced vertical envelope; exact height is per part-number datasheet</td></tr>
+      <tr><td>Mating interface</td><td>8P8C per IEC 60603-7</td><td>8P8C per IEC 60603-7 (unchanged &mdash; standard plug fits)</td></tr>
+      <tr><td>Mating durability</td><td>&ge;750 cycles (IEC 60603-7 / TIA-568)</td><td>&ge;750 cycles (IEC 60603-7 / TIA-568)</td></tr>
+      <tr><td>Integrated magnetics (magjack)</td><td>Readily available; more internal room</td><td>Available, but flattest builds favor discrete/board magnetics</td></tr>
+      <tr><td>Mount options</td><td>Through-hole (DIP) or SMT</td><td>DIP or SMT (VOOHU offers both)</td></tr>
+      <tr><td>Data rate</td><td>10/100M to 10GBASE-T</td><td>10/100M, 100/1000M, 2.5G, 5G, 10GBASE-T</td></tr>
+      <tr><td>PoE current (per contact)</td><td>Up to 1.5 A</td><td>Up to 1.5 A (non-PoE, 350mA / 600mA / 720mA / 850mA / 900mA / 1000mA / 1.5A options)</td></tr>
+      <tr><td>Port arrangements</td><td>1&times;1 to ganged/stacked</td><td>1&times;1 to 2&times;8 (single, ganged and stacked)</td></tr>
+      <tr><td>Operating temperature</td><td>Commercial to industrial</td><td>0~+70&deg;C, -10~+85&deg;C, -20~+70&deg;C, -40~+85&deg;C, -40~+105&deg;C</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Reading VOOHU's RJ45 (Low Height) spec matrix</h2>
+  <p>VOOHU's low-height RJ45 sockets are configurable rather than a single fixed part, so selecting one is a matter of setting each attribute. These are the real options published on VOOHU's RJ45 (Low Height) product page:</p>
+  <table>
+    <caption>Source: VOOHU Electronics RJ45 (Low Height) product configuration options (voohuele.com). Integrated-magnetics electricals (e.g. 350&micro;H OCL, 2250 V isolation) are drawn from VOOHU's integrated RJ45 jack data.</caption>
+    <thead>
+      <tr><th>Configurable attribute</th><th>VOOHU options</th><th>Design note</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Connector type</td><td>45&deg;, 90&deg; (vertical), 180&deg; (horizontal), 180&deg; welding-wire</td><td>Orientation drives effective height and panel alignment</td></tr>
+      <tr><td>Ports</td><td>1&times;1 through 1&times;8; 2&times;1 through 2&times;8</td><td>Ganged/stacked arrays raise port density without extra height</td></tr>
+      <tr><td>Tab</td><td>Tab-up / tab-down</td><td>Tab-down is common for low bezels; confirm mating clearance</td></tr>
+      <tr><td>Integrated magnetics</td><td>Yes / No</td><td>"Yes" = magjack; "No" = discrete magnetics on PCB (flatter option)</td></tr>
+      <tr><td>Data rate</td><td>10/100M, 100/1000M, 2.5GBASE-T, 5GBASE-T, 10GBASE-T (+SPD variants)</td><td>Match the PHY; +SPD adds surge-protection variants</td></tr>
+      <tr><td>PoE (per-contact current)</td><td>non-PoE, 350mA, 600mA, 720mA, 850mA, 900mA, 1000mA, 1.5A</td><td>Size to IEEE 802.3af/at/bt class and derate for temperature</td></tr>
+      <tr><td>Mount</td><td>DIP (through-hole) / SMT</td><td>SMT = flattest &amp; reflow-friendly; DIP = stronger retention</td></tr>
+      <tr><td>Shield tabs / EMI gasket</td><td>Yes / No</td><td>Keep shell grounding even on the shorter shielded shell</td></tr>
+      <tr><td>Operating temperature</td><td>0~+70&deg;C up to -40~+105&deg;C</td><td>Pick the grade that matches the enclosure's worst-case ambient</td></tr>
+    </tbody>
+  </table>
+  <p>Because the exact millimeter height depends on the specific configuration, request the part-number datasheet or the downloadable spec sheet for the mounted-height figure rather than assuming a single number for the whole family.</p>
+
+  <h2>The three trade-offs that actually matter</h2>
+  <h3>1. Integrated magnetics need volume</h3>
+  <p>An integrated-magnetics RJ45 (magjack) hides the LAN transformer and common-mode choke inside the connector. That is elegant for a normal-height jack, but magnetics occupy internal room, so the very flattest designs either use a purpose-built compact integrated module or move the magnetics onto the PCB as discrete parts. VOOHU's integrated jacks carry real magnetics specs &mdash; for example a 10/100Base module with <strong>350&micro;H open-circuit inductance</strong> and <strong>2250 V (DC) isolation</strong> &mdash; but if you need the absolute minimum height, a "magnetics = No" low-height jack paired with a discrete VOOHU LAN transformer is usually thinner.</p>
+
+  <h3>2. SMT vs through-hole retention</h3>
+  <p>SMT low-profile jacks give you the flattest board and a single reflow pass, but the plug's insertion and extraction force is carried by solder joints, so board locks / hold-down pegs are essential to avoid pad lift and joint fatigue on a frequently re-mated port. Through-hole (DIP) versions anchor into the board and tolerate higher mating cycles mechanically, at the cost of a wave/selective-solder step. VOOHU offers both so you can match retention to how often the port is unplugged.</p>
+
+  <h3>3. PoE thermal density</h3>
+  <p>Pushing PoE++ current through a smaller connector body concentrates heat. VOOHU's low-height matrix supports up to <strong>1.5 A per contact</strong>, which covers IEEE 802.3bt Type 4, but you should still verify the temperature grade (up to <strong>-40~+105&deg;C</strong>) against the worst-case internal ambient and derate accordingly. A shorter shell dissipates differently than a full-height one.</p>
+
+  <h2>Common mistakes to avoid</h2>
+  <div class="mistake"><p><strong>Assuming low-profile means slower.</strong> It does not &mdash; VOOHU low-height jacks reach 10GBASE-T. Reducing Z-height does not force a speed downgrade.</p></div>
+  <div class="mistake"><p><strong>Specifying an integrated magjack for an ultra-thin slot without checking module height.</strong> Integrated magnetics add internal volume; confirm the magjack fits before committing, or switch to discrete magnetics.</p></div>
+  <div class="mistake"><p><strong>Choosing SMT for a heavily re-mated port without board locks.</strong> Insertion force on bare solder joints leads to pad lift. Add hold-downs, or use a through-hole part.</p></div>
+  <div class="mistake"><p><strong>Neglecting shield grounding on the shorter shell.</strong> A low-profile shielded jack still needs solid shell-to-chassis grounding and (if selected) the EMI gasket to pass emissions.</p></div>
+  <div class="mistake"><p><strong>Ignoring PoE derating.</strong> Full 1.5 A per contact in a compact body at high ambient needs a temperature-grade check, not an assumption.</p></div>
+  <div class="mistake"><p><strong>Forgetting bezel alignment.</strong> Tab orientation (up/down) and 90&deg; vs 180&deg; change where the opening lands relative to a shallow panel &mdash; verify against the mechanical drawing.</p></div>
+
+  <h2 class="faq">Frequently asked questions</h2>
+  <div class="faq">
+    <h3>What is a low-profile (low-height) RJ45 jack?</h3>
+    <p>It is an 8P8C modular socket (母座) engineered with a reduced mounted height above the PCB so it fits thin chassis and high-density boards. It keeps the standard IEC 60603-7 mating interface, so any standard RJ45 plug still fits; only the connector body envelope is trimmed.</p>
+
+    <h3>Can low-profile RJ45 jacks still include integrated magnetics (magjack)?</h3>
+    <p>Yes, but the LAN magnetics need internal volume, so the flattest designs often move magnetics onto the PCB as discrete components or use a compact integrated module. VOOHU offers RJ45 low-height jacks both with and without integrated magnetics, so you can trade height against board area.</p>
+
+    <h3>Do low-profile RJ45 jacks support PoE and multi-gig speeds?</h3>
+    <p>Yes. VOOHU's RJ45 low-height line spans 10/100M through 10GBASE-T and supports per-contact currents up to 1.5 A, so PoE, PoE+ and PoE++ (IEEE 802.3af/at/bt) and 2.5G/5G/10G links are supported without giving up the low profile.</p>
+
+    <h3>Should I choose SMT or through-hole (DIP) for a low-profile RJ45 jack?</h3>
+    <p>SMT enables the flattest, reflow-friendly designs but needs board-lock retention to survive plug insertion force; through-hole (DIP) gives stronger mechanical anchoring for high mating-cycle ports. VOOHU offers both mount styles across its low-height RJ45 range.</p>
+  </div>
+
+  <div class="related">
+    <h3>Related VOOHU guides</h3>
+    <ul>
+      <li><a href="./rj45-jack-tht-vs-smt-pcb-mount.html">PCB-Mount RJ45 Jacks: Through-Hole (THT) vs SMT</a></li>
+      <li><a href="./integrated-magnetics-magjack-rj45-jacks.html">Integrated-Magnetics (MagJack) RJ45 Sockets Explained</a></li>
+      <li><a href="./rj45-jack-orientation-tab-up-vs-tab-down.html">RJ45 Jack Orientation: Tab-Up vs Tab-Down</a></li>
+      <li><a href="./multi-gig-2-5g-5g-rj45-jacks.html">Multi-Gig 2.5G / 5G RJ45 Jacks</a></li>
+    </ul>
+  </div>
+
+  <p style="margin-top:26px;">
+    <span class="tag">low-profile RJ45 jack</span>
+    <span class="tag">low-height RJ45</span>
+    <span class="tag">8P8C socket</span>
+    <span class="tag">SMT RJ45</span>
+    <span class="tag">PoE</span>
+    <span class="tag">VOOHU</span>
+  </p>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><strong>VOOHU Electronics</strong> — Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices. ISO9001, ISO14001, RoHS, REACH, CE certified.</p>
+    <p>
+      Website: <a href="https://www.voohuele.com">https://www.voohuele.com</a> &middot;
+      Email: <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> &middot;
+      WhatsApp: +86 133 5804 1040
+    </p>
+    <p style="color:#7f92a3; font-size:12.5px;">This guide is provided for engineering reference. Technical minimums are per IEC 60603-7, ANSI/TIA-568 and IEEE 802.3; configuration options and product specs are per VOOHU product documentation. Confirm mounted-height and full parameters against the specific part-number datasheet.</p>
+  </div>
+</footer>
+
+</body>
+</html>
