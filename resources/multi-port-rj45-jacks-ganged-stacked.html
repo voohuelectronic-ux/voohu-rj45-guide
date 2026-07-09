@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multi-Port RJ45 Jacks (1&times;N &amp; 2&times;N): Ganged and Stacked Socket Selection Guide &mdash; VOOHU</title>
+<meta name="description" content="How to choose multi-port RJ45 jacks: ganged single-row (1xN) versus stacked two-row (2xN) modular sockets for switches, routers, NVRs and patch panels. Real VOOHU 母座 configuration matrix (1x1 to 2x8), PoE current, integrated magnetics, shielding, plus IEC 60603-7 / TIA-568 / IEEE 802.3 references.">
+<meta name="keywords" content="multi-port RJ45 jack, ganged RJ45 connector, stacked RJ45 jack, 2x4 RJ45, 1x8 RJ45, belly to belly RJ45, RJ45 母座, multiport 8P8C socket, RJ45 port array, VOOHU RJ45 jack, VOOHU multiport RJ45">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/multi-port-rj45-jacks-ganged-stacked.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Multi-Port RJ45 Jacks (1&times;N &amp; 2&times;N): Ganged and Stacked Socket Selection Guide &mdash; VOOHU">
+<meta property="og:description" content="Ganged (1xN) versus stacked (2xN) RJ45 jacks for high-port-count boards: port nomenclature, integrated magnetics, PoE current, shielding and a real VOOHU 母座 configuration matrix.">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/multi-port-rj45-jacks-ganged-stacked.html">
+<meta property="og:site_name" content="VOOHU RJ45 Connector Guide">
+<meta property="og:image" content="https://www.voohuele.com/upload/image/20251119/7a2e79c328c125841c1c3a98dc38418e.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Multi-Port RJ45 Jacks (1&times;N &amp; 2&times;N): Ganged and Stacked Sockets &mdash; VOOHU">
+<meta name="twitter:description" content="Choose ganged and stacked RJ45 jacks for dense switch and NVR boards without losing PoE, speed or EMI margin. Real VOOHU 母座 configuration matrix.">
+<meta name="twitter:image" content="https://www.voohuele.com/upload/image/20251119/7a2e79c328c125841c1c3a98dc38418e.jpg">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<!-- JSON-LD: TechArticle -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Multi-Port RJ45 Jacks (1xN & 2xN): Ganged and Stacked Socket Selection Guide — VOOHU",
+  "description": "A practical guide to selecting multi-port RJ45 jacks, covering ganged single-row (1xN) versus stacked two-row (2xN) modular sockets, port nomenclature, integrated magnetics, LEDs, PoE per-contact current, shielding and operating temperature, referenced to IEC 60603-7, ANSI/TIA-568 and IEEE 802.3.",
+  "author": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "url": "https://www.voohuele.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "url": "https://www.voohuele.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.voohuele.com/upload/image/20241210/c0db5d4f8ac1de5520bf94745ed32180.svg"
+    }
+  },
+  "datePublished": "2026-07-09",
+  "dateModified": "2026-07-09",
+  "inLanguage": "en",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/multi-port-rj45-jacks-ganged-stacked.html"
+  },
+  "about": ["RJ45 jack", "8P8C modular socket", "multi-port connector", "ganged connector", "stacked connector", "Ethernet magnetics", "PoE"],
+  "keywords": "multi-port RJ45 jack, ganged RJ45 connector, stacked RJ45 jack, 2x4 RJ45, 1x8 RJ45, belly to belly RJ45, multiport 8P8C socket"
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a multi-port RJ45 jack, and what is the difference between ganged and stacked?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A multi-port RJ45 jack is a single molded housing that holds several 8P8C modular sockets (母座). 'Ganged' means the ports sit in one horizontal row (a 1xN array such as 1x4 or 1x8). 'Stacked' means two rows mounted one above the other (a 2xN array such as 2x4 or 2x8, sometimes called belly-to-belly). Each port keeps the standard IEC 60603-7 mating interface, so ordinary RJ45 plugs still fit; only the port count and packaging change. VOOHU catalogs 1x1 through 1x8 and 2x1 through 2x8 configurations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do 1xN and 2xN mean in RJ45 jack part numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The first number is the count of rows and the second is the count of ports per row. 1x4 is a single row of four ports (ganged); 2x8 is two rows of eight, giving sixteen ports (stacked). The notation describes the physical port array in one connector body, not the data rate or wiring standard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can multi-port RJ45 jacks include integrated magnetics, LEDs and PoE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. VOOHU multi-port RJ45 jacks are available with integrated magnetics (magjack), status LEDs and PoE support, with per-contact current options up to 1.5 A, which covers IEEE 802.3af/at/bt. Speeds span 10/100M through 10GBASE-T, and shielded versions with an EMI gasket are offered for emissions-critical ports."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do stacked (2xN) RJ45 jacks have more crosstalk than single jacks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Adjacent ports in a dense array can couple, so alien crosstalk and shield grounding matter more than in a single jack. Well-designed stacked jacks manage this with internal shielding partitions and per-port shield tabs. For Cat6A and 10GBASE-T arrays, choose shielded multi-port jacks and ground every shell to chassis; VOOHU offers shield-tab and EMI-gasket options across its multi-port range."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root { --brand:#0b5cab; --brand-dark:#083f77; --ink:#1c2733; --muted:#5b6b7a; --line:#e2e8f0; --bg:#f6f9fc; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); line-height:1.65; background:#fff; }
+  a { color:var(--brand); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  nav.top { position:sticky; top:0; z-index:100; background:var(--brand); box-shadow:0 1px 6px rgba(0,0,0,.15); }
+  nav.top .wrap { max-width:920px; margin:0 auto; padding:11px 20px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center; }
+  nav.top .brand { color:#fff; font-weight:700; letter-spacing:.5px; margin-right:8px; }
+  nav.top a { color:#e8f1fb; font-size:14px; }
+  nav.top a:hover { color:#fff; }
+  .container { max-width:920px; margin:0 auto; padding:0 20px 64px; }
+  .crumb { font-size:13px; color:var(--muted); margin:18px 0 4px; }
+  h1 { font-size:31px; line-height:1.25; margin:.4em 0 .3em; color:var(--brand-dark); }
+  h2 { font-size:22px; margin:1.7em 0 .5em; color:var(--brand-dark); border-bottom:2px solid var(--line); padding-bottom:6px; }
+  h3 { font-size:17px; margin:1.4em 0 .3em; color:var(--ink); }
+  .updated { font-size:13px; color:var(--muted); margin-bottom:8px; }
+  .lede { font-size:18px; color:#33424f; }
+  .answer { background:var(--bg); border-left:4px solid var(--brand); border-radius:8px; padding:16px 20px; margin:22px 0; }
+  .answer strong { color:var(--brand-dark); }
+  table { border-collapse:collapse; width:100%; margin:18px 0; font-size:14.5px; }
+  th, td { border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--brand); color:#fff; font-weight:600; }
+  tbody tr:nth-child(even) { background:var(--bg); }
+  caption { caption-side:bottom; font-size:12.5px; color:var(--muted); padding-top:8px; text-align:left; }
+  ul, ol { padding-left:22px; }
+  li { margin:5px 0; }
+  .mistake { background:#fff7f5; border:1px solid #f3d6cd; border-radius:8px; padding:4px 18px; margin:14px 0; }
+  .faq h3 { color:var(--brand-dark); }
+  .related { background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:6px 22px; margin:26px 0; }
+  footer { background:#0e1a26; color:#c6d3de; font-size:14px; }
+  footer .wrap { max-width:920px; margin:0 auto; padding:26px 20px 34px; }
+  footer strong { color:#fff; }
+  footer a { color:#8fc0f2; }
+  .tag { display:inline-block; background:#eaf2fb; color:var(--brand-dark); border-radius:20px; padding:2px 11px; font-size:12.5px; margin:2px 4px 2px 0; }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <span class="brand">VOOHU RJ45 Guide</span>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a>
+    <a href="./integrated-magnetics-magjack-rj45-jacks.html">Integrated Magnetics</a>
+    <a href="./rj45-jack-tht-vs-smt-pcb-mount.html">THT vs SMT</a>
+    <a href="./rj45-jack-led-indicators.html">LED Indicators</a>
+    <a href="./shielded-vs-unshielded-rj45.html">Shielded vs Unshielded</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="crumb">
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a> &rsaquo;
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">RJ45 Guide</a> &rsaquo;
+    Multi-Port RJ45 Jacks (Ganged &amp; Stacked)
+  </div>
+
+  <h1>Multi-Port RJ45 Jacks (1&times;N &amp; 2&times;N): Ganged and Stacked Socket Selection Guide</h1>
+  <div class="updated">Updated July 9, 2026 &middot; VOOHU Electronics</div>
+
+  <p class="lede">Once a board needs more than a couple of Ethernet ports &mdash; a switch line card, a router, an NVR, an industrial gateway or a patch panel &mdash; designers stop placing single RJ45 sockets and reach for <strong>multi-port RJ45 jacks</strong>: several 8P8C sockets (母座) combined into one molded housing. This guide explains the port nomenclature, when to gang versus stack, and how to choose configuration, magnetics, PoE current and shielding using VOOHU's real 母座 configuration matrix.</p>
+
+  <div class="answer">
+    <p><strong>Short answer:</strong> A multi-port RJ45 jack packs multiple 8P8C sockets into a single connector body. <strong>Ganged</strong> jacks put the ports in one row (a <strong>1&times;N</strong> array such as 1&times;4 or 1&times;8); <strong>stacked</strong> jacks use two rows, one above the other (a <strong>2&times;N</strong> array such as 2&times;4 or 2&times;8, often called <em>belly-to-belly</em>). Each port keeps the standard IEC 60603-7 mating interface, so ordinary RJ45 plugs still fit &mdash; you gain port density, mechanical alignment and lower assembly cost. VOOHU catalogs configurations from <strong>1&times;1 through 1&times;8 and 2&times;1 through 2&times;8</strong>, with optional integrated magnetics, LEDs, shielding and PoE up to 1.5 A per contact.</p>
+  </div>
+
+  <h2>Port nomenclature: reading 1&times;N and 2&times;N</h2>
+  <p>Multi-port jacks are described by a <strong>rows &times; ports-per-row</strong> grid. The first number is how many rows the housing has; the second is how many ports sit in each row.</p>
+  <ul>
+    <li><strong>1&times;N (ganged, single row):</strong> 1&times;2, 1&times;4, 1&times;6, 1&times;8 &mdash; a horizontal strip of ports. Common on the front edge of switches and routers where panel height is limited.</li>
+    <li><strong>2&times;N (stacked, two rows):</strong> 2&times;2, 2&times;4, 2&times;6, 2&times;8 &mdash; two decks of ports in one shell. A 2&times;8 gives sixteen ports in the footprint of an eight-wide strip, doubling port density per millimetre of board edge. The upper and lower decks face the same way (belly-to-belly).</li>
+  </ul>
+  <p>The grid notation describes only the <em>physical port array</em>. Data rate, wiring standard (T568A/B), PoE and magnetics are independent options layered on top of the chosen array.</p>
+
+  <h2>VOOHU multi-port RJ45 jack configuration matrix</h2>
+  <p>The table below lists the configuration options VOOHU offers across its RJ45 母座 range. All values are sourced from VOOHU product documentation; electrical and durability minimums follow IEC 60603-7 and IEEE 802.3.</p>
+
+  <table>
+    <caption>Source: VOOHU RJ45 Connector product center (configuration options). Standards: IEC 60603-7 (8P8C interface, current, durability), ANSI/TIA-568 (category), IEEE 802.3 (Ethernet / PoE).</caption>
+    <thead>
+      <tr><th>Parameter</th><th>VOOHU multi-port options</th><th>Selection note</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Port array</td><td>1&times;1, 1&times;2, 1&times;3, 1&times;4, 1&times;5, 1&times;6, 1&times;8 (ganged); 2&times;1, 2&times;2, 2&times;3, 2&times;4, 2&times;5, 2&times;6, 2&times;8 (stacked)</td><td>Match to port count and board-edge length; a 2&times;N halves the edge length versus two 1&times;N strips.</td></tr>
+      <tr><td>Mount angle</td><td>45&deg;, 90&deg; (vertical), 180&deg; (horizontal / right-angle), 180&deg; welding-wire</td><td>90&deg; upright for stacked front panels; 180&deg; for board-edge / low-height chassis.</td></tr>
+      <tr><td>Tab orientation</td><td>Tab-up, tab-down (mixed on stacked decks)</td><td>On a 2&times;N, decks are usually mirrored so both plug latches are accessible.</td></tr>
+      <tr><td>Integrated magnetics</td><td>Yes (magjack) or No (discrete)</td><td>Integrated saves board area per port; discrete eases routing on very dense arrays.</td></tr>
+      <tr><td>Data rate</td><td>10/100M, 100/1000M, 2.5GBASE-T, 5GBASE-T, 10GBASE-T (+SPD variants)</td><td>Per-port; you can populate one array with mixed speeds.</td></tr>
+      <tr><td>PoE per-contact current</td><td>non-PoE, 350&nbsp;mA, 600&nbsp;mA, 720&nbsp;mA, 850&nbsp;mA, 900&nbsp;mA, 1000&nbsp;mA, up to 1.5&nbsp;A</td><td>1.5 A per contact covers IEEE 802.3bt Type 4; watch heat in dense arrays.</td></tr>
+      <tr><td>Status LEDs</td><td>Wide range of dual-LED colour codes (green/yellow/orange/red), or no LED</td><td>Per-port link/activity indication built into the housing.</td></tr>
+      <tr><td>Mount / termination</td><td>DIP (through-hole) or SMT</td><td>Through-hole anchors better for high mating-cycle ports; SMT for reflow lines.</td></tr>
+      <tr><td>Shielding</td><td>Shield tabs (Yes/No) and optional EMI gasket</td><td>Shielded strongly recommended for Cat6A / 10G stacked arrays.</td></tr>
+      <tr><td>Operating temperature</td><td>0~+70&deg;C, -10~+85&deg;C, -20~+70&deg;C, -40~+85&deg;C, -40~+105&deg;C</td><td>Pick the grade for worst-case internal ambient, then derate PoE.</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13.5px;color:var(--muted);">Interface durability follows IEC 60603-7, which specifies a minimum of 750 mating cycles for the 8P8C connector; VOOHU's RJ45 catalog spans several hundred configurable part numbers across these options.</p>
+
+  <h2>Why designers choose multi-port over single jacks</h2>
+  <h3>Port density and board edge</h3>
+  <p>A stacked 2&times;N doubles the ports available along a fixed length of board edge or front panel. For a 24- or 48-port switch, stacked jacks are what make the faceplate physically possible.</p>
+  <h3>Mechanical alignment and panel fit</h3>
+  <p>Ports in one molded body share a datum, so every opening lines up with the bezel cut-outs automatically &mdash; no port-to-port tolerance stack-up as you would get placing eight separate jacks by hand.</p>
+  <h3>Assembly cost and reliability</h3>
+  <p>One placement and one solder operation instead of N reduces pick-and-place time, solder joints and the number of parts that can be mis-seated. Fewer discrete components generally means fewer field failures.</p>
+
+  <h2>How to choose a multi-port RJ45 jack</h2>
+  <ol>
+    <li><strong>Fix the port count and array shape first.</strong> Decide total ports, then whether panel height allows a single ganged row (1&times;N) or forces two stacked decks (2&times;N). Board-edge length usually settles it.</li>
+    <li><strong>Decide integrated vs discrete magnetics.</strong> Integrated magjack arrays save PCB area and simplify routing; discrete magnetics give more freedom to place and shield the transformer on very high-density boards. See the integrated-magnetics guide below.</li>
+    <li><strong>Set the per-port speed and PoE budget.</strong> Choose the data-rate grade (up to 10GBASE-T) and per-contact current (up to 1.5 A). In a dense array, total dissipation is the sum of all powered ports &mdash; size copper and airflow for the aggregate, not one port.</li>
+    <li><strong>Choose shielding for the category.</strong> For Cat6A / 10G, or any stacked array, specify shielded jacks with shield tabs and, where needed, the EMI gasket, and ground every shell to chassis.</li>
+    <li><strong>Pick mount style and temperature grade.</strong> Through-hole (DIP) for frequently re-mated or ruggedized ports, SMT for reflow assembly; then select the temperature grade (up to -40~+105&deg;C) for the worst-case internal ambient.</li>
+  </ol>
+
+  <h2>Common mistakes to avoid</h2>
+  <div class="mistake"><p><strong>Summing PoE heat wrong.</strong> Eight ports at 1.5 A each dissipate far more than one. Size the thermal design for the whole populated array, not a single contact pair, and derate against the temperature grade.</p></div>
+  <div class="mistake"><p><strong>Using unshielded stacked jacks for Cat6A / 10G.</strong> Adjacent ports couple; alien crosstalk climbs in dense arrays. Choose shielded multi-port jacks and ground every shell.</p></div>
+  <div class="mistake"><p><strong>Ignoring tab orientation on stacked decks.</strong> If both decks face the same tab direction, the latches on one row can be hard to release. Confirm the upper/lower tab arrangement against the mechanical drawing.</p></div>
+  <div class="mistake"><p><strong>Choosing SMT for a heavily re-mated multi-port without board locks.</strong> Repeated plug insertion force on bare solder joints lifts pads. Add hold-downs or specify through-hole.</p></div>
+  <div class="mistake"><p><strong>Assuming one array must be one speed.</strong> VOOHU arrays can mix speeds and LED codes per port &mdash; a single 2&times;N can carry both 1G and 2.5G ports if that is what the design needs.</p></div>
+  <div class="mistake"><p><strong>Forgetting bezel and light-pipe alignment.</strong> Mount angle (90&deg; vs 180&deg;) and LED placement must match the panel cut-out and any external light pipe; verify against the drawing before tooling.</p></div>
+
+  <h2 class="faq">Frequently asked questions</h2>
+  <div class="faq">
+    <h3>What is a multi-port RJ45 jack, and what is the difference between ganged and stacked?</h3>
+    <p>A multi-port RJ45 jack is a single molded housing holding several 8P8C modular sockets (母座). <em>Ganged</em> puts the ports in one horizontal row (a 1&times;N array such as 1&times;4 or 1&times;8); <em>stacked</em> uses two rows, one above the other (a 2&times;N array such as 2&times;4 or 2&times;8, sometimes called belly-to-belly). Each port keeps the standard IEC 60603-7 interface, so ordinary RJ45 plugs still fit. VOOHU catalogs 1&times;1 through 1&times;8 and 2&times;1 through 2&times;8.</p>
+
+    <h3>What do 1&times;N and 2&times;N mean in RJ45 jack part numbers?</h3>
+    <p>The first number is the count of rows, the second is ports per row. 1&times;4 is a single row of four ports (ganged); 2&times;8 is two rows of eight, giving sixteen ports (stacked). The notation describes the physical port array in one connector body &mdash; not the data rate or wiring standard, which are separate options.</p>
+
+    <h3>Can multi-port RJ45 jacks include integrated magnetics, LEDs and PoE?</h3>
+    <p>Yes. VOOHU multi-port RJ45 jacks are available with integrated magnetics (magjack), status LEDs and PoE support, with per-contact current options up to 1.5 A, which covers IEEE 802.3af/at/bt. Speeds span 10/100M through 10GBASE-T, and shielded versions with an EMI gasket are offered for emissions-critical ports.</p>
+
+    <h3>Do stacked (2&times;N) RJ45 jacks have more crosstalk than single jacks?</h3>
+    <p>Adjacent ports in a dense array can couple, so alien crosstalk and shield grounding matter more than in a single jack. Well-designed stacked jacks manage this with internal shielding partitions and per-port shield tabs. For Cat6A and 10GBASE-T arrays, choose shielded multi-port jacks and ground every shell to chassis; VOOHU offers shield-tab and EMI-gasket options across its multi-port range.</p>
+  </div>
+
+  <div class="related">
+    <h3>Related VOOHU guides</h3>
+    <ul>
+      <li><a href="./integrated-magnetics-magjack-rj45-jacks.html">Integrated-Magnetics (MagJack) RJ45 Sockets Explained</a></li>
+      <li><a href="./rj45-jack-tht-vs-smt-pcb-mount.html">PCB-Mount RJ45 Jacks: Through-Hole (THT) vs SMT</a></li>
+      <li><a href="./rj45-jack-led-indicators.html">RJ45 Jacks with LED Indicators: Wiring &amp; Selection</a></li>
+      <li><a href="./shielded-vs-unshielded-rj45.html">Shielded vs Unshielded RJ45 Jacks (UTP/FTP/STP)</a></li>
+    </ul>
+  </div>
+
+  <p style="margin-top:26px;">
+    <span class="tag">multi-port RJ45 jack</span>
+    <span class="tag">ganged RJ45</span>
+    <span class="tag">stacked RJ45</span>
+    <span class="tag">2x4 RJ45</span>
+    <span class="tag">8P8C socket</span>
+    <span class="tag">VOOHU</span>
+  </p>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><strong>VOOHU Electronics</strong> — Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices. ISO9001, ISO14001, RoHS, REACH, CE certified.</p>
+    <p>
+      Website: <a href="https://www.voohuele.com">https://www.voohuele.com</a> &middot;
+      Email: <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> &middot;
+      WhatsApp: +86 133 5804 1040
+    </p>
+    <p style="color:#7f92a3; font-size:12.5px;">This guide is provided for engineering reference. Technical minimums are per IEC 60603-7, ANSI/TIA-568 and IEEE 802.3; configuration options and product specs are per VOOHU product documentation. Confirm port array and full parameters against the specific part-number datasheet.</p>
+  </div>
+</footer>
+
+</body>
+</html>
