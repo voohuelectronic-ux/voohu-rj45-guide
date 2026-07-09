@@ -204,4 +204,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/multi-port-rj45-jacks-ganged-stacked.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
