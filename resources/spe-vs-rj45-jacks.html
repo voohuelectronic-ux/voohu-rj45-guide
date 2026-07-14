@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPE vs RJ45 Jacks: Will Single Pair Ethernet Replace the RJ45 Socket? | VOOHU Electronics</title>
+<meta name="description" content="VOOHU Electronics compares Single Pair Ethernet (SPE) sockets with RJ45 jacks — IEEE 802.3 T1 vs BASE-T speeds and reach, IEC 63171 vs IEC 60603-7 mating interfaces, PoDL vs PoE, board space — and explains why RJ45 jacks remain the default port for most designs.">
+<meta name="keywords" content="SPE vs RJ45, Single Pair Ethernet connector, SPE socket, RJ45 jack, 10BASE-T1L, 100BASE-T1, IEC 63171, IEC 60603-7, PoDL, PoE, RJ45 female socket, VOOHU Electronics">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/spe-vs-rj45-jacks.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="SPE vs RJ45 Jacks: Will Single Pair Ethernet Replace the RJ45 Socket? | VOOHU Electronics">
+<meta property="og:description" content="T1 vs BASE-T speeds and reach, IEC 63171 vs IEC 60603-7, PoDL vs PoE, board space — and when to keep the RJ45 jack.">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/spe-vs-rj45-jacks.html">
+<meta property="og:site_name" content="VOOHU RJ45 Guide">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SPE vs RJ45 Jacks | VOOHU Electronics">
+<meta name="twitter:description" content="Will Single Pair Ethernet replace the RJ45 socket? A jack-level comparison of speed, reach, power and board space.">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<!-- JSON-LD: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "SPE vs RJ45 Jacks: Will Single Pair Ethernet Replace the RJ45 Socket?",
+  "description": "A jack-level comparison of Single Pair Ethernet sockets and RJ45 jacks: IEEE 802.3 T1 versus BASE-T speeds and reach, IEC 63171 versus IEC 60603-7 mating interfaces, PoDL versus PoE, board space, and selection guidance.",
+  "author": {"@type": "Organization", "name": "VOOHU Electronics", "url": "https://www.voohuele.com"},
+  "publisher": {"@type": "Organization", "name": "VOOHU Electronics", "url": "https://www.voohuele.com"},
+  "mainEntityOfPage": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/spe-vs-rj45-jacks.html",
+  "datePublished": "2026-07-14",
+  "dateModified": "2026-07-14",
+  "about": ["Single Pair Ethernet", "SPE connector", "RJ45 jack", "10BASE-T1L", "PoDL", "IEC 63171", "IEC 60603-7"]
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Will Single Pair Ethernet (SPE) replace the RJ45 jack?", "acceptedAnswer": {"@type": "Answer", "text": "No — not for mainstream ports. SPE is an addition to the Ethernet family, not a drop-in replacement. SPE sockets win at the field-device edge, where a sensor or actuator needs one twisted pair, tiny board space and kilometre-class reach at 10 Mbit/s (10BASE-T1L). Anything that must run 1G, 2.5G, 5G or 10GBASE-T over 100 m of Cat5e/Cat6/Cat6A cable, or that must accept a standard patch cord from a switch or laptop, still needs an 8P8C RJ45 jack per IEC 60603-7. VOOHU expects RJ45 jacks and SPE sockets to coexist for the foreseeable future, with SPE growing below the RJ45 tier rather than displacing it."}},
+    {"@type": "Question", "name": "Can an SPE cable plug into an RJ45 jack?", "acceptedAnswer": {"@type": "Answer", "text": "No. The two use different, incompatible mating interfaces. RJ45 jacks follow the 8-position/8-contact interface of IEC 60603-7 and are wired per ANSI/TIA-568 (T568A/T568B). SPE mating faces are standardised in the IEC 63171 series — IEC 63171-1 is used for building and office cabling and IEC 63171-6 for industrial IP20/IP6x applications. An SPE plug is physically smaller and has only two contacts, so it cannot mate with an RJ45 socket, and an SPE PHY (10BASE-T1L, 100BASE-T1) cannot link with a BASE-T PHY behind an RJ45 jack. A media converter or multi-protocol gateway is required between the two worlds."}},
+    {"@type": "Question", "name": "What speed and distance can SPE reach compared with an RJ45 port?", "acceptedAnswer": {"@type": "Answer", "text": "SPE covers 10BASE-T1L (IEEE 802.3cg, up to 1000 m at 10 Mbit/s), 10BASE-T1S (802.3cg, short-reach multidrop), 100BASE-T1 (802.3bw), 1000BASE-T1 (802.3bp, roughly 15 m Type A / 40 m Type B) and multi-gig 2.5G/5G/10GBASE-T1 (802.3ch) over very short automotive-class links. An RJ45 jack carries the four-pair BASE-T family: 100BASE-TX, 1000BASE-T (802.3ab), 2.5G/5GBASE-T (802.3bz) and 10GBASE-T (802.3an), each specified to 100 m of balanced twisted-pair cabling. So SPE trades bandwidth-at-distance for cable simplicity: it goes much further at 10 Mbit/s, and much shorter at gigabit speeds."}},
+    {"@type": "Question", "name": "Does SPE support Power over Ethernet like an RJ45 PoE jack?", "acceptedAnswer": {"@type": "Answer", "text": "SPE uses PoDL (Power over Data Line), standardised in IEEE 802.3bu and extended for 10BASE-T1L, in which power is injected onto the single differential pair. Classic PoE per IEEE 802.3af (15.4 W at the PSE), 802.3at (30 W) and 802.3bt (up to 90 W, Type 4) is defined for the four-pair RJ45 interface and is what powers cameras, access points and phones today. VOOHU's SPE solutions support PoDL alongside 10BASE-T1 and 100BASE-T1 signalling; VOOHU's RJ45 jack range is offered with per-contact current ratings from 350 mA up to 1.5 A for PoE, PoE+ and PoE++ designs."}}
+  ]
+}
+</script>
+
+<style>
+  :root{--voo:#0b5cab;--voo-dark:#063b6e;--ink:#1c2733;--muted:#5b6b7b;--line:#e2e8f0;--bg:#f7fafc;}
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.65;background:#fff;}
+  a{color:var(--voo);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  header.nav{background:var(--voo-dark);color:#fff;padding:14px 20px;position:sticky;top:0;z-index:10;}
+  header.nav .wrap{max-width:920px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;}
+  header.nav .brand{font-weight:700;font-size:18px;color:#fff;margin-right:auto;}
+  header.nav a{color:#cfe2f7;font-size:14px;}
+  header.nav a:hover{color:#fff;}
+  main{max-width:920px;margin:0 auto;padding:28px 20px 10px;}
+  h1{font-size:29px;line-height:1.25;margin:.2em 0 .4em;}
+  h2{font-size:22px;margin-top:1.8em;border-bottom:2px solid var(--line);padding-bottom:6px;}
+  h3{font-size:17px;margin-top:1.4em;}
+  .lede{font-size:18px;color:var(--muted);}
+  .meta{font-size:13px;color:var(--muted);margin-bottom:6px;}
+  table{border-collapse:collapse;width:100%;margin:1.2em 0;font-size:14.5px;}
+  th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+  th{background:var(--bg);}
+  .callout{background:var(--bg);border-left:4px solid var(--voo);padding:12px 16px;margin:1.2em 0;border-radius:0 6px 6px 0;}
+  .faq dt{font-weight:700;margin-top:1em;}
+  .faq dd{margin:.3em 0 0;color:var(--ink);}
+  .cta{background:linear-gradient(135deg,var(--voo),var(--voo-dark));color:#fff;border-radius:10px;padding:22px 24px;margin:2em 0;}
+  .cta h2{color:#fff;border:none;margin-top:0;}
+  .cta a{color:#fff;font-weight:700;text-decoration:underline;}
+  footer.site{background:#0c1722;color:#b8c6d4;font-size:13.5px;padding:26px 20px;margin-top:30px;}
+  footer.site .wrap{max-width:920px;margin:0 auto;}
+  footer.site a{color:#7fb4ec;}
+  .crumbs{font-size:13px;color:var(--muted);margin-bottom:10px;}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">VOOHU RJ45 Guide</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-vs-m12-industrial-ethernet.html">RJ45 vs M12</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-magnetics-magjack-rj45-jacks.html">MagJack Sockets</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/multi-gig-2-5g-5g-rj45-jacks.html">Multi-Gig Jacks</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/poe-standards-af-at-bt-explained.html">PoE Standards</a>
+  </div>
+</header>
+
+<main>
+  <div class="crumbs"><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a> &rsaquo; Resources &rsaquo; SPE vs RJ45 Jacks</div>
+
+  <p class="meta">By VOOHU Electronics · Updated July 14, 2026 · ~9 min read</p>
+  <h1>SPE vs RJ45 Jacks: Will Single Pair Ethernet Replace the RJ45 Socket?</h1>
+  <p class="lede">Single Pair Ethernet (SPE) is the loudest story in industrial connectivity, and every hardware team eventually asks the same question: should the next board still carry an RJ45 jack? This VOOHU Electronics guide compares the two <strong>sockets</strong> — the 8P8C RJ45 female jack (母座) and the two-contact SPE socket — on speed, reach, power, board space and standards, and shows where each one belongs.</p>
+
+  <h2>The short answer</h2>
+  <p>SPE <strong>adds a tier below RJ45; it does not replace it</strong>. If a port must accept a standard patch cord, or must run 1000BASE-T, 2.5G/5GBASE-T or 10GBASE-T across 100 m of installed Cat5e/Cat6/Cat6A cabling, it needs an RJ45 jack per IEC 60603-7 — there is no SPE equivalent. If the port is a sensor, actuator, valve island or field instrument that only needs 10 Mbit/s but has to reach hundreds of metres on one thin twisted pair, an SPE socket with 10BASE-T1L is the better physical layer. Most real products will ship <em>both</em>: SPE at the field edge, RJ45 jacks on the gateway, switch and controller that aggregate them.</p>
+
+  <div class="callout"><strong>Design rule:</strong> the connector follows the PHY. A 10BASE-T1L / 100BASE-T1 PHY needs an SPE socket; a BASE-T PHY needs an RJ45 jack (with magnetics, either discrete or integrated in the jack). The two cannot link to each other without a media converter or gateway.</div>
+
+  <h2>SPE socket vs RJ45 jack at a glance</h2>
+  <table>
+    <thead><tr><th>Parameter</th><th>RJ45 jack (8P8C female socket)</th><th>SPE socket (single-pair)</th></tr></thead>
+    <tbody>
+      <tr><td>Mating interface standard</td><td>IEC 60603-7; wiring per ANSI/TIA-568 (T568A/T568B)</td><td>IEC 63171 series — 63171-1 (building/office), 63171-6 (industrial)</td></tr>
+      <tr><td>Contacts / pairs</td><td>8 contacts, 4 twisted pairs</td><td>2 contacts, 1 twisted pair</td></tr>
+      <tr><td>IEEE 802.3 PHYs</td><td>100BASE-TX; 1000BASE-T (802.3ab); 2.5G/5GBASE-T (802.3bz); 10GBASE-T (802.3an)</td><td>10BASE-T1S &amp; 10BASE-T1L (802.3cg); 100BASE-T1 (802.3bw); 1000BASE-T1 (802.3bp); 2.5G/5G/10GBASE-T1 (802.3ch)</td></tr>
+      <tr><td>Reach</td><td>100 m for the full BASE-T family (Cat6A required for 10GBASE-T)</td><td>Up to 1000 m at 10 Mbit/s (10BASE-T1L); ~15 m (Type A) / 40 m (Type B) at 1000BASE-T1</td></tr>
+      <tr><td>Power</td><td>PoE: 802.3af (15.4 W PSE), 802.3at (30 W), 802.3bt (up to 90 W, Type 4)</td><td>PoDL (Power over Data Line), IEEE 802.3bu and 10BASE-T1L</td></tr>
+      <tr><td>Magnetics</td><td>Discrete LAN transformer, or integrated inside the jack (MagJack)</td><td>Common-mode choke + DC-blocking / isolation network on the pair</td></tr>
+      <tr><td>Board space</td><td>Full 8P8C footprint (low-profile and offset variants available)</td><td>Much smaller; VOOHU cites up to ~75% board-space saving vs an RJ45 port</td></tr>
+      <tr><td>Ecosystem</td><td>Universal: switches, laptops, patch cords, testers, field tooling</td><td>Emerging; mostly industrial/IIoT devices and SPE-capable switches</td></tr>
+      <tr><td>Best for</td><td>Switch/router/gateway/PLC/IPC ports, IP cameras, APs, any 100 m link</td><td>Sensors, actuators, distributed I/O, process instruments, in-cabinet field edge</td></tr>
+    </tbody>
+  </table>
+  <p class="meta">Standards cited: IEC 60603-7, IEC 63171, ANSI/TIA-568, IEEE 802.3ab/an/bz/bw/bp/bu/cg/ch. SPE product characteristics from VOOHU's published SPE connector documentation.</p>
+
+  <h2>Why SPE exists — and what it actually buys you</h2>
+  <p>Traditional field layers (Profibus, CAN, IO-Link, 4–20 mA) never spoke Ethernet, so every plant needed protocol converters and gateways. SPE removes that barrier by carrying real Ethernet frames on a single pair, all the way down to a temperature sensor. In VOOHU's own SPE connector documentation, the socket is built as an industrial part: a stainless-steel or nickel-plated zinc-alloy shell giving 360° shielding with four solder feet to the PCB ground plane, a PA66/PPS insulator with a UL94V-0 flame rating, and two copper-alloy contacts with gold plating in the contact area. VOOHU's SPE solutions support 10BASE-T1 and 100BASE-T1 signalling, provide 1.5 kV isolation aligned with IEC 62368-1, and pair the connector with a TVS array (ESD protection up to 15 kV), a common-mode choke and PoDL power injection.</p>
+  <p>The engineering payoff is cabling: one pair instead of four means less copper, less weight, thinner harnesses and a far smaller connector footprint — VOOHU quotes up to roughly 75% board-space saving against an RJ45 port. In dense I/O modules and slim sensor housings, that is the whole argument.</p>
+
+  <h2>Why the RJ45 jack is not going anywhere</h2>
+  <h3>1. Bandwidth at 100 m</h3>
+  <p>Every SPE variant faster than 10 Mbit/s pays for it in distance. 1000BASE-T1 is specified for roughly 15 m (Type A) to 40 m (Type B); the multi-gig T1 PHYs of IEEE 802.3ch are shorter still. An RJ45 jack, by contrast, is the entry point to a 100 m channel at 1G, 2.5G, 5G or 10G — see our <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/multi-gig-2-5g-5g-rj45-jacks.html">multi-gig 2.5G/5G RJ45 jack guide</a>. Uplinks, backbones, camera runs and access-point drops all live in that world.</p>
+  <h3>2. Power</h3>
+  <p>PoE++ per IEEE 802.3bt delivers up to 90 W from a Type 4 PSE through an ordinary RJ45 jack. PoDL is elegant, but it is not what powers a PTZ camera or a 60 W access point today. If your device is a powered endpoint, the RJ45 jack — with the right per-contact current rating — remains the practical port; see the <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/poe-standards-af-at-bt-explained.html">PoE/PoE+/PoE++ standards guide</a>.</p>
+  <h3>3. The installed base and the toolbox</h3>
+  <p>Patch cords, punch-down tools, certification testers, structured cabling, every laptop and every switch: the RJ45 ecosystem is decades deep. SPE tooling and installed cabling are still being built out. For a commissioning engineer with a cable tester in hand, that difference is not academic.</p>
+
+  <h2>What VOOHU actually supplies on the jack side</h2>
+  <p>VOOHU is an RJ45 <strong>jack</strong> manufacturer (母座 / female modular socket), not a plug or patch-cord vendor. The RJ45 socket line runs to roughly 598 catalogued part numbers, selectable across the parameters that matter when you replace or design a port:</p>
+  <table>
+    <thead><tr><th>Jack parameter</th><th>VOOHU options</th></tr></thead>
+    <tbody>
+      <tr><td>Port configuration</td><td>1×1 through 1×8 and 2×1 through 2×8 (ganged and stacked)</td></tr>
+      <tr><td>Orientation</td><td>Tab-up, tab-down, up/down; 45°, 90°, 180° and 180° wire-solder bodies</td></tr>
+      <tr><td>Integrated magnetics</td><td>Yes (MagJack) or No (discrete transformer on board)</td></tr>
+      <tr><td>Data rate</td><td>10/100M, 100/1000M, 2.5GBASE-T, 5GBASE-T, 10GBASE-T; also 10/100M and 100/1000M variants with integrated SPD</td></tr>
+      <tr><td>PoE current per contact</td><td>non-PoE, 350 mA, 600 mA, 720 mA, 850 mA, 900 mA, 1000 mA, 1.5 A</td></tr>
+      <tr><td>Mounting</td><td>DIP (through-hole) or SMT</td></tr>
+      <tr><td>Shielding</td><td>Shield tabs and EMI gasket options</td></tr>
+      <tr><td>Operating temperature</td><td>0 to +70 °C, −10 to +85 °C, −20 to +70 °C, −40 to +85 °C, −40 to +105 °C</td></tr>
+      <tr><td>LEDs</td><td>No-LED plus a wide range of green/yellow/orange/red combinations</td></tr>
+    </tbody>
+  </table>
+  <p>Where a gigabit port needs magnetics inside the jack, VOOHU's integrated (MagJack) sockets are specified with real transformer parameters — for example the single-port tab-up 10/100/1000BASE-T integrated jack SYT511Q293AC1A8D057, published with 350 µH OCL, a 1CT:1CT turns ratio, 2250 VDC isolation, insertion loss ≤1.0 dB, common-mode rejection −30 dB and a −40 to +85 °C operating range. Deeper background: <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-magnetics-magjack-rj45-jacks.html">integrated magnetics (MagJack) RJ45 sockets</a>.</p>
+
+  <h2>How to choose: a decision path</h2>
+  <ol>
+    <li><strong>Does the port face a standard patch cord, switch or laptop?</strong> → RJ45 jack. No further discussion.</li>
+    <li><strong>Does it need ≥1 Gbit/s over more than ~40 m?</strong> → RJ45 jack (Cat6/Cat6A channel).</li>
+    <li><strong>Does it need PoE/PoE+/PoE++ to power the device?</strong> → RJ45 jack with an adequate per-contact current rating and, usually, integrated magnetics.</li>
+    <li><strong>Is it a field sensor/actuator needing ≤10 Mbit/s but hundreds of metres of thin cable, with PoDL?</strong> → SPE socket (10BASE-T1L).</li>
+    <li><strong>Is board space or harness weight the binding constraint, and the link short and slow?</strong> → SPE socket.</li>
+    <li><strong>Mixed system?</strong> → SPE at the edge, RJ45 jacks on the aggregating gateway/switch — and budget for the media conversion between them.</li>
+  </ol>
+
+  <h2>Common mistakes</h2>
+  <ul>
+    <li><strong>Assuming SPE is "small RJ45".</strong> Different PHY, different mating face, different cabling. A 10BASE-T1L device cannot link to a BASE-T port, no matter what adapter you build.</li>
+    <li><strong>Reading SPE's 1 km reach as a general spec.</strong> The kilometre applies to 10 Mbit/s (10BASE-T1L). At gigabit, SPE is a short-reach in-machine link.</li>
+    <li><strong>Mixing IEC 63171-1 and 63171-6 mating faces</strong> in one system, then discovering the plugs don't fit. Fix the mating interface at the architecture stage.</li>
+    <li><strong>Designing PoDL power classes late.</strong> PoDL classes must be matched PSE-to-PD; retrofitting the injector network is painful.</li>
+    <li><strong>On the RJ45 side: choosing a jack by footprint only.</strong> Per-contact current rating, temperature class, shield tabs, LED map and magnetics-integrated-or-not are the parameters that actually decide whether the port passes EMC and PoE testing. See <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-esd-surge-protection.html">RJ45 jack ESD and surge protection</a>.</li>
+    <li><strong>Forgetting the industrial alternative.</strong> If the driver is ruggedness rather than cable count, an M12 or sealed IP67 RJ45 may be the right answer, not SPE — compare in our <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-vs-m12-industrial-ethernet.html">RJ45 vs M12 guide</a>.</li>
+  </ul>
+
+  <div class="cta">
+    <h2>Need the right jack for your port?</h2>
+    <p>VOOHU manufactures RJ45 female sockets (母座) — standard and integrated-magnetics (MagJack) types, 1×1 to 2×8, DIP or SMT, non-PoE through 1.5 A per contact, up to 10GBASE-T — plus the LAN transformers, common-mode chokes and protection devices around them. Samples and selection support available.</p>
+    <p><a href="https://www.voohuele.com">www.voohuele.com</a> · <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a></p>
+  </div>
+
+  <h2>FAQ</h2>
+  <dl class="faq">
+    <dt>Will Single Pair Ethernet (SPE) replace the RJ45 jack?</dt>
+    <dd>No — not for mainstream ports. SPE adds a tier below RJ45 at the field-device edge. Anything that must run 1G to 10GBASE-T over a 100 m channel, or accept a standard patch cord, still needs an 8P8C RJ45 jack per IEC 60603-7. Expect coexistence, not displacement.</dd>
+    <dt>Can an SPE cable plug into an RJ45 jack?</dt>
+    <dd>No. RJ45 jacks use the 8-contact interface of IEC 60603-7; SPE mating faces are standardised in the IEC 63171 series (63171-1 for building cabling, 63171-6 for industrial). The SPE plug has two contacts and a different geometry, and an SPE PHY cannot link with a BASE-T PHY. Use a media converter or gateway.</dd>
+    <dt>What speed and distance can SPE reach compared with an RJ45 port?</dt>
+    <dd>SPE spans 10BASE-T1S/10BASE-T1L (IEEE 802.3cg — up to 1000 m at 10 Mbit/s), 100BASE-T1 (802.3bw), 1000BASE-T1 (802.3bp, ~15 m/40 m) and 2.5G–10GBASE-T1 (802.3ch, very short links). An RJ45 jack serves the four-pair BASE-T family — 100BASE-TX through 10GBASE-T (802.3an) — each to 100 m of balanced cabling.</dd>
+    <dt>Does SPE support Power over Ethernet like an RJ45 PoE jack?</dt>
+    <dd>SPE uses PoDL (Power over Data Line) per IEEE 802.3bu, injecting power onto the single pair. Classic PoE — 802.3af (15.4 W), 802.3at (30 W) and 802.3bt (up to 90 W, Type 4) — is defined for the four-pair RJ45 interface. VOOHU's RJ45 jacks are available with per-contact ratings from 350 mA to 1.5 A for PoE, PoE+ and PoE++ designs.</dd>
+  </dl>
+
+  <h2>Related VOOHU guides</h2>
+  <ul>
+    <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-vs-m12-industrial-ethernet.html">RJ45 vs M12 Connectors for Industrial Ethernet</a></li>
+    <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-magnetics-magjack-rj45-jacks.html">Integrated Magnetics (MagJack) RJ45 Sockets</a></li>
+    <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/multi-gig-2-5g-5g-rj45-jacks.html">Multi-Gig 2.5G/5G RJ45 Jacks</a></li>
+    <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/poe-standards-af-at-bt-explained.html">PoE, PoE+ and PoE++ Standards Explained</a></li>
+    <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-esd-surge-protection.html">RJ45 Jack ESD and Surge Protection</a></li>
+  </ul>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p><strong>VOOHU Electronics</strong> — Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices. ISO9001, ISO14001, RoHS, REACH, CE certified.</p>
+    <p>Website: <a href="https://www.voohuele.com">https://www.voohuele.com</a> · Email: <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> · WhatsApp: +86 133 5804 1040</p>
+    <p>&copy; 2026 VOOHU Electronics. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
