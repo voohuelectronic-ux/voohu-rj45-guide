@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bob Smith Termination in RJ45 Jacks: 75&#937; / 1000pF Common-Mode Network | VOOHU</title>
+<meta name="description" content="What Bob Smith termination is inside an RJ45 jack, the classic 75&#937; resistor + 1000pF/2kV capacitor common-mode network, and why VOOHU integrated-magnetics RJ45 jacks (母座) build it in for lower EMI. Real specs and design tips.">
+<meta name="keywords" content="Bob Smith termination, RJ45 jack, RJ45 socket, integrated magnetics RJ45, magjack, common-mode termination, 75 ohm 1000pF, unused pairs Ethernet, EMI RJ45, VOOHU, network transformer, center tap termination">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/bob-smith-termination-rj45-magjack.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bob Smith Termination in RJ45 Jacks: 75&#937; / 1000pF Common-Mode Network | VOOHU">
+<meta property="og:description" content="The 75&#937; resistor + 1000pF/2kV capacitor common-mode network inside an RJ45 jack, and why VOOHU integrated-magnetics jacks (母座) build it in for lower EMI.">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/bob-smith-termination-rj45-magjack.html">
+<meta property="og:site_name" content="VOOHU RJ45 Jack Knowledge Base">
+<meta property="og:image" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/assets/voohu-rj45-og.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bob Smith Termination in RJ45 Jacks | VOOHU">
+<meta name="twitter:description" content="The 75&#937;/1000pF common-mode network inside an RJ45 jack, and why VOOHU integrated-magnetics jacks (母座) build it in.">
+<meta name="twitter:image" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/assets/voohu-rj45-og.png">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<!-- JSON-LD: TechArticle -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Bob Smith Termination in RJ45 Jacks: The 75-ohm / 1000pF Common-Mode Network",
+  "description": "A practical guide to Bob Smith termination inside RJ45 jacks: the classic 75-ohm resistor plus 1000pF/2kV capacitor common-mode network, why unused pairs and transformer center taps need it, and how VOOHU integrated-magnetics RJ45 jacks build it in.",
+  "author": { "@type": "Organization", "name": "VOOHU Electronics", "url": "https://www.voohuele.com" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "logo": { "@type": "ImageObject", "url": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/assets/voohu-logo.png" }
+  },
+  "datePublished": "2026-07-15",
+  "dateModified": "2026-07-15",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/bob-smith-termination-rj45-magjack.html" },
+  "image": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/assets/voohu-rj45-og.png",
+  "articleSection": "RJ45 Jack Design",
+  "keywords": "Bob Smith termination, RJ45 jack, integrated magnetics, magjack, common-mode termination, 75 ohm 1000pF, EMI"
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Bob Smith termination in an RJ45 jack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bob Smith termination is a small resistor-capacitor network that terminates the common-mode impedance of each twisted pair (including the two unused pairs in 10/100 Ethernet) and the transformer center taps. Each pair is tied through an approximately 75-ohm resistor to a common node, which connects to chassis ground through a high-voltage capacitor, typically 1000pF rated at least 2kV. It reduces common-mode EMI and gives common-mode noise a defined return path. In an integrated-magnetics RJ45 jack (magjack), this network lives inside the connector."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the typical Bob Smith termination component values?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The classic network uses one 75-ohm resistor per pair (four resistors in a 10/100 design) connected to a common star node, and a single coupling capacitor of about 1000pF (1nF) rated to at least 2kV that links that node to chassis ground. The 75-ohm value approximates the common-mode impedance of the twisted pair; the 2kV capacitor blocks DC and survives hi-pot and surge stress."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do integrated-magnetics RJ45 jacks (magjacks) include Bob Smith termination?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Integrated-magnetics RJ45 jacks such as VOOHU's integrated RJ45 series place the isolation transformer, common-mode choke, and the Bob Smith termination network inside the shielded jack housing. This guarantees repeatable common-mode termination, saves board area, and removes the risk of a designer fitting an under-rated coupling capacitor. You should not add a second external network to an integrated magjack."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 75 ohm the right resistor value, or should I use 52.3 ohm?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both values appear in the field. The original Bob Smith scheme uses 75 ohm; a modified scheme uses 52.3 ohm. Published measurements show little practical difference in return loss between 75 ohm, 52.3 ohm, and even no resistor. What matters far more is a correctly rated 2kV coupling capacitor and a clean, short connection to chassis ground rather than digital ground."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root { --brand:#0b5cab; --brand-dark:#083f77; --ink:#1c2530; --muted:#5b6b7b; --line:#e2e8f0; --bg:#f7f9fc; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.65; }
+  a { color:var(--brand); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .nav { position:sticky; top:0; z-index:50; background:var(--brand); color:#fff; box-shadow:0 1px 6px rgba(0,0,0,.15); }
+  .nav .wrap { max-width:920px; margin:0 auto; padding:11px 20px; display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center; }
+  .nav .brand { font-weight:700; letter-spacing:.3px; margin-right:6px; }
+  .nav a { color:#eaf2fb; font-size:14px; }
+  .nav a:hover { color:#fff; }
+  .container { max-width:920px; margin:0 auto; padding:26px 20px 60px; }
+  .crumb { font-size:13px; color:var(--muted); margin:14px 0 8px; }
+  h1 { font-size:31px; line-height:1.25; margin:.2em 0 .35em; }
+  h2 { font-size:22px; margin-top:1.9em; border-bottom:2px solid var(--line); padding-bottom:6px; }
+  h3 { font-size:18px; margin-top:1.4em; }
+  .updated { color:var(--muted); font-size:14px; }
+  .lede { font-size:18px; color:#33404d; }
+  .answer { background:#eef4fc; border-left:4px solid var(--brand); padding:16px 18px; border-radius:6px; margin:22px 0; }
+  .answer strong { color:var(--brand-dark); }
+  table { width:100%; border-collapse:collapse; margin:18px 0; font-size:15px; }
+  th,td { border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--brand); color:#fff; font-weight:600; }
+  tbody tr:nth-child(even) { background:#fff; }
+  tbody tr:nth-child(odd) { background:#f1f6fc; }
+  .callout { background:#fff; border:1px solid var(--line); border-radius:8px; padding:6px 20px; margin:18px 0; }
+  .mistakes li { margin:8px 0; }
+  .faq h3 { margin-bottom:2px; }
+  .related { background:#fff; border:1px solid var(--line); border-radius:8px; padding:8px 22px 16px; }
+  footer { background:#0d1b2a; color:#c7d3df; font-size:14px; }
+  footer .wrap { max-width:920px; margin:0 auto; padding:26px 20px; }
+  footer strong { color:#fff; }
+  footer a { color:#8fc0f5; }
+  .tag { display:inline-block; background:#eef4fc; color:var(--brand-dark); border:1px solid #cfe0f5; border-radius:20px; padding:2px 10px; font-size:12px; margin:2px 4px 2px 0; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <span class="brand">VOOHU RJ45 Guide</span>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-magnetics-magjack-rj45-jacks.html">Integrated Magnetics (Magjack)</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/common-mode-choke-placement-ethernet-transformer.html">Common-Mode Choke Placement</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-esd-surge-protection.html">ESD &amp; Surge Protection</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/shielded-vs-unshielded-rj45.html">Shielded vs Unshielded</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="crumb">
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a> &rsaquo;
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">RJ45 Jack Resources</a> &rsaquo;
+    Bob Smith Termination in RJ45 Jacks
+  </div>
+
+  <h1>Bob Smith Termination in RJ45 Jacks: The 75&#937; / 1000pF Common-Mode Network</h1>
+  <p class="updated">Updated July 15, 2026 &middot; VOOHU Electronics &middot; RJ45 Jack (母座) Design Series</p>
+
+  <p class="lede">An RJ45 jack that carries Ethernet does more than pass two or four differential pairs. It also has to deal with the <strong>common-mode currents</strong> riding on those pairs and on the transformer center taps &mdash; energy that would otherwise radiate as EMI or couple noise back into the PHY. <em>Bob Smith termination</em> is the small resistor-capacitor network that quietly handles this right at the jack. This guide explains what it does, the classic 75&#937;/1000pF values, and why VOOHU's integrated-magnetics RJ45 jacks (母座) build it in.</p>
+
+  <div class="answer">
+    <strong>Short answer.</strong> Bob Smith termination ties each twisted pair &mdash; including the two <em>unused</em> pairs in 10/100 Ethernet &mdash; and the transformer center taps through roughly <strong>75&#937; resistors</strong> to a common node, which connects to chassis ground through a high-voltage capacitor, typically <strong>1000pF (1nF) rated &ge;2kV</strong>. It reduces common-mode EMI emissions and gives common-mode noise a defined return path. In an integrated magjack, all of these parts live <em>inside</em> the connector housing, so the termination is fixed by the manufacturer rather than by your board layout.
+  </div>
+
+  <h2>Why an RJ45 jack needs common-mode termination</h2>
+  <p>A standard RJ45 jack is the 8-position, 8-contact (8P8C) interface defined by <strong>IEC 60603-7</strong>, wired per <strong>ANSI/TIA-568</strong> and carrying signals defined by <strong>IEEE 802.3</strong>. Each of its four twisted pairs has a differential (odd-mode) impedance of 100&#937;, which the PHY and cabling already control. The problem is the <em>even mode</em>: common-mode currents that flow equally on both wires of a pair.</p>
+  <p>Two situations create common-mode energy at the jack:</p>
+  <ul>
+    <li><strong>Unused pairs.</strong> In 10BASE-T and 100BASE-TX only two pairs carry data (pins 1-2 and 3-6). The other two pairs (4-5 and 7-8) are electrically idle but still act as antennas &mdash; they pick up and re-radiate common-mode noise if left floating.</li>
+    <li><strong>Transformer center taps.</strong> The isolation transformer inside the magnetics has center taps on the line side. Without a defined AC path, common-mode currents on those taps have nowhere controlled to go.</li>
+  </ul>
+  <p>Bob Smith termination &mdash; named after Robert W. Smith, whose approach is described in <strong>U.S. Patent 5,321,372</strong> (issued June 14, 1994, &ldquo;Apparatus and method for terminating cables to minimize emissions and susceptibility&rdquo;) &mdash; gives that energy a matched, high-voltage-isolated route to chassis ground. The payoff is measurably lower radiated emissions (helping designs pass CISPR 32 / EN 55032) and better common-mode noise immunity.</p>
+
+  <h2>The classic Bob Smith network, component by component</h2>
+  <p>The canonical implementation sits on the cable side of the magnetics, between the connector and chassis ground:</p>
+
+  <table>
+    <thead>
+      <tr><th>Element</th><th>Typical value</th><th>Function</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Common-mode termination resistor (one per pair)</td><td>~75&#937;, 1% tolerance</td><td>Approximates the common-mode impedance of the twisted pair; damps common-mode resonance on used and unused pairs</td></tr>
+      <tr><td>Resistor count (10/100 design)</td><td>4 (one per pair)</td><td>Terminates the Tx pair, Rx pair, and both idle pairs (4-5, 7-8)</td></tr>
+      <tr><td>Common / star node</td><td>&mdash;</td><td>Single point where all termination resistors meet before the capacitor</td></tr>
+      <tr><td>Coupling capacitor to chassis</td><td>~1000pF (1nF), rated <strong>&ge;2kV</strong></td><td>AC path for common-mode currents to chassis; blocks DC; provides high-voltage isolation and survives hi-pot / surge</td></tr>
+    </tbody>
+  </table>
+
+  <p>The <strong>voltage rating of the capacitor is the part most often gotten wrong</strong>. Because the jack must withstand a 1500&nbsp;Vrms isolation (hi-pot) test per IEEE 802.3, and can see cable-borne surge, the coupling cap is rated 2kV or higher &mdash; not a garden-variety 50V/100V part.</p>
+
+  <div class="callout">
+    <p><strong>Design note &mdash; 75&#937; vs 52.3&#937;.</strong> There is a long-running debate about the &ldquo;right&rdquo; resistor value: the original Bob Smith network uses 75&#937;, while a well-known modified version uses 52.3&#937;. Published bench measurements have shown little practical difference in return loss between 75&#937;, 52.3&#937;, and even no termination resistor at all. The capacitor's voltage rating and a clean chassis-ground connection matter far more than the exact ohms.</p>
+  </div>
+
+  <h2>Discrete network vs integrated magjack (母座)</h2>
+  <p>You can realise Bob Smith termination two ways.</p>
+  <h3>1. Discrete magnetics + external network</h3>
+  <p>PHY &rarr; common-mode choke and transformer module &rarr; RJ45 jack, with the 75&#937; resistors and the 2kV capacitor placed as discrete parts near the connector. This is the lowest raw-BOM path, but it multiplies the ways to get EMC wrong: an under-rated cap, resistors tied to digital ground instead of chassis, or long, noisy traces to the star node.</p>
+  <h3>2. Integrated-magnetics RJ45 jack (magjack)</h3>
+  <p>An <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-magnetics-magjack-rj45-jacks.html">integrated-magnetics RJ45 jack</a> puts the isolation transformer, the <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/common-mode-choke-placement-ethernet-transformer.html">common-mode choke</a>, and the Bob Smith termination network <em>inside</em> the shielded metal jack housing. VOOHU's integrated RJ45 series is offered in 1&times;1, 1&times;N and 2&times;N sink-type modules, Tab-Up and Tab-Down, spanning 100M, 1000M, 2.5G, 5G, 10G and HDBaseT. Because the termination is fixed at the factory, every board gets the same, correctly rated common-mode network &mdash; a real advantage for industrial and PoE ports where EMC margin is tight.</p>
+
+  <h2>Real VOOHU integrated-magjack specifications</h2>
+  <p>These are published parameters for a VOOHU single-port integrated jack; the center-tap / Bob Smith termination is internal to the part.</p>
+
+  <table>
+    <thead>
+      <tr><th>Parameter</th><th>VOOHU SYT511Q293AC1A8D057 (Gigabit integrated jack)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Type / orientation</td><td>Single-port (1&times;1), Tab-Up integrated-magnetics RJ45 jack</td></tr>
+      <tr><td>Data rate</td><td>10/100/1000BASE-T</td></tr>
+      <tr><td>Turns ratio</td><td>1CT : 1CT</td></tr>
+      <tr><td>OCL (open-circuit inductance)</td><td>350&#181;H</td></tr>
+      <tr><td>Isolation (Hi-pot)</td><td>2250&nbsp;VDC</td></tr>
+      <tr><td>Insertion loss</td><td>&le;1.0&nbsp;dB</td></tr>
+      <tr><td>Common-mode rejection</td><td>&minus;30&nbsp;dB</td></tr>
+      <tr><td>Operating temperature</td><td>&minus;40&#176;C to +85&#176;C (industrial)</td></tr>
+      <tr><td>Indicators</td><td>Green / Yellow dual-color LEDs</td></tr>
+    </tbody>
+  </table>
+
+  <p>VOOHU also offers 100Base 1&times;1 Tab-Down integrated jacks such as the industrial <strong>SYT111B002CA2A1D</strong> and <strong>SYT111B002FA2A1D</strong> (&minus;40&#176;C to +85&#176;C), pin-compatible drop-ins for common commercial magjacks &mdash; all with the magnetics and common-mode termination integrated inside the socket.</p>
+
+  <h2>Choosing your approach</h2>
+  <p>Reach for a <strong>discrete transformer plus external Bob Smith network</strong> when you are squeezing the last cents out of a very high-volume consumer board, already own the magnetics module, and have full control of the layout and chassis-ground stitching.</p>
+  <p>Reach for a <strong>VOOHU integrated magjack</strong> when you want guaranteed, repeatable common-mode termination, a smaller footprint, fewer placement mistakes, and a shielded housing that helps EMC &mdash; the usual choice for industrial gateways, PoE endpoints, IP cameras and anything that must pass emissions with margin.</p>
+
+  <h2>Common mistakes</h2>
+  <ul class="mistakes">
+    <li><strong>Using a low-voltage coupling capacitor.</strong> The chassis cap must be rated &ge;2kV. A 50V/100V part will fail hi-pot and can rupture under surge.</li>
+    <li><strong>Tying the star node to digital/signal ground.</strong> The Bob Smith node belongs on <em>chassis</em> ground; connecting it to logic ground injects noise and defeats the EMI benefit.</li>
+    <li><strong>Leaving the unused pairs (4-5, 7-8) unterminated</strong> in a 10/100 design &mdash; they still radiate common-mode energy.</li>
+    <li><strong>Adding an external network to an integrated magjack.</strong> The termination is already inside; doubling up mis-terminates the port.</li>
+    <li><strong>Over-optimising the resistor value.</strong> 75&#937; vs 52.3&#937; barely moves return loss; spend the effort on cap rating and grounding.</li>
+  </ul>
+
+  <h2 class="faq">Frequently asked questions</h2>
+  <div class="faq">
+    <h3>What is Bob Smith termination in an RJ45 jack?</h3>
+    <p>It is a resistor-capacitor network that terminates the common-mode impedance of each pair (including the unused 10/100 pairs) and the transformer center taps. Each pair goes through about a 75&#937; resistor to a common node, which reaches chassis ground through a high-voltage capacitor (typically 1000pF, &ge;2kV). It lowers common-mode EMI and gives noise a defined path. In a magjack the network is inside the connector.</p>
+
+    <h3>What are the typical component values?</h3>
+    <p>One 75&#937; resistor per pair (four in a 10/100 design) to a shared star node, plus a single ~1000pF (1nF) capacitor rated at least 2kV linking that node to chassis ground.</p>
+
+    <h3>Do integrated-magnetics RJ45 jacks include Bob Smith termination?</h3>
+    <p>Yes. VOOHU integrated RJ45 jacks house the transformer, common-mode choke and Bob Smith network inside the shielded socket, so the termination is fixed and repeatable. Do not add a second external network.</p>
+
+    <h3>Should I use 75&#937; or 52.3&#937; resistors?</h3>
+    <p>Either works. Measurements show little return-loss difference between 75&#937;, 52.3&#937; and no resistor. A correctly rated 2kV capacitor and a short, clean chassis-ground connection matter far more.</p>
+  </div>
+
+  <h2>Related VOOHU guides</h2>
+  <div class="related">
+    <ul>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-magnetics-magjack-rj45-jacks.html">Integrated-magnetics (magjack) RJ45 jacks explained</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/common-mode-choke-placement-ethernet-transformer.html">Common-mode choke placement in Ethernet transformers</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-esd-surge-protection.html">RJ45 jack ESD &amp; surge protection</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/shielded-vs-unshielded-rj45.html">Shielded vs unshielded (UTP/FTP/STP) RJ45 jacks</a></li>
+    </ul>
+  </div>
+
+  <p style="margin-top:26px;">
+    <span class="tag">Bob Smith termination</span>
+    <span class="tag">RJ45 jack</span>
+    <span class="tag">integrated magnetics</span>
+    <span class="tag">common-mode EMI</span>
+    <span class="tag">VOOHU</span>
+  </p>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><strong>VOOHU Electronics</strong> &mdash; Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices. ISO9001, ISO14001, RoHS, REACH, CE certified.</p>
+    <p>
+      Website: <a href="https://www.voohuele.com">https://www.voohuele.com</a> &middot;
+      Email: <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> &middot;
+      WhatsApp: +86 133 5804 1040
+    </p>
+    <p style="color:#7f8ea0;">VOOHU manufactures RJ45 connector jacks / female modular sockets (母座), including integrated-magnetics (magjack) types. &copy; 2021-2026 VOOHU Electronics.</p>
+  </div>
+</footer>
+
+</body>
+</html>
