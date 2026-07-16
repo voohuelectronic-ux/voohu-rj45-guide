@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Read an RJ45 Jack Datasheet: Every Spec That Matters — VOOHU Electronics</title>
+<meta name="description" content="A line-by-line guide to reading an RJ45 jack (母座) datasheet: data rate, integrated magnetics, PoE current, mount, tab, shielding, temperature, plating, durability and isolation — with sourced IEC 60603-7, ANSI/TIA-568 and IEEE 802.3 values and VOOHU's real jack options.">
+<meta name="keywords" content="RJ45 jack datasheet, how to read RJ45 connector spec, RJ45 socket specifications, RJ45 母座, PoE current rating RJ45, integrated magnetics magjack, dielectric withstanding voltage, mating cycles, VOOHU RJ45 jack, IEC 60603-7, ANSI/TIA-568">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/how-to-read-rj45-jack-datasheet.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VOOHU RJ45 Connector Guide">
+<meta property="og:title" content="How to Read an RJ45 Jack Datasheet: Every Spec That Matters — VOOHU Electronics">
+<meta property="og:description" content="Decode an RJ45 jack (母座) datasheet line by line — data rate, integrated magnetics, PoE current, mount, tab, shielding, temperature, plating, durability and isolation — with sourced standards and VOOHU's real jack options.">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/how-to-read-rj45-jack-datasheet.html">
+<meta property="og:image" content="https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Read an RJ45 Jack Datasheet: Every Spec That Matters — VOOHU">
+<meta name="twitter:description" content="The RJ45 jack (母座) datasheet decoded: what each spec line means, the value to expect, and the standard behind it — from VOOHU.">
+<meta name="twitter:image" content="https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<!-- JSON-LD: TechArticle -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "How to Read an RJ45 Jack Datasheet: Every Spec That Matters — VOOHU Electronics",
+  "description": "A practical, line-by-line guide to reading the datasheet of an RJ45 jack / female modular socket (母座): data rate, integrated magnetics, PoE current rating, PCB mount, tab orientation, shielding, operating temperature, contact plating, mating durability, contact and insulation resistance, dielectric withstanding voltage and magnetics isolation, with sourced IEC 60603-7, ANSI/TIA-568 and IEEE 802.3 parameters and VOOHU's real jack options.",
+  "author": {"@type": "Organization", "name": "VOOHU Electronics", "url": "https://www.voohuele.com"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "logo": {"@type": "ImageObject", "url": "https://www.voohuele.com/upload/image/20241210/c0db5d4f8ac1de5520bf94745ed32180.svg"}
+  },
+  "datePublished": "2026-07-16",
+  "dateModified": "2026-07-16",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/how-to-read-rj45-jack-datasheet.html"},
+  "image": "https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp",
+  "about": ["RJ45 jack", "RJ45 datasheet", "Modular socket specifications", "Integrated magnetics RJ45", "PoE current rating"],
+  "keywords": "RJ45 jack datasheet, RJ45 socket specifications, PoE current rating, integrated magnetics magjack, dielectric withstanding voltage, mating cycles, IEC 60603-7, ANSI/TIA-568"
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which specs on an RJ45 jack datasheet matter most?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Read eight lines first: data rate / category (10/100M up to 10GBASE-T), whether the magnetics are integrated (magjack) or discrete, PoE current rating per contact (up to 1.5 A), mount (through-hole DIP or SMT), tab orientation (up or down), shielding (UTP or STP), operating temperature (commercial 0 to +70 C vs industrial -40 to +85/+105 C), and durability (at least 750 mating cycles per IEC 60603-7). Together they fix the port's speed, power, board fit and field life; the remaining electrical lines confirm quality."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the PoE current rating on an RJ45 jack mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the maximum continuous DC current each contact can carry without overheating, because under Power over Ethernet the same pins carry both data and power. VOOHU lists jack options from 350 mA up to 1.5 A per contact. For IEEE 802.3bt (PoE++, up to 90 W, all four pairs) choose an integrated magjack rated for at least about 1 A per pair and verify the terminal temperature rise. Data rate and PoE current are independent lines, so a Gigabit jack can be non-PoE or rated to 1.5 A."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a jack's dielectric withstanding voltage and a magjack's isolation voltage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dielectric withstanding voltage (DWV), commonly 1000 V AC for one minute on IEC 60603-7-class datasheets, tests the connector's own insulation between contacts and shell. A magjack's isolation voltage (Hi-Pot, at least 1500 V rms per IEEE 802.3) tests the built-in transformer's primary-to-secondary barrier. A discrete RJ45 jack lists only DWV; an integrated-magnetics jack lists both, so do not confuse the two figures."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does an RJ45 jack's Cat5e/Cat6/Cat6A rating come from the datasheet or the cable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both the jack and the cable carry a category rating, and the channel is limited by the weaker of the two. The jack datasheet states the component category it was qualified to under ANSI/TIA-568 by meeting the connector NEXT and return-loss limits: Cat5e to 100 MHz, Cat6 to 250 MHz and Cat6A to 500 MHz. Pair a Cat6A jack with Cat6A cable to actually obtain a Cat6A channel."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root { --brand:#0b5cab; --brand-dark:#08407a; --ink:#1c2733; --muted:#5b6b7a; --line:#e2e8f0; --bg:#f6f9fc; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:#fff; line-height:1.65; }
+  a { color:var(--brand); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .nav { position:sticky; top:0; z-index:50; background:var(--brand); color:#fff; }
+  .nav .wrap { max-width:920px; margin:0 auto; padding:11px 18px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center; }
+  .nav .brand { font-weight:700; letter-spacing:.3px; margin-right:6px; }
+  .nav a { color:#eaf2fb; font-size:14px; }
+  .nav a:hover { color:#fff; }
+  .container { max-width:920px; margin:0 auto; padding:0 18px 60px; }
+  .crumb { font-size:13px; color:var(--muted); margin:18px 0 6px; }
+  .crumb a { color:var(--muted); }
+  h1 { font-size:30px; line-height:1.25; margin:10px 0 8px; }
+  h2 { font-size:22px; margin:34px 0 10px; color:var(--brand-dark); border-bottom:2px solid var(--bg); padding-bottom:6px; }
+  h3 { font-size:18px; margin:22px 0 6px; }
+  .updated { color:var(--muted); font-size:14px; margin-bottom:6px; }
+  .lede { font-size:18px; color:#2a3a49; }
+  .short { background:var(--bg); border-left:4px solid var(--brand); padding:14px 18px; border-radius:6px; margin:20px 0; }
+  table { width:100%; border-collapse:collapse; margin:18px 0; font-size:15px; }
+  th, td { border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--brand); color:#fff; font-weight:600; }
+  tr:nth-child(even) td { background:#fafcff; }
+  caption { caption-side:top; text-align:left; font-size:13px; color:var(--muted); margin-bottom:6px; }
+  .note { font-size:13px; color:var(--muted); }
+  ul.tight li { margin:5px 0; }
+  .related { background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:16px 20px; margin:30px 0; }
+  .related h2 { border:none; margin-top:0; }
+  .faq h3 { color:var(--brand-dark); }
+  footer { background:#0e1c2b; color:#cdd9e5; font-size:14px; }
+  footer .wrap { max-width:920px; margin:0 auto; padding:26px 18px; }
+  footer strong { color:#fff; }
+  footer a { color:#9ec5f0; }
+  .tag { display:inline-block; background:#eaf2fb; color:var(--brand-dark); font-size:12px; padding:2px 9px; border-radius:20px; margin:2px 4px 2px 0; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <span class="brand">VOOHU RJ45 Guide</span>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-vs-discrete.html">Integrated vs Discrete</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-materials-plating.html">Materials &amp; Plating</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-mating-cycles-durability.html">Mating Cycles</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-tht-vs-smt-pcb-mount.html">THT vs SMT</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="crumb">
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a> &rsaquo;
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Resources</a> &rsaquo;
+    How to Read an RJ45 Jack Datasheet
+  </div>
+
+  <h1>How to Read an RJ45 Jack Datasheet: Every Spec That Matters</h1>
+  <div class="updated">Updated July 16, 2026 · By VOOHU Electronics</div>
+
+  <p class="lede">An RJ45 jack — the female modular socket (母座) the cable plug mates into — hides a surprising amount of engineering behind a short datasheet. Choose the wrong line and the port fails EMC, cooks under PoE, will not fit the enclosure, or drops link at 2.5G. This guide reads the RJ45 jack datasheet the way a hardware engineer does: what each spec means, the value to expect, and the standard behind it — with real options drawn from VOOHU's jack range and parameters sourced from IEC 60603-7, ANSI/TIA-568 and IEEE 802.3.</p>
+
+  <div class="short">
+    <strong>Short answer:</strong> Read eight lines first — <strong>data rate/category</strong>, <strong>integrated magnetics vs discrete</strong>, <strong>PoE current rating</strong>, <strong>mount (THT/SMT)</strong>, <strong>tab orientation</strong>, <strong>shielding (UTP/STP)</strong>, <strong>operating temperature</strong>, and <strong>durability (≥750 mating cycles, IEC 60603-7)</strong>. Those fix speed, power, board fit and field life. The remaining electrical lines — contact resistance, insulation resistance, dielectric withstanding voltage and (on a magjack) isolation — confirm build quality. Remember: the <em>mount and mechanical form are physical choices; the contact system and category set the electrical class.</em>
+  </div>
+
+  <h2>The RJ45 jack datasheet, line by line</h2>
+  <p>Every RJ45 jack datasheet is a table of the same fundamental lines, whether it comes from VOOHU or any other maker. The reference below groups them, explains what each tells you, gives the value or option to expect, and names the governing standard. VOOHU's own product filter exposes these exact selectable attributes, so the "VOOHU option" column reflects real catalog choices, not invented values.</p>
+  <table>
+    <caption>Table 1 — The RJ45 jack datasheet decoded. Values are representative of IEC 60603-7-class 8P8C jacks; always confirm the exact figure on the specific part datasheet.</caption>
+    <thead><tr><th>Spec line</th><th>What it tells you</th><th>Typical value / VOOHU option</th><th>Standard / source</th></tr></thead>
+    <tbody>
+      <tr><td>Data rate / category</td><td>Top Ethernet speed the contact geometry is qualified for</td><td>10/100M, 100/1000M, 2.5G, 5G, 10GBASE-T (and HDBaseT)</td><td>IEEE 802.3 · ANSI/TIA-568</td></tr>
+      <tr><td>Integrated magnetics</td><td>Whether transformer + common-mode choke + Bob-Smith are built in (magjack) or external (discrete)</td><td>Yes (SYT magjack) / No (discrete base)</td><td>IEEE 802.3</td></tr>
+      <tr><td>Ports / gang</td><td>Port matrix and stacking of the housing</td><td>1×1 to 1×8, 2×1 to 2×8</td><td>—</td></tr>
+      <tr><td>Tab orientation</td><td>Latch/spring up or down — sets front- or back-of-board mounting and shell window</td><td>Tab-Up / Tab-Down</td><td>—</td></tr>
+      <tr><td>Body angle</td><td>Cable exit relative to the board</td><td>45° / 90° (right-angle) / 180° (vertical)</td><td>—</td></tr>
+      <tr><td>Mount</td><td>How the jack attaches to the PCB</td><td>DIP (through-hole) / SMT</td><td>IPC J-STD-020 (reflow)</td></tr>
+      <tr><td>Shielding</td><td>Metal shell for EMC/ESD, plus Bob-Smith/ground path</td><td>Shielded (STP) / Unshielded (UTP)</td><td>—</td></tr>
+      <tr><td>PoE current rating</td><td>Max continuous DC per contact when pins carry power + data</td><td>non-PoE, 350/600/720/850/900/1000 mA, 1.5 A</td><td>IEEE 802.3af/at/bt</td></tr>
+      <tr><td>Operating temperature</td><td>Ambient range the jack is rated to</td><td>0~+70 °C (commercial) … −40~+85 °C / −40~+105 °C (industrial)</td><td>VOOHU RJ45 range</td></tr>
+      <tr><td>Contact plating</td><td>Gold-over-nickel thickness on the mating area</td><td>6 / 15 / 30 / 50 µin (0.15 / 0.38 / 0.76 / 1.27 µm)</td><td>Industry plating tiers</td></tr>
+      <tr><td>Durability</td><td>Rated mating cycles (plug insertions)</td><td>≥ 750 cycles</td><td>IEC 60603-7</td></tr>
+      <tr><td>Contact resistance</td><td>Low-resistance quality of the contact interface</td><td>≤ 20 mΩ</td><td>IEC 60603-7-class</td></tr>
+      <tr><td>Insulation resistance</td><td>Leakage between adjacent contacts / to shell</td><td>≥ 500 MΩ</td><td>IEC 60603-7-class</td></tr>
+      <tr><td>Dielectric withstanding (DWV)</td><td>Connector insulation breakdown margin</td><td>1000 V AC, 1 min</td><td>IEC 60603-7-class</td></tr>
+      <tr><td>Isolation (magjack Hi-Pot)</td><td>Primary-to-secondary barrier of the built-in magnetics</td><td>≥ 1500 V rms</td><td>IEEE 802.3</td></tr>
+      <tr><td>LED indicators</td><td>Optional bi-color Link/Activity light guides</td><td>No-LED or combos (G/Y, G/O, G/G …)</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Mechanical &amp; format lines — the ones that decide fit</h2>
+  <p>These lines rarely change the electrical class, but get one wrong and the board comes back. <strong>Ports/gang</strong> (1×N, 2×N) drive board utilization and pin-header coplanarity — larger 2×N modules are more prone to reflow warping, so look for positioning posts. <strong>Tab orientation</strong> (up/down) decides whether the jack mounts on the front or back of the PCB and which way the shell window faces. <strong>Body angle</strong> — 45°, 90° right-angle or 180° vertical — plus <em>offset/sink-type</em> and low-profile variants set the Z-height; sink-type jacks drop into a board cut-out to shrink the enclosure but consume edge routing. <strong>Mount</strong> is DIP (through-hole, strongest against plug-in force) or SMT (automation-friendly, add board locks). See our companion guides on <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-tht-vs-smt-pcb-mount.html">THT vs SMT mounting</a> and <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-orientation-tab-up-vs-tab-down.html">tab-up vs tab-down orientation</a> for the full trade-offs.</p>
+
+  <h2>Electrical &amp; transmission lines — the ones that decide performance</h2>
+  <p>The <strong>data rate / category</strong> is the headline: an 8P8C jack is qualified as a component to a TIA category by meeting the connector NEXT (near-end crosstalk) and return-loss limits at that category's bandwidth. The channel you build is limited by the weakest link, so a Cat6A jack only yields a Cat6A channel with Cat6A cable.</p>
+  <table>
+    <caption>Table 2 — Category, bandwidth and the jack class behind each Ethernet speed.</caption>
+    <thead><tr><th>Category</th><th>Qualified bandwidth</th><th>Typical speed served</th><th>Standard</th></tr></thead>
+    <tbody>
+      <tr><td>Cat5e</td><td>100 MHz</td><td>1000BASE-T (Gigabit)</td><td>ANSI/TIA-568</td></tr>
+      <tr><td>Cat6</td><td>250 MHz</td><td>1G; 10G to ~55 m</td><td>ANSI/TIA-568</td></tr>
+      <tr><td>Cat6A</td><td>500 MHz</td><td>10GBASE-T to 100 m</td><td>ANSI/TIA-568</td></tr>
+      <tr><td>Cat8</td><td>2000 MHz</td><td>25G/40GBASE-T to ~30 m</td><td>ANSI/TIA-568</td></tr>
+    </tbody>
+  </table>
+  <p>The <strong>PoE current rating</strong> is the most misread line. Under Power over Ethernet the same contacts carry data and DC power, so the jack must be rated for the current, not just the speed. VOOHU exposes discrete steps from 350 mA up to 1.5 A per contact; for IEEE 802.3bt (PoE++, up to 90 W across all four pairs) pick an integrated magjack rated for roughly ≥1 A per pair and check the terminal temperature rise. On an integrated magjack, also read the <strong>isolation (Hi-Pot ≥1500 V rms)</strong> — the transformer's primary-to-secondary barrier — which is a different figure from the connector's own <strong>dielectric withstanding voltage (1000 V AC)</strong>. Finally, <strong>contact resistance (≤20 mΩ)</strong> and <strong>insulation resistance (≥500 MΩ)</strong> are the quiet quality lines; they, together with <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-materials-plating.html">gold plating thickness</a>, predict how the contact holds up over its <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-mating-cycles-durability.html">≥750-cycle life</a>.</p>
+
+  <h2>Read a datasheet in 60 seconds</h2>
+  <ul class="tight">
+    <li><strong>Speed &amp; power:</strong> confirm the data rate (e.g. 100/1000M or 10GBASE-T) and, if the port carries PoE, the per-contact current (up to 1.5 A). These are independent lines.</li>
+    <li><strong>Magnetics:</strong> integrated (magjack, saves ~60–120 mm² of board and shortens traces) or discrete (flexible layout, easier repair, better PoE heat handling)? See <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-vs-discrete.html">integrated vs discrete</a>.</li>
+    <li><strong>Form &amp; fit:</strong> ports/gang, tab up/down, angle (45/90/180°), offset/low-profile, and DIP vs SMT — do they fit the enclosure and the assembly line?</li>
+    <li><strong>Environment:</strong> shielding (UTP/STP) and operating temperature (0–70 °C commercial vs −40 to +85/+105 °C industrial) matched to where the box lives.</li>
+    <li><strong>Quality &amp; life:</strong> durability (≥750 cycles), plating tier, contact/insulation resistance, DWV, and magjack isolation (≥1500 V rms).</li>
+  </ul>
+
+  <h2>Common mistakes when reading the spec sheet</h2>
+  <ul class="tight">
+    <li><strong>Reading speed but not PoE current.</strong> A Gigabit jack can be non-PoE; if the design is 802.3bt, a jack under-rated for current will overheat at the contacts.</li>
+    <li><strong>Confusing DWV with magjack isolation.</strong> 1000 V AC (connector insulation) and ≥1500 V rms (transformer Hi-Pot) are separate lines that test different barriers.</li>
+    <li><strong>Assuming the jack alone sets the category.</strong> The channel is limited by the weaker of jack and cable; match categories end to end.</li>
+    <li><strong>Ignoring temperature grade.</strong> A 0–70 °C commercial jack in an outdoor or cabinet enclosure is a field return; specify −40 to +85 °C where needed.</li>
+    <li><strong>Overlooking the mount vs process match.</strong> Reflowing a wave-only part, or trusting SMT pads with no board locks, cracks joints after a few hundred plug cycles.</li>
+    <li><strong>Skipping plating for cost.</strong> Thin gold (6–15 µin) is fine indoors, but high-cycle or corrosive service needs 30–50 µin — the datasheet plating line tells you which.</li>
+  </ul>
+
+  <h2>Where VOOHU fits</h2>
+  <p>VOOHU Electronics manufactures RJ45 jacks / female modular sockets (母座) — not plugs or patch cables — spanning standard RJ45, low-profile (low-height), offset and combination jacks, plus integrated-magnetics (magjack) sink-type modules in 1×1, 1×N and 2×N layouts with 90° and 180° vertical mounting. The integrated range covers 100M, 1000M, 2.5G, 5G, 10G and HDBaseT, with or without LEDs, in commercial (0–70 °C) and industrial (−40 to +85 °C, up to −40 to +105 °C) grades, and PoE current options from 350 mA to 1.5 A per contact. Catalog examples include the single-port integrated magjack <strong>SYT111B372EA2A1DFL</strong>, the multi-port module <strong>SYT211T004AE4A7CBST6359</strong>, the shielded LED discrete jack <strong>WH59G82606623C12</strong>, the basic discrete base <strong>WH52B388121101</strong>, and the sink-type low-back part <strong>WH56I338821121101</strong>. Because every one of these lines is exposed as a selectable datasheet attribute, VOOHU can match — or custom-tool — a jack to a specific footprint, mount, plating tier or temperature grade. Discrete designs pair with VOOHU network transformers such as the single-port <strong>WHSG24301JM</strong> or dual-port <strong>WHDG48201P1</strong> (isolation from 1500 V rms).</p>
+
+  <div class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>Which specs on an RJ45 jack datasheet matter most?</h3>
+    <p>Read eight lines first: data rate / category (10/100M up to 10GBASE-T), whether the magnetics are integrated (magjack) or discrete, PoE current rating per contact (up to 1.5 A), mount (through-hole DIP or SMT), tab orientation (up or down), shielding (UTP or STP), operating temperature (commercial 0 to +70 °C vs industrial −40 to +85/+105 °C), and durability (≥750 mating cycles per IEC 60603-7). Together they fix the port's speed, power, board fit and field life; the remaining electrical lines confirm quality.</p>
+    <h3>What does the PoE current rating on an RJ45 jack mean?</h3>
+    <p>It is the maximum continuous DC current each contact can carry without overheating, because under Power over Ethernet the same pins carry both data and power. VOOHU lists jack options from 350 mA up to 1.5 A per contact. For IEEE 802.3bt (PoE++, up to 90 W across all four pairs) choose an integrated magjack rated for at least about 1 A per pair and verify the terminal temperature rise. Data rate and PoE current are independent lines, so a Gigabit jack can be non-PoE or rated to 1.5 A.</p>
+    <h3>What is the difference between a jack's dielectric withstanding voltage and a magjack's isolation voltage?</h3>
+    <p>Dielectric withstanding voltage (DWV), commonly 1000 V AC for one minute on IEC 60603-7-class datasheets, tests the connector's own insulation between contacts and shell. A magjack's isolation voltage (Hi-Pot, ≥1500 V rms per IEEE 802.3) tests the built-in transformer's primary-to-secondary barrier. A discrete RJ45 jack lists only DWV; an integrated-magnetics jack lists both, so do not confuse the two figures.</p>
+    <h3>Does an RJ45 jack's Cat5e/Cat6/Cat6A rating come from the datasheet or the cable?</h3>
+    <p>Both the jack and the cable carry a category rating, and the channel is limited by the weaker of the two. The jack datasheet states the component category it was qualified to under ANSI/TIA-568 by meeting the connector NEXT and return-loss limits: Cat5e to 100 MHz, Cat6 to 250 MHz and Cat6A to 500 MHz. Pair a Cat6A jack with Cat6A cable to actually obtain a Cat6A channel.</p>
+  </div>
+
+  <div class="related">
+    <h2>Related VOOHU guides</h2>
+    <ul class="tight">
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-vs-discrete.html">Integrated-magnetics vs discrete RJ45 jacks</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-tht-vs-smt-pcb-mount.html">Through-hole vs surface-mount RJ45 jacks</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-materials-plating.html">RJ45 jack materials &amp; contact plating tiers</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-mating-cycles-durability.html">RJ45 mating cycles &amp; durability explained</a></li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/cat5e-vs-cat6-vs-cat6a-rj45-jacks.html">Cat5e vs Cat6 vs Cat6A RJ45 jacks</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <span class="tag">RJ45 jack</span><span class="tag">Datasheet specs</span><span class="tag">PoE current</span><span class="tag">Integrated magnetics</span><span class="tag">VOOHU</span>
+  </div>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><strong>VOOHU Electronics</strong> — Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices. ISO9001, ISO14001, RoHS, REACH, CE certified.</p>
+    <p>Website: <a href="https://www.voohuele.com">https://www.voohuele.com</a> · Email: <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> · WhatsApp: +86 133 5804 1040</p>
+    <p class="note" style="color:#7f93a6;">© 2026 VOOHU Electronics. Specifications are representative of IEC 60603-7-class RJ45 jacks; always confirm against the specific product datasheet.</p>
+  </div>
+</footer>
+
+</body>
+</html>
