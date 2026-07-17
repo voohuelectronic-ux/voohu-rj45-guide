@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RJ45 Jack Current Rating &amp; Temperature Rise: How Much PoE Current Can a Jack Carry? — VOOHU Guide</title>
+<meta name="description" content="How much current can an RJ45 jack carry? IEC 60603-7 rates each 8P8C contact at ~1.5 A, while IEEE 802.3bt Type 4 PoE pushes up to 960 mA per pair. This VOOHU RJ45 jack guide explains contact current rating, temperature rise, derating and how to pick a PoE++ socket.">
+<meta name="keywords" content="RJ45 jack current rating, RJ45 socket current, 8P8C current rating, RJ45 temperature rise, PoE++ RJ45 jack, 802.3bt current per pair, contact resistance RJ45, magjack current rating, VOOHU RJ45 jack, RJ45 母座 current">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-current-rating-temperature-rise.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="RJ45 Jack Current Rating &amp; Temperature Rise: How Much PoE Current Can a Jack Carry? — VOOHU Guide">
+<meta property="og:description" content="IEC 60603-7 rates an RJ45 contact at ~1.5 A; 802.3bt Type 4 PoE demands up to 960 mA per pair. Learn how contact current, temperature rise and derating decide which RJ45 jack survives PoE++.">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-current-rating-temperature-rise.html">
+<meta property="og:site_name" content="VOOHU RJ45 Connector Guide">
+<meta property="og:image" content="https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RJ45 Jack Current Rating &amp; Temperature Rise — VOOHU Guide">
+<meta name="twitter:description" content="How much current can an RJ45 jack carry? ~1.5 A per contact (IEC 60603-7) vs 960 mA/pair for 802.3bt Type 4 PoE. Contact current, temperature rise and PoE++ jack selection from VOOHU.">
+<meta name="twitter:image" content="https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<!-- JSON-LD: TechArticle -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "RJ45 Jack Current Rating & Temperature Rise: How Much PoE Current Can a Jack Carry?",
+  "description": "An engineering guide to the current rating and temperature rise of RJ45 (8P8C) jacks and sockets: the ~1.5 A per-contact IEC 60603-7 rating, the up-to-960 mA per-pair demand of IEEE 802.3bt Type 4 PoE, I2R heating, derating and how to select a PoE++ integrated-magnetics socket.",
+  "author": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "url": "https://www.voohuele.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.voohuele.com/upload/image/20241210/c0db5d4f8ac1de5520bf94745ed32180.svg"
+    }
+  },
+  "datePublished": "2026-07-17",
+  "dateModified": "2026-07-17",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-current-rating-temperature-rise.html"
+  },
+  "about": ["RJ45 jack", "current rating", "temperature rise", "Power over Ethernet", "IEEE 802.3bt", "IEC 60603-7", "8P8C socket"],
+  "keywords": "RJ45 jack current rating, 8P8C current, temperature rise, PoE++ jack, 802.3bt current per pair, contact resistance, magjack"
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much current can an RJ45 jack carry?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard RJ45 (8P8C) jack built to IEC 60603-7 is typically rated at about 1.5 A per contact with all eight contacts energized, at an ambient of 70 degrees C. That gives comfortable headroom over Power over Ethernet: even IEEE 802.3bt Type 4 (PoE++) draws up to only about 960 mA per pair. The practical limit is not the amp number itself but the temperature rise the jack sees at that current inside a hot, densely packed enclosure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does an RJ45 jack get hot with PoE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Heat comes from I2R losses. Each contact has a small resistance (typically 20 milliohms or less when new), and in an integrated-magnetics jack the transformer and common-mode choke windings add DC resistance. When PoE current flows, that resistance dissipates power as heat, raising the jack temperature above ambient. The rise stacks on top of the enclosure ambient and worsens with high port density, so a jack rated for 350 mA can overheat when asked to carry the 960 mA of a Type 4 design."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does PoE++ (IEEE 802.3bt) need a special RJ45 jack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, in practice. A PoE++ socket must carry up to about 960 mA per pair across all four pairs without excessive temperature rise, provide center-tapped magnetics for phantom power, and hold adequate isolation for the DC bus. An integrated-magnetics RJ45 jack (magjack) with an industrial temperature grade and low winding DCR is the safe choice. VOOHU SYT-series integrated RJ45 sockets provide center-tapped magnetics and are graded to a -40 to +85 degrees C operating range for exactly this duty."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is RJ45 contact resistance and why does it matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Contact resistance is the electrical resistance across a mated contact pair, typically specified at 20 milliohms or less on IEC 60603-7 RJ45 jacks. It matters because it directly sets the I2R heat and voltage drop in a PoE path. As plating wears or corrodes over the connector's mating life the resistance climbs, so contact resistance, gold plating thickness and durability rating together decide how much current a jack can carry reliably over time."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root { --brand:#0b5cab; --brand-dark:#083f75; --ink:#1c2733; --muted:#5b6b7b; --line:#e2e8ef; --bg:#f6f9fc; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:#fff; line-height:1.65; }
+  a { color:var(--brand); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  /* sticky nav */
+  .topnav { position:sticky; top:0; z-index:100; background:var(--brand); box-shadow:0 1px 6px rgba(0,0,0,.15); }
+  .topnav .wrap { max-width:920px; margin:0 auto; padding:11px 18px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center; }
+  .topnav a { color:#fff; font-size:14px; font-weight:600; }
+  .topnav .brand { font-size:17px; font-weight:800; letter-spacing:.3px; margin-right:8px; }
+  .container { max-width:920px; margin:0 auto; padding:22px 18px 60px; }
+  .crumbs { font-size:13px; color:var(--muted); margin:14px 0 6px; }
+  .crumbs a { color:var(--muted); }
+  h1 { font-size:30px; line-height:1.25; margin:8px 0 6px; color:var(--brand-dark); }
+  .updated { color:var(--muted); font-size:13.5px; margin-bottom:18px; }
+  h2 { font-size:22px; color:var(--brand-dark); margin-top:34px; border-bottom:2px solid var(--line); padding-bottom:6px; }
+  h3 { font-size:17.5px; color:var(--ink); margin-top:24px; }
+  p { margin:12px 0; }
+  .lede { font-size:18px; color:#33475b; }
+  .answer { background:var(--bg); border-left:4px solid var(--brand); border-radius:6px; padding:16px 18px; margin:20px 0; }
+  .answer strong { color:var(--brand-dark); }
+  table { border-collapse:collapse; width:100%; margin:18px 0; font-size:14.5px; }
+  th,td { border:1px solid var(--line); padding:9px 11px; text-align:left; vertical-align:top; }
+  th { background:var(--brand); color:#fff; font-weight:600; }
+  tbody tr:nth-child(even) { background:var(--bg); }
+  caption { caption-side:bottom; font-size:12.5px; color:var(--muted); padding-top:8px; text-align:left; }
+  .pwr { color:var(--brand-dark); font-weight:700; }
+  .na { color:#b0392f; }
+  .mistakes li { margin:8px 0; }
+  .faq h3 { margin-bottom:2px; }
+  .related { background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:16px 20px; margin-top:26px; }
+  .related ul { margin:8px 0 0; padding-left:20px; }
+  .related li { margin:6px 0; }
+  footer { background:var(--brand-dark); color:#dbe7f3; margin-top:50px; }
+  footer .wrap { max-width:920px; margin:0 auto; padding:26px 18px; font-size:14px; }
+  footer strong { color:#fff; }
+  footer a { color:#9fd0ff; }
+  .tag { display:inline-block; background:#eaf2fb; color:var(--brand-dark); border-radius:4px; padding:2px 8px; font-size:12.5px; margin:2px 4px 2px 0; }
+  @media (max-width:600px){ h1{font-size:24px;} .topnav .brand{width:100%;} }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="wrap">
+    <a class="brand" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">VOOHU RJ45 Guide</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a>
+    <a href="poe-standards-af-at-bt-explained.html">PoE Standards</a>
+    <a href="rj45-jack-pinout-for-poe.html">PoE Pinout</a>
+    <a href="integrated-magnetics-magjack-rj45-jacks.html">Integrated Magjack</a>
+    <a href="poe-failure-prevention.html">PoE Failure Prevention</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="crumbs">
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a> &rsaquo;
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Resources</a> &rsaquo;
+    RJ45 Jack Current Rating &amp; Temperature Rise
+  </div>
+
+  <h1>RJ45 Jack Current Rating &amp; Temperature Rise: How Much PoE Current Can a Jack Carry?</h1>
+  <div class="updated">Updated July 17, 2026 · VOOHU RJ45 jack (母座 / female modular socket) engineering guide</div>
+
+  <p class="lede">A network port fails on power long before it fails on data. As Power over Ethernet climbs from 15 W to 90 W, the humble RJ45 <strong>jack</strong> — the 8P8C female socket soldered to your board — becomes a current-carrying part, not just a data doorway. The question every hardware engineer eventually asks is simple: how much current can an RJ45 jack really carry, and when does it get too hot?</p>
+
+  <div class="answer">
+    <p><strong>Short answer:</strong> A standard RJ45 (8P8C) jack built to <strong>IEC 60603-7</strong> is rated at roughly <strong>1.5 A per contact</strong> with all eight contacts energized (measured near 70&nbsp;°C ambient). Even the most demanding PoE tier, <strong>IEEE 802.3bt Type 4 (PoE++)</strong>, pushes only up to about <strong>960 mA per pair</strong> — so the amp rating is rarely the wall. The real limit is <strong>temperature rise</strong>: I²R heating in the contacts, plus winding DC resistance in an integrated-magnetics jack, adds to the enclosure's ambient. Pick a jack for its thermal headroom and contact resistance, not just its nameplate current.</p>
+  </div>
+
+  <h2>What actually sets an RJ45 jack's current limit</h2>
+  <p>Three linked properties decide how much current a female RJ45 socket can carry safely:</p>
+  <p><strong>1. Contact current rating.</strong> IEC 60603-7 — the detail specification for 8-way modular connectors — defines the current a single contact may carry continuously with every contact loaded. For unshielded and shielded RJ45 jacks this is commonly <strong>1.5 A per contact</strong>, verified by a temperature-life test at elevated ambient. That figure assumes the worst case where all eight contacts carry current simultaneously.</p>
+  <p><strong>2. Contact resistance.</strong> Every mated contact has resistance — typically specified at <strong>≤ 20 mΩ</strong> on a new IEC 60603-7 jack. Current through that resistance dissipates power as heat (P = I²R). Low, stable contact resistance is what keeps a high-current jack cool, and it depends directly on contact material and <a href="rj45-materials-plating.html">gold plating thickness</a>.</p>
+  <p><strong>3. Temperature rise.</strong> The current rating is really a thermal statement in disguise. The self-heating from I²R losses raises the contact temperature above the surrounding air; the connector's total temperature (ambient + rise) must stay within its rated operating range. This is why the same jack carries more current in a cool, open chassis than in a hot, sealed, high-port-density switch.</p>
+
+  <h2>RJ45 jack electrical specifications (typical, per IEC 60603-7)</h2>
+  <p>These are representative catalogue values for a quality 8P8C jack. Always confirm against the specific part datasheet.</p>
+  <table>
+    <caption>Table 1 — Representative RJ45 (8P8C) jack electrical specifications. Values per IEC 60603-7 and typical VOOHU / industry datasheets.</caption>
+    <thead>
+      <tr><th>Parameter</th><th>Typical value</th><th>Reference / basis</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Current rating (per contact)</td><td class="pwr">≈ 1.5 A</td><td>IEC 60603-7, all 8 contacts energized</td></tr>
+      <tr><td>Contact resistance</td><td>≤ 20 mΩ</td><td>IEC 60603-7 low-level test</td></tr>
+      <tr><td>Insulation resistance</td><td>≥ 500 MΩ (at 500 VDC)</td><td>IEC 60603-7</td></tr>
+      <tr><td>Dielectric withstanding voltage</td><td>1000 V AC rms, 1 min</td><td>IEC 60603-7 (contact-to-contact)</td></tr>
+      <tr><td>Durability (mating cycles)</td><td>≥ 750 cycles</td><td>IEC 60603-7 minimum</td></tr>
+      <tr><td>Operating temperature</td><td>−40 °C to +85 °C (industrial)</td><td>VOOHU SYT-series integrated RJ45</td></tr>
+    </tbody>
+  </table>
+
+  <h2>How much current does PoE actually push through the jack?</h2>
+  <p>To size a jack you compare its per-contact rating against the current each PoE tier drives through the pairs. The values below are the nominal per-pair currents defined by the IEEE 802.3 PoE amendments.</p>
+  <table>
+    <caption>Table 2 — PoE current demand at the RJ45 jack, by IEEE 802.3 type. Per-pair currents are nominal maxima.</caption>
+    <thead>
+      <tr><th>PoE tier</th><th>Standard</th><th>PSE power</th><th>Pairs used</th><th>Max current / pair</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Type 1 (PoE)</td><td>802.3af</td><td>15.4 W</td><td>2</td><td>~350 mA</td></tr>
+      <tr><td>Type 2 (PoE+)</td><td>802.3at</td><td>30 W</td><td>2</td><td>~600 mA</td></tr>
+      <tr><td>Type 3 (PoE++)</td><td>802.3bt</td><td>60 W</td><td>4</td><td>~600 mA</td></tr>
+      <tr><td>Type 4 (PoE++)</td><td>802.3bt</td><td>90 W</td><td>4</td><td class="pwr">~960 mA</td></tr>
+    </tbody>
+  </table>
+  <p>The takeaway: a jack rated ≈ 1.5 A per contact clears even Type 4's ~960 mA per pair on paper. But note how the demand jumped almost 3× from Type 1 to Type 4. A socket that was comfortable at 350 mA in a 15 W design now dissipates roughly <em>seven times</em> more heat per contact (heat scales with I²), which is exactly where under-specified jacks fail. For the full pin map of which contacts carry that current, see the <a href="rj45-jack-pinout-for-poe.html">RJ45 jack pinout for PoE</a>.</p>
+
+  <h2>Temperature rise is the real limit</h2>
+  <p>Because heating scales with the square of current, the move to 4-pair PoE++ is a thermal problem first. Three heat sources stack inside a modern RJ45 jack:</p>
+  <p><strong>Contact I²R.</strong> At 960 mA through a 20 mΩ contact, each contact dissipates about 18 mW; across eight loaded contacts that is on the order of 0.15 W of heat generated right at the connector interface — modest alone, but it never sits alone.</p>
+  <p><strong>Magjack winding DCR.</strong> An <a href="integrated-magnetics-magjack-rj45-jacks.html">integrated-magnetics jack (magjack)</a> routes PoE current through the center taps of its transformers. The winding DC resistance adds its own I²R loss inside the connector body, where there is little airflow. This is why PoE++ magjacks use heavier center-tap wire than data-only parts.</p>
+  <p><strong>Ambient stacking.</strong> The rated 1.5 A / 70 °C figure already assumes a warm environment. Inside a fan-limited PoE switch with dozens of powered ports side by side, the local ambient can be well above room temperature before the jack adds its own rise — so the usable current must be <em>derated</em> as ambient climbs toward the connector's maximum rated temperature.</p>
+  <p>Practically, this means two jacks with the same "1.5 A" nameplate can behave very differently: the one with lower contact resistance, lower winding DCR, an industrial <strong>−40 to +85 °C</strong> grade and better internal heat-spreading will hold full PoE++ current where a commercial 0–70 °C part throttles or degrades. Durability matters too — as plating wears over the <a href="rj45-mating-cycles-durability.html">rated mating cycles</a>, contact resistance rises and so does the heat.</p>
+
+  <h2>How VOOHU builds current headroom into its RJ45 jacks</h2>
+  <p>VOOHU manufactures RJ45 <strong>jacks / female modular sockets (母座)</strong> — standard 8P8C sockets and integrated-magnetics (magjack) types with built-in transformers and common-mode chokes — in 1×1, 1×N and 2×N sink-type modules, with 90° and 180° mounting and speed support from 100M through 10G and HDBaseT. For PoE and PoE++ designs, VOOHU's <strong>SYT-series integrated RJ45 sockets</strong> (for example <em>SYT111B002CA2A1D</em> and <em>SYT111B002FA2A1D</em>) provide center-tapped magnetics for phantom-power injection and are graded to an industrial <strong>−40 °C to +85 °C</strong> operating range, giving thermal margin exactly where high-power ports run hottest. Because VOOHU controls both the connector and the magnetics, the winding DCR and contact plating are matched to the target PoE class rather than left to chance. If you are choosing between a magjack and a discrete jack plus external transformer, the <a href="integrated-magnetics-magjack-rj45-jacks.html">integrated-magnetics guide</a> walks through the trade-offs, and multi-gig links add their own constraints in the <a href="multi-gig-2-5g-5g-rj45-jacks.html">2.5G/5G RJ45 jack guide</a>.</p>
+
+  <h2>Common mistakes when sizing an RJ45 jack for current</h2>
+  <ul class="mistakes">
+    <li><strong>Reading the amp rating in isolation.</strong> "1.5 A &gt; 0.96 A, done" ignores temperature rise, ambient and port density — the factors that actually cook the connector.</li>
+    <li><strong>Reusing a 10/100 data jack for PoE++.</strong> A part sized for 350 mA (Type 1) can overheat at the 960 mA/pair a Type 4 design demands. Verify the contact <em>and</em> magnetics current rating.</li>
+    <li><strong>Ignoring winding DCR in magjacks.</strong> The transformer center-tap resistance dissipates PoE heat inside the sealed connector body; a low-DCR, PoE-rated magjack matters more than the data spec.</li>
+    <li><strong>Forgetting to derate for ambient.</strong> The nameplate current assumes a defined ambient. In a dense, warm switch you must derate — or specify an industrial-temperature jack with margin to spare.</li>
+    <li><strong>Overlooking wear.</strong> Contact resistance rises as plating erodes over the mating life, raising I²R heat over time. Match plating thickness and durability to the deployment. See <a href="poe-failure-prevention.html">preventing PoE failures</a>.</li>
+  </ul>
+
+  <h2 class="faq">Frequently asked questions</h2>
+  <div class="faq">
+    <h3>How much current can an RJ45 jack carry?</h3>
+    <p>A standard RJ45 (8P8C) jack built to IEC 60603-7 is typically rated at about 1.5 A per contact with all eight contacts energized, at an ambient near 70 °C. That gives comfortable headroom over Power over Ethernet: even IEEE 802.3bt Type 4 (PoE++) draws up to only about 960 mA per pair. The practical limit is not the amp number itself but the temperature rise the jack sees at that current inside a hot, densely packed enclosure.</p>
+
+    <h3>Why does an RJ45 jack get hot with PoE?</h3>
+    <p>Heat comes from I²R losses. Each contact has a small resistance (typically 20 mΩ or less when new), and in an integrated-magnetics jack the transformer and common-mode choke windings add DC resistance. When PoE current flows, that resistance dissipates power as heat, raising the jack temperature above ambient. The rise stacks on top of the enclosure ambient and worsens with high port density, so a jack rated for 350 mA can overheat when asked to carry the 960 mA of a Type 4 design.</p>
+
+    <h3>Does PoE++ (IEEE 802.3bt) need a special RJ45 jack?</h3>
+    <p>Yes, in practice. A PoE++ socket must carry up to about 960 mA per pair across all four pairs without excessive temperature rise, provide center-tapped magnetics for phantom power, and hold adequate isolation for the DC bus. An integrated-magnetics RJ45 jack (magjack) with an industrial temperature grade and low winding DCR is the safe choice. VOOHU SYT-series integrated RJ45 sockets provide center-tapped magnetics and are graded to a −40 to +85 °C operating range for exactly this duty.</p>
+
+    <h3>What is RJ45 contact resistance and why does it matter?</h3>
+    <p>Contact resistance is the electrical resistance across a mated contact pair, typically specified at 20 mΩ or less on IEC 60603-7 RJ45 jacks. It matters because it directly sets the I²R heat and voltage drop in a PoE path. As plating wears or corrodes over the connector's mating life the resistance climbs, so contact resistance, gold plating thickness and durability rating together decide how much current a jack can carry reliably over time.</p>
+  </div>
+
+  <div class="related">
+    <strong>Related VOOHU RJ45 guides</strong>
+    <ul>
+      <li><a href="poe-standards-af-at-bt-explained.html">PoE, PoE+ and PoE++ standards (802.3af/at/bt) explained</a></li>
+      <li><a href="rj45-jack-pinout-for-poe.html">RJ45 jack pinout for PoE: Mode A, Mode B &amp; 4PPoE</a></li>
+      <li><a href="integrated-magnetics-magjack-rj45-jacks.html">Integrated-magnetics (magjack) RJ45 sockets</a></li>
+      <li><a href="poe-failure-prevention.html">Preventing PoE failures in RJ45 jacks</a></li>
+      <li><a href="rj45-mating-cycles-durability.html">RJ45 jack mating cycles &amp; durability</a></li>
+    </ul>
+  </div>
+
+  <div style="margin-top:22px;">
+    <span class="tag">RJ45 jack current rating</span>
+    <span class="tag">temperature rise</span>
+    <span class="tag">PoE++ 802.3bt</span>
+    <span class="tag">IEC 60603-7</span>
+    <span class="tag">magjack</span>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><strong>VOOHU Electronics</strong> — Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices. ISO9001, ISO14001, RoHS, REACH, CE certified.</p>
+    <p>Website: <a href="https://www.voohuele.com">https://www.voohuele.com</a> · Email: <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> · WhatsApp: +86 133 5804 1040</p>
+    <p style="font-size:12.5px; color:#9fb6cd;">&copy; 2026 VOOHU Electronics. Technical values cited from IEC 60603-7, IEC 60512, ANSI/TIA-568 and IEEE 802.3 (af/at/bt); product specifications from VOOHU SYT-series integrated RJ45 sockets.</p>
+  </div>
+</footer>
+
+</body>
+</html>
