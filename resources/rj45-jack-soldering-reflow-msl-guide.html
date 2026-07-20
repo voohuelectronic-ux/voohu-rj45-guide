@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RJ45 Jack Soldering &amp; Moisture Sensitivity (MSL): Reflow, Wave &amp; Hand-Soldering Guide | VOOHU</title>
+<meta name="description" content="How to solder RJ45 jacks without damaging them: J-STD-020 reflow profiles, wave and hand-soldering windows, and JEDEC MSL moisture-sensitivity handling for integrated-magnetics (magjack) sockets. A VOOHU jack sourcing and process guide.">
+<meta name="keywords" content="RJ45 jack soldering, RJ45 reflow profile, magjack MSL, moisture sensitivity level, J-STD-020, integrated magnetics RJ45 socket, wave soldering RJ45, SMT RJ45 jack, VOOHU">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-soldering-reflow-msl-guide.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VOOHU RJ45 Connector Guide">
+<meta property="og:title" content="RJ45 Jack Soldering &amp; Moisture Sensitivity (MSL): Reflow, Wave &amp; Hand-Soldering Guide | VOOHU">
+<meta property="og:description" content="J-STD-020 reflow profiles, wave/hand-soldering windows, and JEDEC MSL floor-life handling for integrated-magnetics RJ45 jacks. A VOOHU process and sourcing guide.">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-soldering-reflow-msl-guide.html">
+<meta property="og:image" content="https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RJ45 Jack Soldering &amp; MSL: Reflow, Wave &amp; Hand-Soldering Guide | VOOHU">
+<meta name="twitter:description" content="Solder RJ45 jacks without popcorning or heat damage: J-STD-020 reflow, wave/hand windows, and MSL handling for magjack sockets.">
+<meta name="twitter:image" content="https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<!-- JSON-LD: TechArticle -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "RJ45 Jack Soldering & Moisture Sensitivity (MSL): Reflow, Wave & Hand-Soldering Guide",
+  "description": "A jack-focused process guide covering J-STD-020 reflow profiles, wave and hand-soldering windows, and JEDEC MSL moisture-sensitivity handling for integrated-magnetics RJ45 sockets.",
+  "image": "https://www.voohuele.com/upload/image/20260227/d0433fafcafa26765e12f57a855a5edc.webp",
+  "author": {"@type": "Organization", "name": "VOOHU Electronics", "url": "https://www.voohuele.com"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "logo": {"@type": "ImageObject", "url": "https://www.voohuele.com/upload/image/20241210/c0db5d4f8ac1de5520bf94745ed32180.svg"}
+  },
+  "datePublished": "2026-07-20",
+  "dateModified": "2026-07-20",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-soldering-reflow-msl-guide.html"},
+  "about": ["RJ45 jack", "modular socket", "integrated magnetics magjack", "reflow soldering", "moisture sensitivity level"],
+  "citation": ["IPC/JEDEC J-STD-020", "IPC/JEDEC J-STD-033", "IPC J-STD-001", "IEC 60603-7"]
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can you reflow-solder an RJ45 magjack?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. SMT integrated-magnetics RJ45 jacks are designed for one lead-free reflow pass following the JEDEC J-STD-020 profile, with a peak package body temperature of 260 degrees C maximum. Always confirm the exact peak temperature and the allowed number of passes on the specific part datasheet, and follow the MSL floor-life and bake rules so the internal magnetics and housing are not damaged."}
+    },
+    {
+      "@type": "Question",
+      "name": "What moisture sensitivity level (MSL) do integrated-magnetics RJ45 jacks have?",
+      "acceptedAnswer": {"@type": "Answer", "text": "It varies by part and is stated on the dry-pack label and datasheet. Integrated-magnetics SMT jacks are commonly rated MSL 2 to MSL 4, meaning a floor life of roughly one year down to 72 hours out of the moisture barrier bag. If the floor life is exceeded, bake the parts per J-STD-033 before reflow to avoid popcorning."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can through-hole (DIP) RJ45 jacks be wave-soldered?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. Through-hole DIP RJ45 jacks are wave and selective-solder friendly, typically with a solder pot around 250 to 260 degrees C, 3 to 5 seconds of contact and a single pass. VOOHU supplies both DIP and SMT RJ45 jacks, so match the process to the part you order."}
+    },
+    {
+      "@type": "Question",
+      "name": "Why does an RJ45 jack fail right after soldering?",
+      "acceptedAnswer": {"@type": "Answer", "text": "The usual causes are heat and moisture damage: popcorning from a skipped MSL bake, a cracked or warped housing from too high a peak temperature, degraded internal magnetics from prolonged heat, or cold joints on the shield ground tabs. Controlling the reflow profile and MSL handling prevents almost all of these."}
+    }
+  ]
+}
+</script>
+
+<!-- JSON-LD: Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/"},
+    {"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/"},
+    {"@type": "ListItem", "position": 3, "name": "RJ45 Jack Soldering & MSL Guide", "item": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-soldering-reflow-msl-guide.html"}
+  ]
+}
+</script>
+
+<style>
+  :root{ --brand:#0b5cab; --brand-dark:#083f75; --ink:#1c2733; --muted:#5b6b7a; --line:#e2e8f0; --bg-soft:#f5f8fc; }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.65;background:#fff;}
+  a{color:var(--brand);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .nav{position:sticky;top:0;z-index:50;background:var(--brand);box-shadow:0 1px 6px rgba(0,0,0,.12);}
+  .nav-inner{max-width:920px;margin:0 auto;padding:11px 20px;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;}
+  .nav-inner a{color:#fff;font-size:14px;font-weight:600;}
+  .nav-inner .brand{font-size:16px;font-weight:800;letter-spacing:.3px;margin-right:6px;}
+  .wrap{max-width:920px;margin:0 auto;padding:0 20px 64px;}
+  .crumbs{font-size:13px;color:var(--muted);padding:16px 0 4px;}
+  .crumbs a{color:var(--muted);}
+  h1{font-size:31px;line-height:1.25;margin:12px 0 6px;color:var(--brand-dark);}
+  h2{font-size:22px;margin:38px 0 10px;color:var(--brand-dark);border-bottom:2px solid var(--line);padding-bottom:6px;}
+  h3{font-size:18px;margin:24px 0 6px;color:var(--ink);}
+  .updated{color:var(--muted);font-size:14px;margin-bottom:18px;}
+  .lede{font-size:18px;color:#33414f;}
+  .answer{background:var(--bg-soft);border-left:4px solid var(--brand);border-radius:8px;padding:16px 20px;margin:22px 0;}
+  .answer strong{color:var(--brand-dark);}
+  table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14.5px;}
+  th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+  th{background:var(--brand);color:#fff;font-weight:600;}
+  tbody tr:nth-child(even){background:var(--bg-soft);}
+  caption{caption-side:bottom;font-size:12.5px;color:var(--muted);padding-top:8px;text-align:left;}
+  .callout{border:1px solid var(--line);border-radius:8px;padding:14px 18px;margin:18px 0;background:#fff;}
+  .mistakes li{margin:8px 0;}
+  .faq h3{margin-top:20px;}
+  .related{background:var(--bg-soft);border-radius:10px;padding:18px 22px;margin:26px 0;}
+  .related h2{border:0;margin-top:0;}
+  .related ul{margin:6px 0 0;padding-left:20px;}
+  .related li{margin:7px 0;}
+  footer{background:var(--brand-dark);color:#dbe6f2;font-size:14px;}
+  .foot-inner{max-width:920px;margin:0 auto;padding:26px 20px 34px;}
+  footer strong{color:#fff;}
+  footer a{color:#bcd6f2;}
+  .tag{display:inline-block;background:#eef3fb;color:var(--brand-dark);border-radius:20px;padding:2px 11px;font-size:12.5px;margin:2px 4px 2px 0;}
+  @media(max-width:560px){h1{font-size:25px;} .nav-inner{gap:4px 12px;}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">VOOHU RJ45 Guide</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-tht-vs-smt-pcb-mount.html">THT vs SMT</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-magnetics-magjack-rj45-jacks.html">Magjack</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-materials-plating.html">Materials &amp; Plating</a>
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/how-to-read-rj45-jack-datasheet.html">Reading a Datasheet</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="crumbs">
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Home</a> &rsaquo;
+    <a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/">Resources</a> &rsaquo;
+    RJ45 Jack Soldering &amp; MSL Guide
+  </div>
+
+  <h1>RJ45 Jack Soldering &amp; Moisture Sensitivity (MSL): Reflow, Wave &amp; Hand-Soldering Guide</h1>
+  <div class="updated">Updated July 20, 2026 &middot; By VOOHU Electronics</div>
+
+  <p class="lede">An RJ45 jack (the female modular socket, or <span lang="zh">&#27597;&#24231;</span>) looks like a rugged mechanical part, but the way you solder it decides whether it survives assembly &mdash; especially an integrated-magnetics <em>magjack</em> socket, which hides a transformer and fine magnet wire inside the housing. This guide explains how to solder RJ45 jacks correctly: the lead-free reflow profile, the wave and hand-soldering windows, and the JEDEC moisture-sensitivity-level (MSL) rules that stop SMT sockets from &ldquo;popcorning&rdquo; on the line.</p>
+
+  <div class="answer">
+    <strong>Short answer:</strong> Solder a plain through-hole (DIP) RJ45 jack by wave or selective soldering at roughly 250&ndash;260&deg;C for 3&ndash;5&nbsp;s. Solder an SMT integrated-magnetics jack with a single lead-free reflow pass to the <strong>IPC/JEDEC J-STD-020</strong> profile &mdash; ~217&deg;C liquidus, 60&ndash;150&nbsp;s above liquidus, <strong>260&deg;C peak maximum</strong> &mdash; and respect its <strong>MSL floor life</strong> (bake per J-STD-033 if the dry-pack bag has been open too long). Always confirm the exact peak temperature, pass count and MSL rating on the specific part datasheet.
+  </div>
+
+  <h2>Why RJ45 jacks are more heat- and moisture-sensitive than they look</h2>
+  <p>A bare unshielded or shielded RJ45 jack is mostly a thermoplastic housing, a metal shield and eight phosphor-bronze contacts &mdash; robust, and forgiving of heat. An <strong>integrated-magnetics RJ45 jack (magjack)</strong> is a different animal: it packs an Ethernet transformer, sometimes a common-mode choke, and enamelled magnet wire into the same body that mates with the plug. That internal assembly introduces two failure modes that plain jacks do not have:</p>
+  <ul>
+    <li><strong>Thermal damage</strong> &mdash; excess peak temperature or dwell can soften or warp the housing, relax the contact spring, or degrade the enamel on the internal magnet wire, shifting the magnetics&rsquo; performance.</li>
+    <li><strong>Moisture / popcorning</strong> &mdash; the plastic and the winding varnish absorb ambient humidity. If a moisture-laden part is reflowed, trapped water flashes to steam and cracks or delaminates the body &mdash; the classic &ldquo;popcorn&rdquo; effect. This is why SMT magjacks carry a moisture-sensitivity level.</li>
+  </ul>
+  <p>The RJ45 mating interface itself is defined by <strong>IEC 60603-7</strong>; category transmission performance follows <strong>ANSI/TIA-568</strong>. Neither standard tells you how to solder the jack &mdash; that is governed by the soldering standards below, plus the connector&rsquo;s own datasheet.</p>
+
+  <h2>Lead-free reflow profile for SMT RJ45 jacks (per J-STD-020)</h2>
+  <p>SMT integrated-magnetics jacks are classified for reflow using <strong>IPC/JEDEC J-STD-020</strong>. Treat the numbers below as the outer envelope for a single SnAgCu (lead-free) pass; your paste and the part datasheet may specify a tighter window.</p>
+  <table>
+    <caption>Table 1. Representative lead-free (SAC) reflow envelope per IPC/JEDEC J-STD-020. Confirm the exact peak on the specific VOOHU part datasheet.</caption>
+    <thead>
+      <tr><th>Reflow stage</th><th>Parameter</th><th>Lead-free (SnAgCu) target</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Ramp-up</td><td>Average slope to peak</td><td>3&deg;C/s max</td></tr>
+      <tr><td>Preheat / soak</td><td>Temperature band</td><td>150&ndash;200&deg;C</td></tr>
+      <tr><td>Preheat / soak</td><td>Soak time</td><td>60&ndash;120 s</td></tr>
+      <tr><td>Liquidus</td><td>T<sub>L</sub></td><td>~217&deg;C</td></tr>
+      <tr><td>Time above liquidus</td><td>t<sub>L</sub></td><td>60&ndash;150 s</td></tr>
+      <tr><td>Peak package body temp</td><td>T<sub>p</sub></td><td>260&deg;C max</td></tr>
+      <tr><td>Time within 5&deg;C of peak</td><td>t<sub>p</sub></td><td>20&ndash;30 s</td></tr>
+      <tr><td>Ramp-down</td><td>Average slope from peak</td><td>6&deg;C/s max</td></tr>
+      <tr><td>25&deg;C to peak</td><td>Total time</td><td>8 min max</td></tr>
+      <tr><td>Reflow passes</td><td>Number of cycles</td><td>1 (single); confirm datasheet before a 2nd pass</td></tr>
+    </tbody>
+  </table>
+  <p>Key discipline: keep the <em>peak</em> under the datasheet limit and the <em>time near peak</em> short. A magjack that sees two uncontrolled reflow passes (for example a double-sided board where the jack is reflowed twice) is a common, avoidable cause of shifted return-loss and intermittent link-up.</p>
+
+  <h2>Moisture Sensitivity Level (MSL): floor life and baking</h2>
+  <p>MSL, defined in <strong>IPC/JEDEC J-STD-020</strong> and handled per <strong>IPC/JEDEC J-STD-033</strong>, tells you how long an SMT jack may sit out of its sealed moisture-barrier bag (MBB) before it must be reflowed &mdash; or re-baked. The clock starts the moment the bag is opened. Check the humidity indicator card (HIC) inside the bag; if it shows the part has taken on moisture, bake before use regardless of the timer.</p>
+  <table>
+    <caption>Table 2. JEDEC MSL floor-life classes (IPC/JEDEC J-STD-020 / J-STD-033). Ambient reference is &le;30&deg;C / 60% RH unless noted.</caption>
+    <thead>
+      <tr><th>MSL</th><th>Floor life out of bag</th><th>Reference ambient</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Unlimited</td><td>&le;30&deg;C / 85% RH</td></tr>
+      <tr><td>2</td><td>1 year</td><td>&le;30&deg;C / 60% RH</td></tr>
+      <tr><td>2a</td><td>4 weeks</td><td>&le;30&deg;C / 60% RH</td></tr>
+      <tr><td>3</td><td>168 hours</td><td>&le;30&deg;C / 60% RH</td></tr>
+      <tr><td>4</td><td>72 hours</td><td>&le;30&deg;C / 60% RH</td></tr>
+      <tr><td>5</td><td>48 hours</td><td>&le;30&deg;C / 60% RH</td></tr>
+      <tr><td>5a</td><td>24 hours</td><td>&le;30&deg;C / 60% RH</td></tr>
+      <tr><td>6</td><td>Mandatory bake before reflow (time on label)</td><td>&mdash;</td></tr>
+    </tbody>
+  </table>
+  <p>Integrated-magnetics RJ45 jacks are typically supplied around <strong>MSL 2 to MSL 4</strong>. If the floor life is exceeded, restore the part with a bake (commonly 125&deg;C, duration per J-STD-033 for the package and MSL) and reset the clock. Plain through-hole jacks without magnetics are generally not moisture-sensitive in the same way, but should still be kept dry and clean for good solderability.</p>
+
+  <h2>Choosing the right process for the jack you ordered</h2>
+  <p>VOOHU builds RJ45 jacks in both <strong>DIP (through-hole)</strong> and <strong>SMT</strong> versions, with or without integrated magnetics, in 90&deg; and 180&deg; orientations and single- to multi-port (1&times;1 up to 2&times;8) formats. Match the soldering process to the part:</p>
+  <table>
+    <caption>Table 3. Typical process by jack construction. Windows are general IPC J-STD-001 practice; always defer to the specific datasheet.</caption>
+    <thead>
+      <tr><th>Jack construction</th><th>Usual mount</th><th>Recommended process</th><th>Main watch-out</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Plain RJ45 (no magnetics), shielded or UTP</td><td>THT / DIP</td><td>Wave or selective solder; hand-solder OK</td><td>Avoid parking heat on the shield tabs</td></tr>
+      <tr><td>Integrated-magnetics magjack, through-hole</td><td>THT / DIP</td><td>Wave or selective, single pass</td><td>Limit pot dwell so internal magnetics stay cool</td></tr>
+      <tr><td>Integrated-magnetics magjack, surface-mount</td><td>SMT</td><td>Reflow to J-STD-020; observe MSL</td><td>Popcorning, warpage, enamel damage</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Wave &amp; selective soldering (through-hole jacks)</h3>
+  <p>Typical practice for DIP RJ45 jacks: topside preheat ~100&ndash;130&deg;C, solder pot ~250&ndash;260&deg;C, contact time 3&ndash;5&nbsp;s, single pass. Selective soldering with a local nozzle is ideal for a jack next to heat-sensitive neighbours because it confines the heat to the jack&rsquo;s pins.</p>
+
+  <h3>Hand soldering &amp; rework</h3>
+  <p>For touch-up and prototypes, use a temperature-controlled iron around 350&ndash;370&deg;C, 3&ndash;5&nbsp;s per contact, and adequate tip mass for the large ground/shield tabs (an under-powered iron makes cold joints; camping the tip too long melts the housing). Follow <strong>IPC-7711/7721</strong> for rework of magnetics-bearing parts.</p>
+
+  <h2>Common RJ45-jack soldering mistakes</h2>
+  <ul class="mistakes">
+    <li><strong>Treating an SMT magjack like a passive.</strong> Skipping the MSL bake after the bag&rsquo;s floor life expired is the number-one cause of popcorned, cracked sockets.</li>
+    <li><strong>Ignoring the HIC.</strong> The humidity indicator card overrides the timer &mdash; a pink card means bake, even if the part was &ldquo;only opened yesterday.&rdquo;</li>
+    <li><strong>A second, unqualified reflow pass.</strong> Double-reflowing a magjack without checking the datasheet shifts the magnetics and can crack the body.</li>
+    <li><strong>Over-long wave contact.</strong> Cooking a through-hole magjack in the pot degrades the internal windings even when the joints look perfect.</li>
+    <li><strong>Cold joints on shield/ground tabs.</strong> Large thermal mass with a small iron leaves weak grounds &mdash; then the port fails EMC or ESD later.</li>
+    <li><strong>Wrong stencil/paste on fine SMT tabs.</strong> Insufficient paste volume on the shield legs causes tombstoning or opens.</li>
+  </ul>
+
+  <div class="callout">
+    <strong>Sourcing tip:</strong> Every VOOHU RJ45 jack part number ships with a PDF datasheet, PCB layout and 3D STP model. Before you set your oven, pull the datasheet and read off three things: the <em>MSL rating</em>, the <em>peak reflow temperature</em>, and the <em>allowed number of passes</em>. If any of the three is missing for your process, ask VOOHU for the reflow/MSL spec of that exact part before you buy.
+  </div>
+
+  <h2 id="faq">Frequently asked questions</h2>
+  <div class="faq">
+    <h3>Can you reflow-solder an RJ45 magjack?</h3>
+    <p>Yes. SMT integrated-magnetics RJ45 jacks are designed for one lead-free reflow pass following the JEDEC J-STD-020 profile, peak 260&deg;C maximum. Confirm the exact peak and pass count on the part datasheet, and follow the MSL floor-life/bake rules so the internal magnetics and housing are not damaged.</p>
+    <h3>What MSL do integrated-magnetics RJ45 jacks have?</h3>
+    <p>It varies by part and is printed on the dry-pack label and datasheet &mdash; commonly MSL 2 to MSL 4 (roughly one year down to 72 hours of floor life). If the floor life is exceeded, bake per J-STD-033 before reflow to avoid popcorning.</p>
+    <h3>Can through-hole (DIP) RJ45 jacks be wave-soldered?</h3>
+    <p>Yes. DIP RJ45 jacks are wave- and selective-solder friendly &mdash; typically ~250&ndash;260&deg;C pot, 3&ndash;5&nbsp;s, single pass. VOOHU offers both DIP and SMT jacks, so match the process to the part.</p>
+    <h3>Why does an RJ45 jack fail right after soldering?</h3>
+    <p>Usually heat or moisture damage: popcorning from a skipped MSL bake, a warped/cracked housing from too high a peak, degraded internal magnetics, or cold joints on the shield tabs. Controlling the profile and MSL handling prevents nearly all of these.</p>
+  </div>
+
+  <div class="related">
+    <h2>Related VOOHU guides</h2>
+    <ul>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-tht-vs-smt-pcb-mount.html">RJ45 jack THT vs SMT PCB mounting</a> &mdash; picking through-hole or surface-mount before you plan the solder process.</li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/integrated-magnetics-magjack-rj45-jacks.html">Integrated-magnetics (magjack) RJ45 sockets</a> &mdash; what is inside the heat-sensitive jacks discussed here.</li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-materials-plating.html">RJ45 jack materials &amp; plating</a> &mdash; housing thermoplastics and contact finishes that set the thermal limits.</li>
+      <li><a href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/how-to-read-rj45-jack-datasheet.html">How to read an RJ45 jack datasheet</a> &mdash; where the MSL and reflow specs live.</li>
+    </ul>
+  </div>
+
+  <div style="margin-top:22px">
+    <span class="tag">RJ45 jack</span><span class="tag">reflow soldering</span><span class="tag">MSL</span><span class="tag">magjack</span><span class="tag">J-STD-020</span><span class="tag">VOOHU</span>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <p><strong>VOOHU Electronics</strong> &mdash; Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices. ISO9001, ISO14001, RoHS, REACH, CE certified.</p>
+    <p>Website: <a href="https://www.voohuele.com">https://www.voohuele.com</a> &middot; Email: <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> &middot; WhatsApp: +86 133 5804 1040</p>
+    <p style="font-size:12.5px;color:#9db9d6;margin-top:14px">This guide is for engineering reference. Soldering windows are general industry practice (IPC/JEDEC J-STD-020, J-STD-033, IPC J-STD-001, IEC 60603-7); always follow the specific VOOHU part datasheet for exact reflow and MSL limits.</p>
+  </div>
+</footer>
+
+</body>
+</html>
