@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Right-Angle vs Vertical RJ45 Jacks: 90&deg;, 180&deg; &amp; 45&deg; Mounting Angles Explained | VOOHU</title>
+<meta name="description" content="Right-angle (horizontal) vs vertical (top-entry) vs 45&deg; RJ45 connector jacks: how the mounting angle changes PCB layout, panel height and cable routing. A VOOHU jack-selection guide with sourced 8P8C specs (IEC 60603-7).">
+<meta name="keywords" content="right angle RJ45 jack, vertical RJ45 jack, 180 degree RJ45 connector, 90 degree RJ45, RJ45 mounting angle, top entry RJ45 socket, horizontal RJ45 jack, RJ45 female socket, 8P8C jack, VOOHU">
+<meta name="author" content="VOOHU Electronics">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-mounting-angle-right-angle-vs-vertical.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Right-Angle vs Vertical RJ45 Jacks: 90&deg;, 180&deg; &amp; 45&deg; Mounting Angles Explained | VOOHU">
+<meta property="og:description" content="How RJ45 jack mounting angle (right-angle 90&deg;, vertical 180&deg;, inclined 45&deg;) changes PCB layout, panel height and cable routing. VOOHU jack-selection guide.">
+<meta property="og:url" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-mounting-angle-right-angle-vs-vertical.html">
+<meta property="og:site_name" content="VOOHU RJ45 Connector Knowledge Base">
+<meta property="og:image" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/assets/voohu-rj45-og.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Right-Angle vs Vertical RJ45 Jacks (90&deg; / 180&deg; / 45&deg;) | VOOHU">
+<meta name="twitter:description" content="Pick the right RJ45 jack mounting angle: right-angle horizontal, vertical top-entry, or 45&deg; inclined. Sourced 8P8C specs and a VOOHU selection matrix.">
+<meta name="twitter:image" content="https://voohuelectronic-ux.github.io/voohu-rj45-guide/assets/voohu-rj45-og.png">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1MTRB726Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1MTRB726Q');
+</script>
+
+<!-- JSON-LD: TechArticle -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Right-Angle vs Vertical RJ45 Jacks: 90°, 180° & 45° Mounting Angles Explained",
+  "description": "A jack-focused guide to RJ45 connector mounting angle: right-angle (horizontal, side-entry), vertical (upright, top-entry) and 45° inclined jacks, how each affects PCB layout, panel height and cable routing, with sourced 8P8C specifications.",
+  "author": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "url": "https://www.voohuele.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "VOOHU Electronics",
+    "url": "https://www.voohuele.com"
+  },
+  "datePublished": "2026-07-22",
+  "dateModified": "2026-07-22",
+  "inLanguage": "en",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://voohuelectronic-ux.github.io/voohu-rj45-guide/resources/rj45-jack-mounting-angle-right-angle-vs-vertical.html"
+  },
+  "keywords": "right angle RJ45 jack, vertical RJ45 jack, 180 degree RJ45 connector, RJ45 mounting angle, top entry RJ45 socket, 8P8C jack",
+  "about": [
+    {"@type": "Thing", "name": "RJ45 modular jack"},
+    {"@type": "Thing", "name": "8P8C connector"},
+    {"@type": "Thing", "name": "PCB connector mounting orientation"}
+  ]
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between a right-angle and a vertical RJ45 jack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A right-angle (horizontal, side-entry) RJ45 jack sits flat on the PCB and the plug inserts parallel to the board, so the port faces out the front panel edge; this is the standard equipment network port. A vertical (upright, top-entry) RJ45 jack mounts perpendicular to the board and the plug inserts from above, freeing horizontal board width. Both are 8P8C jacks compliant with IEC 60603-7; the choice is driven by where the mating cable must approach and by faceplate height."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do the 90 degree and 180 degree labels mean the same thing for every RJ45 vendor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Vendors are not consistent: some catalog a horizontal side-entry jack as 90 degrees and a top-entry jack as 180 degrees, while others reverse the labels. Always confirm the plug entry direction from the datasheet mechanical drawing rather than trusting the degree label alone. VOOHU classifies its RJ45 jacks under a Connector Type filter of 45 degrees, 90 degrees and 180 degrees, with tab-up or tab-down and DIP or SMT options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I use a 45-degree RJ45 jack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 45-degree (inclined) RJ45 jack angles the port opening so the mating plug and its cable exit on a diagonal. It is used in high-density faceplates, patch panels and slim wall outlets where an angled exit improves the cable bend radius and lets cabling drop straight down inside a shallow enclosure without a sharp kink at the plug boot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does mounting angle change the electrical performance of an RJ45 jack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 8P8C contact interface and its category rating are defined by IEC 60603-7 and ANSI/TIA-568 and are independent of body orientation, so a well-designed right-angle, vertical or 45-degree jack can carry the same Cat5e to Cat6A or multi-gig signal, up to 1.5 A per contact for PoE. What orientation changes is signal-integrity risk from layout: right-angle jacks keep the pin field near the board edge for short PHY routing, while vertical jacks place pins deeper inside the board and need careful return-path planning."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root { --brand:#0b5cab; --brand-dark:#083f75; --ink:#1c2733; --muted:#5a6b7b; --line:#dbe4ec; --bg:#f5f8fb; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); line-height:1.65; background:#fff; }
+  a { color:var(--brand); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  nav.top { position:sticky; top:0; z-index:50; background:var(--brand); box-shadow:0 1px 6px rgba(0,0,0,.15); }
+  nav.top .wrap { max-width:920px; margin:0 auto; padding:11px 20px; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center; }
+  nav.top a { color:#fff; font-size:14px; font-weight:600; }
+  nav.top .brand { font-size:16px; font-weight:800; letter-spacing:.4px; margin-right:8px; }
+  main { max-width:920px; margin:0 auto; padding:0 20px 60px; }
+  .crumb { font-size:13px; color:var(--muted); margin:18px 0 6px; }
+  .crumb a { color:var(--muted); }
+  h1 { font-size:31px; line-height:1.25; margin:8px 0 6px; color:var(--brand-dark); }
+  .updated { font-size:13px; color:var(--muted); margin-bottom:20px; }
+  h2 { font-size:23px; margin:34px 0 10px; color:var(--brand-dark); border-bottom:2px solid var(--line); padding-bottom:6px; }
+  h3 { font-size:18px; margin:22px 0 6px; color:var(--ink); }
+  p { margin:12px 0; }
+  .short { background:var(--bg); border-left:4px solid var(--brand); padding:16px 20px; border-radius:0 8px 8px 0; margin:22px 0; }
+  .short strong { color:var(--brand-dark); }
+  table { width:100%; border-collapse:collapse; margin:20px 0; font-size:14.5px; }
+  th,td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--brand); color:#fff; font-weight:600; }
+  tbody tr:nth-child(even) { background:var(--bg); }
+  caption { caption-side:bottom; font-size:12.5px; color:var(--muted); padding-top:8px; text-align:left; }
+  ul.clean { padding-left:20px; }
+  ul.clean li { margin:7px 0; }
+  .mistake { background:#fff6f4; border:1px solid #f3d3ca; border-radius:8px; padding:6px 18px; margin:16px 0; }
+  .faq h3 { border-top:1px solid var(--line); padding-top:16px; }
+  .related { background:var(--bg); border-radius:10px; padding:8px 24px 18px; margin:30px 0; }
+  footer { background:var(--brand-dark); color:#dce7f2; }
+  footer .wrap { max-width:920px; margin:0 auto; padding:26px 20px; font-size:14px; }
+  footer strong { color:#fff; }
+  footer a { color:#bcd6f0; }
+  .tag { display:inline-block; background:#e6eef7; color:var(--brand-dark); font-size:12px; font-weight:600; padding:2px 9px; border-radius:20px; margin:2px 4px 2px 0; }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">VOOHU RJ45 Guide</a>
+    <a href="../index.html">Home</a>
+    <a href="./rj45-jack-tht-vs-smt-pcb-mount.html">THT vs SMT</a>
+    <a href="./rj45-jack-orientation-tab-up-vs-tab-down.html">Tab Up/Down</a>
+    <a href="./low-profile-low-height-rj45-jacks.html">Low-Profile Jacks</a>
+    <a href="./multi-port-rj45-jacks-ganged-stacked.html">Multi-Port Jacks</a>
+  </div>
+</nav>
+
+<main>
+  <div class="crumb">
+    <a href="../index.html">Home</a> &rsaquo; <a href="../index.html">Resources</a> &rsaquo; RJ45 Jack Mounting Angle
+  </div>
+
+  <h1>Right-Angle vs Vertical RJ45 Jacks: 90&deg;, 180&deg; &amp; 45&deg; Mounting Angles Explained</h1>
+  <div class="updated">By VOOHU Electronics &middot; Updated July 22, 2026</div>
+
+  <p>When you drop an RJ45 connector <strong>jack</strong> (the female 8P8C socket, or <span lang="zh">&#27597;&#24231;</span>) onto a board, one of the first mechanical decisions is the <strong>mounting angle</strong>: does the network cable plug in horizontally out the front panel, straight down from the top, or on a diagonal? That single choice ripples through your PCB floor plan, your enclosure height, your faceplate layout and how neatly the installed cable routes. This guide compares the three orientations VOOHU catalogs its RJ45 jacks under &mdash; <strong>right-angle (90&deg;)</strong>, <strong>vertical (180&deg;)</strong> and <strong>inclined (45&deg;)</strong> &mdash; and gives a practical way to choose. Everything here is framed around the jack/socket, not the mating plug.</p>
+
+  <div class="short">
+    <p><strong>Short answer:</strong> Use a <strong>right-angle (horizontal, side-entry) RJ45 jack</strong> for the vast majority of equipment front panels &mdash; switches, routers, gateways, IPC and 1U rack gear &mdash; because the port faces the panel edge and keeps the PHY trace short. Choose a <strong>vertical (upright, top-entry) jack</strong> when the mating cable comes from above or when you must reclaim horizontal board width in a dense or stacked layout. Reserve the <strong>45&deg; inclined jack</strong> for slim faceplates, patch panels and wall outlets where an angled exit relieves the cable bend radius. All three are 8P8C jacks compliant with IEC 60603-7 / ANSI-TIA-568, so orientation is a mechanical and layout decision, not a category or bandwidth trade-off.</p>
+  </div>
+
+  <h2>The three RJ45 jack mounting angles</h2>
+
+  <h3>Right-angle (horizontal / side-entry)</h3>
+  <p>The jack body lies flat on the PCB and the plug inserts <em>parallel</em> to the board, so the opening faces out the board edge and, through a panel cut-out, out the front of the product. The contact tails bend down into the board (through-hole or surface-mount). This is the workhorse network port: it presents the port at a natural height for a front panel, keeps the 8 contacts close to the board edge for a short, controlled route to the Ethernet PHY or magnetics, and stacks easily into ganged 1&times;N and 2&times;N housings. For 1U switches and high-density panels it is effectively the only single-row option because it minimizes how much panel width each port consumes.</p>
+
+  <h3>Vertical (upright / top-entry)</h3>
+  <p>The jack stands upright and the plug inserts <em>perpendicular</em> to the board &mdash; you mate from directly above. Because the connector footprint is narrow and tall rather than wide and flat, a vertical jack frees up horizontal board area, which is valuable on cramped daughter-cards, sensor boards and stacked modules where cabling is expected to drop in from the top of the enclosure. The trade-off is package height above the board and a pin field that sits deeper inside the layout, so the return path to the PHY needs more deliberate planning.</p>
+
+  <h3>45&deg; inclined</h3>
+  <p>The port opening is angled, so the plug and its cable exit on a diagonal. In shallow faceplates, AV wall outlets and patch panels a 45&deg; jack lets the cable turn gently and drop straight down inside the wall or rack channel instead of kinking hard at the plug boot &mdash; protecting the twisted-pair bend radius that Cat6/Cat6A cabling is sensitive to. It is a specialty orientation rather than a default board port.</p>
+
+  <div class="short">
+    <p><strong>Terminology warning (important for buyers):</strong> the degree labels are <em>not</em> standardized across vendors. Some datasheets call a horizontal side-entry jack &ldquo;90&deg;&rdquo; and a top-entry jack &ldquo;180&deg;&rdquo;; others reverse them. Never order from the number alone &mdash; confirm the <strong>plug entry direction</strong> from the mechanical drawing. VOOHU catalogs its RJ45 jacks under a <em>Connector Type</em> filter of <strong>45&deg; / 90&deg; / 180&deg; (plus 180&deg; welding-wire)</strong>, each further specified by tab-up/tab-down, DIP or SMT, port count and integrated-magnetics option.</p>
+  </div>
+
+  <h2>Comparison: orientation vs layout impact</h2>
+  <table>
+    <caption>Table 1. How RJ45 jack mounting angle affects the design. Orientation labels follow VOOHU&rsquo;s Connector Type catalog naming; always verify entry direction on the datasheet drawing.</caption>
+    <thead>
+      <tr><th>Attribute</th><th>Right-angle (horizontal)</th><th>Vertical (top-entry)</th><th>45&deg; inclined</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Plug inserts</td><td>Parallel to PCB (from the side)</td><td>Perpendicular to PCB (from above)</td><td>Diagonally (angled exit)</td></tr>
+      <tr><td>Port faces</td><td>Front-panel edge</td><td>Upward / top of enclosure</td><td>Front, angled downward</td></tr>
+      <tr><td>Horizontal board width used</td><td>Wider footprint</td><td>Narrow footprint (saves width)</td><td>Moderate</td></tr>
+      <tr><td>Height above board</td><td>Low to moderate</td><td>Taller</td><td>Moderate</td></tr>
+      <tr><td>Best for</td><td>Switches, routers, IPC, 1U rack front panels</td><td>Stacked modules, daughter-cards, top-cabled boxes</td><td>Slim faceplates, patch panels, wall outlets</td></tr>
+      <tr><td>Cable routing</td><td>Exits horizontally at the panel</td><td>Exits vertically upward</td><td>Angled &mdash; eases bend radius</td></tr>
+      <tr><td>PHY trace length</td><td>Shortest (edge-adjacent pins)</td><td>Longer (deeper pin field)</td><td>Layout-dependent</td></tr>
+      <tr><td>VOOHU catalog label</td><td>90&deg;</td><td>180&deg;</td><td>45&deg;</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Specs that stay the same across orientations</h2>
+  <p>Because the 8-position/8-contact interface is fixed by <strong>IEC 60603-7</strong> (unshielded) and <strong>IEC 60603-7-1</strong> (shielded), and category performance by <strong>ANSI/TIA-568.2-D</strong> with BASE-T signalling defined in <strong>IEEE 802.3</strong>, the electrical envelope of a quality jack does not depend on whether it is right-angle, vertical or 45&deg;. The table below lists parameters that a VOOHU RJ45 jack carries in any orientation.</p>
+  <table>
+    <caption>Table 2. Representative sourced specifications for VOOHU RJ45 connector jacks (from the VOOHU RJ45 Connector product catalog and the SYT-series integrated-magnetics jack, plus the governing 8P8C standards). Values are configuration-dependent; confirm the exact part datasheet.</caption>
+    <thead>
+      <tr><th>Parameter</th><th>Value / range</th><th>Source</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Interface</td><td>8P8C modular jack</td><td>IEC 60603-7 / ANSI-TIA-1096-A / ISO-IEC 8877</td></tr>
+      <tr><td>Data rate options</td><td>10/100M, 100/1000M, 2.5GBASE-T, 5GBASE-T, 10GBASE-T</td><td>VOOHU RJ45 catalog</td></tr>
+      <tr><td>PoE current rating</td><td>Up to 1.5 A per contact (350mA / 600 / 720 / 850 / 900 / 1000mA / 1.5A options)</td><td>VOOHU RJ45 catalog; 1.5 A typical per IEC 60603-7</td></tr>
+      <tr><td>Durability (mating cycles)</td><td>750 cycles minimum (typical)</td><td>IEC 60603-7</td></tr>
+      <tr><td>Contact resistance</td><td>&le; 20 m&#8486; (low-level)</td><td>IEC 60603-7 class</td></tr>
+      <tr><td>Mount style</td><td>DIP (through-hole) or SMT</td><td>VOOHU RJ45 catalog</td></tr>
+      <tr><td>Tab orientation</td><td>Tab-up or tab-down</td><td>VOOHU RJ45 catalog</td></tr>
+      <tr><td>Port configurations</td><td>1&times;1 through 1&times;8; 2&times;1 through 2&times;8 (ganged / stacked)</td><td>VOOHU RJ45 catalog</td></tr>
+      <tr><td>Shielding / EMI gasket</td><td>Shield tabs and EMI gasket optional (UTP or shielded)</td><td>VOOHU RJ45 catalog</td></tr>
+      <tr><td>Operating temperature</td><td>0~+70&deg;C up to industrial &minus;40~+105&deg;C grades</td><td>VOOHU RJ45 catalog</td></tr>
+      <tr><td>Integrated-magnetics (MagJack) option</td><td>OCL 350&micro;H, turns ratio 1CT:1CT, isolation 2250 VDC, insertion loss &le;1.0 dB, common-mode rejection &minus;30 dB, dual-color LED</td><td>VOOHU SYT-series integrated RJ45 (e.g. SYT511Q293AC1A8D057)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>How to choose the mounting angle</h2>
+  <ul class="clean">
+    <li><strong>Follow the cable, not the fashion.</strong> Decide where the installed patch cord physically approaches the port &mdash; from the front (right-angle), from the top of a stacked box (vertical), or into a shallow faceplate (45&deg;). The mating direction is the primary driver.</li>
+    <li><strong>Guard your panel and Z-height budget.</strong> Right-angle jacks present the port at a convenient panel height with a low profile; vertical jacks trade board width for taller Z-height. If the lid is close to the board, check the vertical jack&rsquo;s height plus the seated plug and its boot.</li>
+    <li><strong>Protect the PHY route.</strong> Right-angle jacks keep the 8 contacts near the board edge for the shortest run to the magnetics and PHY &mdash; helpful at 2.5G/5G/10GBASE-T. For a vertical jack, budget layout effort for the deeper pin field and its return path.</li>
+    <li><strong>Fold in the other jack variables at the same time.</strong> Mounting angle, tab-up/tab-down, DIP vs SMT, port count and integrated vs discrete magnetics are chosen together, not in isolation. VOOHU can combine them on one part, including <span lang="zh">&#27597;&#24231;</span> with built-in magnetics.</li>
+    <li><strong>Lock temperature grade to environment.</strong> A consumer router port can live with a 0~+70&deg;C jack; industrial, outdoor or PoE-powered gear should specify &minus;40~+85&deg;C or &minus;40~+105&deg;C regardless of orientation.</li>
+  </ul>
+
+  <h2>Common mistakes</h2>
+  <div class="mistake">
+    <p><strong>Ordering by the degree number alone.</strong> Because 90&deg;/180&deg; labeling is inconsistent between suppliers, buying on the label without checking the drawing is the fastest way to receive a top-entry jack when you needed side-entry. Confirm entry direction visually.</p>
+  </div>
+  <div class="mistake">
+    <p><strong>Forgetting the plug boot and bend radius.</strong> The seated plug and its strain-relief boot add length in front of the jack. On a vertical jack that means extra Z-height above the lid; on a right-angle jack in a shallow bezel it can foul the enclosure. 45&deg; jacks exist largely to solve this in slim faceplates.</p>
+  </div>
+  <div class="mistake">
+    <p><strong>Choosing orientation before magnetics.</strong> If the design needs an integrated-magnetics jack (MagJack), pick a body that offers your speed grade and isolation first; the orientation and tab style are then selected within that family so you are not forced into a discrete-magnetics fallback late in layout.</p>
+  </div>
+  <div class="mistake">
+    <p><strong>Assuming vertical always saves space.</strong> Vertical jacks save horizontal <em>width</em> but cost <em>height</em>; in a thin, wide enclosure that is exactly backwards. Match the footprint you actually want to reclaim.</p>
+  </div>
+
+  <h2 class="faq">Frequently asked questions</h2>
+  <div class="faq">
+    <h3>What is the difference between a right-angle and a vertical RJ45 jack?</h3>
+    <p>A right-angle (horizontal, side-entry) RJ45 jack sits flat on the PCB and the plug inserts parallel to the board, so the port faces out the front panel edge; this is the standard equipment network port. A vertical (upright, top-entry) jack mounts perpendicular to the board and the plug inserts from above, freeing horizontal board width. Both are 8P8C jacks compliant with IEC 60603-7; the choice is driven by where the mating cable approaches and by faceplate height.</p>
+
+    <h3>Do the 90&deg; and 180&deg; labels mean the same thing for every RJ45 vendor?</h3>
+    <p>No. Vendors are not consistent: some catalog a horizontal side-entry jack as 90&deg; and a top-entry jack as 180&deg;, while others reverse the labels. Always confirm the plug entry direction from the datasheet mechanical drawing rather than trusting the degree label alone. VOOHU classifies its RJ45 jacks under a Connector Type filter of 45&deg;, 90&deg; and 180&deg;, with tab-up/tab-down and DIP/SMT options.</p>
+
+    <h3>When should I use a 45&deg; RJ45 jack?</h3>
+    <p>A 45&deg; (inclined) RJ45 jack angles the port so the mating plug and cable exit on a diagonal. It suits high-density faceplates, patch panels and slim wall outlets where an angled exit improves the cable bend radius and lets cabling drop straight down inside a shallow enclosure without a sharp kink at the plug boot.</p>
+
+    <h3>Does mounting angle change the electrical performance of an RJ45 jack?</h3>
+    <p>The 8P8C contact interface and its category rating are defined by IEC 60603-7 and ANSI/TIA-568 and are independent of body orientation, so a well-designed right-angle, vertical or 45&deg; jack can carry the same Cat5e to Cat6A or multi-gig signal, up to 1.5 A per contact for PoE. What orientation changes is layout-driven signal-integrity risk: right-angle jacks keep the pin field near the board edge for short PHY routing, while vertical jacks place pins deeper inside the board and need careful return-path planning.</p>
+  </div>
+
+  <div class="related">
+    <h2>Related VOOHU guides</h2>
+    <ul class="clean">
+      <li><a href="./rj45-jack-tht-vs-smt-pcb-mount.html">THT vs SMT RJ45 jacks: through-hole and surface-mount PCB mounting</a></li>
+      <li><a href="./rj45-jack-orientation-tab-up-vs-tab-down.html">Tab-up vs tab-down RJ45 jack orientation</a></li>
+      <li><a href="./low-profile-low-height-rj45-jacks.html">Low-profile / low-height RJ45 jacks</a></li>
+      <li><a href="./multi-port-rj45-jacks-ganged-stacked.html">Multi-port RJ45 jacks: ganged and stacked housings</a></li>
+      <li><a href="./integrated-magnetics-magjack-rj45-jacks.html">Integrated-magnetics (MagJack) RJ45 jacks</a></li>
+    </ul>
+    <p>Explore the full range on the <a href="https://www.voohuele.com/rj45-connector3217/" target="_blank" rel="noopener">VOOHU RJ45 Connector product center</a> or the <a href="https://www.voohuele.com/network-connector-rj45-rj11/" target="_blank" rel="noopener">Network Connector (RJ45/RJ11) catalog</a>.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>VOOHU Electronics</strong> &mdash; Global supplier of RJ45 connectors, network transformers, magnetics, and protection devices. ISO9001, ISO14001, RoHS, REACH, CE certified.</p>
+    <p>Website: <a href="https://www.voohuele.com" target="_blank" rel="noopener">https://www.voohuele.com</a> &middot; Email: <a href="mailto:olivia@voohuele.com">olivia@voohuele.com</a> &middot; WhatsApp: +86 133 5804 1040</p>
+    <p style="margin-top:14px;">
+      <span class="tag">RJ45 jack</span><span class="tag">right-angle vs vertical</span><span class="tag">8P8C</span><span class="tag">mounting angle</span><span class="tag">MagJack</span>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
